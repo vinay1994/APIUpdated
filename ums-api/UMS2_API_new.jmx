@@ -17,18 +17,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-        <stringProp name="filename">F:/testdata.csv</stringProp>
-        <stringProp name="fileEncoding"></stringProp>
-        <stringProp name="variableNames"> lognid,vineet,kumar,chaudhary,M,7838723200,kewal@incaendo.com,1995-12-28,lognid,1234,true,vin123, loginid,vineet,Kumar,,chaudhary,M,7838723200,kewal@incaendo.com,1995-12-28,vineet,123,true,kewal098 ,vineet,5842bbae9a160,M,vin,1988-10-12, 583e64e2a113f,vin123,test2, 583e64e2a113f,kewal@incaendo.com,  583e64e2a113f,kewal@incaendo.com, 583e64e2a113f,7838723200,  kewal@incaendo.com,167171, kewal@incaendo.com,167044,Mobile, lognid,null,vineet,null,chaudhary,null,null,M,vin,kewal@incaendo.com,7838723209,null,0000-00-00,0,0,2016-12-02 19:19:18,2016-12-02 19:48:21,58417,null,123,null,null,null, vineet,JTmXXxefhGP7vUKZqIa34c0GU, vineet,JTmXXxefhGP7vUKZqIa34c0GU, 583e64e2a113f,7073931,test2, loginid,167171, 58417bde67998,5842bce891302&quot;,is_teacher, knojiyak1,d41d8cd98f00b204e9800998ecf8427e,1c:87:2c:9e:8a:21,357870062622548,Gaurav,androidmobile,Android,5.0,4.1.2.5     </stringProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <boolProp name="recycle">true</boolProp>
-        <boolProp name="stopThread">false</boolProp>
-        <stringProp name="shareMode">shareMode.all</stringProp>
-      </CSVDataSet>
-      <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USER_API" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UMS API" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -61,15 +50,15 @@
                 <stringProp name="Argument.value">{&#xd;
   &quot;user&quot;: [&#xd;
     {&#xd;
-      &quot;loginId&quot;: &quot;${lognid}&quot;,&#xd;
+      &quot;loginId&quot;: &quot;${abc}&quot;,&#xd;
       &quot;firstName&quot;: &quot;${vineet}&quot;,&#xd;
       &quot;middleName&quot;: &quot;${kumar}&quot;,&#xd;
       &quot;lastName&quot;: &quot;${chaudhary}&quot;,&#xd;
       &quot;gender&quot;: &quot;${M}&quot;,&#xd;
       &quot;mobileNumber&quot;: &quot;${7838723200}&quot;,&#xd;
-      &quot;emailId&quot;: &quot;${kewal@incaendo.com}&quot;,&#xd;
+      &quot;emailId&quot;: &quot;${kewal1@incaendo.com}&quot;,&#xd;
       &quot;dateOfBirth&quot;: &quot;${1995-12-28}&quot;,&#xd;
-      &quot;nickname&quot;: &quot;${vin}&quot;,&#xd;
+      &quot;nickname&quot;: &quot;${vin1}&quot;,&#xd;
       &quot;updatedBy&quot;: &quot;${1234}&quot;,&#xd;
       &quot;shouldInvite&quot;: &quot;${true}&quot;&#xd;
     }&#xd;
@@ -96,7 +85,19 @@
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="filename">F:/testdata.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">abc,vineet,kumar,chaudhary,M,9818613519,vineet123@yahoo.com,1996-12-11,vin1,123,true,vin1235</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UA2 - Create Adult User" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -106,15 +107,15 @@
                 <stringProp name="Argument.value">{&#xd;
   &quot;user&quot;: [&#xd;
     {&#xd;
-      &quot;loginId&quot;: &quot;${lognid}&quot;,&#xd;
-      &quot;firstName&quot;: &quot;${vineet}&quot;,&#xd;
-      &quot;middleName&quot;: &quot;${kumar}&quot;,&#xd;
-      &quot;lastName&quot;: &quot;${chaudhary}&quot;,&#xd;
+      &quot;loginId&quot;: &quot;${efg}&quot;,&#xd;
+      &quot;firstName&quot;: &quot;${vinee}&quot;,&#xd;
+      &quot;middleName&quot;: &quot;${kuma}&quot;,&#xd;
+      &quot;lastName&quot;: &quot;${chaudhar}&quot;,&#xd;
       &quot;gender&quot;: &quot;${M}&quot;,&#xd;
       &quot;mobileNumber&quot;: &quot;${7838723200}&quot;,&#xd;
-      &quot;emailId&quot;: &quot;${kewal@incaendo.com}&quot;,&#xd;
+      &quot;emailId&quot;: &quot;${kewal123@incaendo.com}&quot;,&#xd;
       &quot;dateOfBirth&quot;: &quot;${1995-12-28}&quot;,&#xd;
-      &quot;nickname&quot;: &quot;${vin}&quot;,&#xd;
+      &quot;nickname&quot;: &quot;${vin12}&quot;,&#xd;
       &quot;updatedBy&quot;: &quot;${1234}&quot;,&#xd;
       &quot;shouldInvite&quot;: &quot;${true}&quot;&#xd;
     }&#xd;
@@ -141,7 +142,19 @@
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="filename">F:/testdata.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">aii,jai,singh,chauhan,M,7838723200,kewal123@incaendo.com,1995-12-28,vin12,1234,true,vin123</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UA13 :- Set User Profile By UUID" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -376,7 +389,7 @@
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/isCodeValidForUser</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
@@ -756,19 +769,7 @@
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">F:/testdata.csv</stringProp>
-            <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">kewal098,loginid,pass,mac,imei</stringProp>
-            <stringProp name="delimiter">,</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-          </CSVDataSet>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -907,6 +908,17 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="false">
+        <stringProp name="filename">F:/testdata.csv</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="variableNames"> 123,vineet,kumar,chaudhary,M,7838723200,kewal@incaendo.com,1995-12-28,lognid,1234,true,vin123, 123,vineet,kumar,chaudhary,M,7838723200,kewal@incaendo.com,1995-12-28,lognid,1234,true,vin123, ,vineet,5842bbae9a160,M,vin,1988-10-12, 583e64e2a113f,vin123,test2, 583e64e2a113f,kewal@incaendo.com,  583e64e2a113f,kewal@incaendo.com, 583e64e2a113f,7838723200,  kewal@incaendo.com,167171, kewal@incaendo.com,167044,Mobile, lognid,null,vineet,null,chaudhary,null,null,M,vin,kewal@incaendo.com,7838723209,null,0000-00-00,0,0,2016-12-02 19:19:18,2016-12-02 19:48:21,58417,null,123,null,null, vineet,JTmXXxefhGP7vUKZqIa34c0GU, vineet,JTmXXxefhGP7vUKZqIa34c0GU, 583e64e2a113f,7073931,test2, loginid,167171, 58417bde67998,5842bce891302&quot;,is_teacher, knojiyak1,d41d8cd98f00b204e9800998ecf8427e,1c:87:2c:9e:8a:21,357870062622548,Gaurav,androidmobile,Android,5.0,4.1.2.5     </stringProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+      </CSVDataSet>
+      <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
