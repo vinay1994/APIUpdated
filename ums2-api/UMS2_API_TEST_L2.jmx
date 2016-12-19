@@ -21,7 +21,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">3</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -87,12 +87,12 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2 - Create Adult User Data" enabled="true">
-            <stringProp name="filename">F:\API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
+            <stringProp name="filename">API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
             <stringProp name="delimiter">,</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
+            <boolProp name="quotedData">true</boolProp>
+            <boolProp name="recycle">false</boolProp>
             <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
           </CSVDataSet>
@@ -107,20 +107,20 @@
                 <stringProp name="Argument.value">{&#xd;
   &quot;user&quot;: [&#xd;
     {&#xd;
-      &quot;loginId&quot;: &quot;${lognid}&quot;,&#xd;
-      &quot;firstName&quot;: &quot;${vineet}&quot;,&#xd;
-      &quot;middleName&quot;: &quot;${kumar}&quot;,&#xd;
-      &quot;lastName&quot;: &quot;${chaudhary}&quot;,&#xd;
-      &quot;gender&quot;: &quot;${M}&quot;,&#xd;
-      &quot;mobileNumber&quot;: &quot;${7838723200}&quot;,&#xd;
-      &quot;emailId&quot;: &quot;${kewal@incaendo.com}&quot;,&#xd;
-      &quot;dateOfBirth&quot;: &quot;${1995-12-28}&quot;,&#xd;
-      &quot;nickname&quot;: &quot;${vin}&quot;,&#xd;
-      &quot;updatedBy&quot;: &quot;${1234}&quot;,&#xd;
-      &quot;shouldInvite&quot;: &quot;${true}&quot;&#xd;
+      &quot;loginId&quot;: &quot;${umsLoginId}&quot;,&#xd;
+      &quot;firstName&quot;: &quot;${umsFName}&quot;,&#xd;
+      &quot;middleName&quot;: &quot;${umsMName}&quot;,&#xd;
+      &quot;lastName&quot;: &quot;${umsLName}&quot;,&#xd;
+      &quot;gender&quot;: &quot;${umsGender}&quot;,&#xd;
+      &quot;mobileNumber&quot;: &quot;${umsMobileNum}&quot;,&#xd;
+      &quot;emailId&quot;: &quot;${umsEmailId}&quot;,&#xd;
+      &quot;dateOfBirth&quot;: &quot;${umsDOB}&quot;,&#xd;
+      &quot;nickname&quot;: &quot;${umsNickName}&quot;,&#xd;
+      &quot;updatedBy&quot;: ${umsUpdateBy},&#xd;
+      &quot;shouldInvite&quot;: &quot;${umsShldInvite}&quot;&#xd;
     }&#xd;
   ],&#xd;
-  &quot;password&quot;: &quot;${vin123}&quot;&#xd;
+  &quot;password&quot;: &quot;${umsPassword}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -144,7 +144,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2-1 - Create Minor User Data" enabled="true">
-            <stringProp name="filename">F:\API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
+            <stringProp name="filename">API_TEST_DATA\UA2_Create_Minor_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -176,13 +176,95 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2-1 - Create Minor User Data" enabled="true">
-            <stringProp name="filename">F:\API_TEST_DATA\UA1_User_UUID.csv</stringProp>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA1 - Get User By UUID data" enabled="true">
+            <stringProp name="filename">API_TEST_DATA\UA1_User_UUID.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsUserUuid</stringProp>
             <stringProp name="delimiter">,</stringProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USER_API_Create_Adult_User" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">3</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1481884722000</longProp>
+        <longProp name="ThreadGroup.end_time">1481884722000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Fliplearn UMS2 API Headers" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UA2 - Create Adult User" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;user&quot;: [&#xd;
+    {&#xd;
+      &quot;loginId&quot;: &quot;${umsLoginId}&quot;,&#xd;
+      &quot;firstName&quot;: &quot;${umsFName}&quot;,&#xd;
+      &quot;middleName&quot;: &quot;${umsMName}&quot;,&#xd;
+      &quot;lastName&quot;: &quot;${umsLName}&quot;,&#xd;
+      &quot;gender&quot;: &quot;${umsGender}&quot;,&#xd;
+      &quot;mobileNumber&quot;: &quot;${umsMobileNum}&quot;,&#xd;
+      &quot;emailId&quot;: &quot;${umsEmailId}&quot;,&#xd;
+      &quot;dateOfBirth&quot;: &quot;${umsDOB}&quot;,&#xd;
+      &quot;nickname&quot;: &quot;${umsNickName}&quot;,&#xd;
+      &quot;updatedBy&quot;: ${umsUpdateBy},&#xd;
+      &quot;shouldInvite&quot;: &quot;${umsShldInvite}&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;password&quot;: &quot;${umsPassword}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${umsBaseUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/createAdultUser</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2 - Create Adult User Data" enabled="true">
+            <stringProp name="filename">API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">true</boolProp>
+            <boolProp name="recycle">false</boolProp>
             <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
           </CSVDataSet>
