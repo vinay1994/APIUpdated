@@ -271,6 +271,107 @@
           <hashTree/>
         </hashTree>
       </hashTree>
+      <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Assertion And Reporting" enabled="true">
+        <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
+import java.util.Date; 
+
+String apiResData = new String(ResponseData);
+String apiResCode = new String(ResponseCode);
+String apiReqData = new String(SamplerData);
+String apiThreadGroup = ctx.getThreadGroup().getName();
+String apiSample = SampleResult.getSampleLabel();
+String apiResultCode = SampleResult.getResponseCode();
+String apiResultDesc = SampleResult.getResponseMessage();
+String apiPath = SampleResult.getURL().getPath();
+String apiHost = SampleResult.getURL().getHost();
+
+long apiResponseTime = SampleResult.getTime();
+//long apiLatency = SampleResult.getLatency();
+int apiBodySize = SampleResult.getBodySize();
+
+Date apiDate = new Date(); 
+SimpleDateFormat apiFormatDT = new SimpleDateFormat(&quot;dd-MMM-yyyy hh:mm:ss a&quot;);
+SimpleDateFormat apiFormatDTFN = new SimpleDateFormat(&quot;ddMMMyyyy_hhmma&quot;);
+String apiRunDateTime = apiFormatDT.format(apiDate);
+String apiRunFileDT = apiFormatDTFN.format(apiDate);
+
+FileWriter apiWrite = new FileWriter(&quot;E:\\APITesting\\Test_Output\\TXT_API_Reports\\&quot;+apiThreadGroup+&quot; Test Result.txt&quot;,true);
+BufferedWriter apiOut = new BufferedWriter(apiWrite);
+//print(&quot;-------------------+++-------------------+++-------------------&quot;);
+//print(&quot;API TEST ON: &quot;+apiSample+&quot;. API URL: &quot;+apiHost+apiPath);
+if (ResponseCode.equals(&quot;200&quot;)) {
+//	print(&quot;Load/response time: &quot;+apiResponseTime+&quot;. Latency: &quot;+apiLatency);
+    	print(&quot;\n----+++----+++---- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
+    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
+    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
+	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;PASS&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+else if (ResponseCode.equals(&quot;404&quot;)) {
+	print(&quot;\n----+++----+++---- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
+    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
+    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
+	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Check API deployment.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+else if (ResponseCode.equals(&quot;500&quot;)) {
+	if(ResponseData.length == 0){
+		print(&quot;\n----+++----+++---- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
+    		print(&quot;[MSG@ND] Nothing returns in response...\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
+    		apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
+		apiOut.write(apiResponseTime+&quot; ms;API TEST RESPONSE NOT FOUND.&quot;);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API returns nothing in response. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+	else{
+		print(&quot;\n----+++----+++---- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
+	    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
+	    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
+		apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Server error observed. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+}
+else {
+	print(&quot;\n----+++----+++---- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
+    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
+    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
+	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API test failed. Check deployment and prvide correct request parameters.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}</stringProp>
+        <stringProp name="BeanShellAssertion.filename"></stringProp>
+        <stringProp name="BeanShellAssertion.parameters"></stringProp>
+        <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+      </BeanShellAssertion>
+      <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
