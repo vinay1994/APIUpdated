@@ -1,6 +1,25 @@
-77660851,QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@fliplearn.com,01247894562,001,1,123
-,,SEBA,,,,1,1,,,demo_qa@fliplearn.com,0002,0001,1,123
-77660851,XXXXXXXX,,,,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,,demo@fliplearn.com,01247894562,001,0,123
-@#hgweerw274,QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@qa_jmter@fliplearn.com,01247894562,001,1,123
-77660851,QA12160011,,QA API Test School JMTR,23856kjerghesrjhgertert,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi..com,demo@fliplearn.com,01247894562,001,1,123
-77660851<script>alert("API Failed")</script>,QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@fliplearn.com,01247894562,001,1,123
+77660851,QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@fliplearn.com,1247894562,1,1,123
+,,SEBA,,,,1,1,,,demo_qa@fliplearn.com,2,1,1,123
+77660851,XXXXXXXX,,,,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,,demo@fliplearn.com,1247894562,1,0,123
+@#hgweerw274,QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@qa_jmter@fliplearn.com,1247894562,1,1,123
+77660851,QA12160011,,QA API Test School JMTR,23856kjerghesrjhgertert,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi..com,demo@fliplearn.com,1247894562,1,1,123
+"77660851<script>alert(""API Failed"")</script>",QA12160011,CBSE,QA API Test School JMTR,qa_jmter.png,JMeter Update School,1,1,514 UV P3 Gurgaon 122001,www.qafliplearnapi.com,demo@fliplearn.com,1247894562,1,1,123
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,school: [{,,,,,,,,,,,,,
+,,,"schoolCode: ${sclCodeUsr},",,,,,,,,,,,
+,,,"registrationCode: ""${sclRegCode}"",",,,,,,,,,,,
+,,,"board: ""${sclBoard}"",",,,,,,,,,,,
+,,,"name: ""${sclName}"",",,,,,,,,,,,
+,,,"logo: ""${sclLogo}"",",,,,,,,,,,,
+,,,"detail: ""${sclDetail}"",",,,,,,,,,,,
+,,,"cityId: ${sclCityId},",,,,,,,,,,,
+,,,"stateId: ${sclStateId},",,,,,,,,,,,
+,,,"address: ""${sclAddress}"",",,,,,,,,,,,
+,,,"website: ""${sclURL}"",",,,,,,,,,,,
+,,,"email: ""${sclEmail}"",",,,,,,,,,,,
+,,,"contacts: ""phone:${sclPhoneNum},fax:${sclFaxNum}"",",,,,,,,,,,,
+,,,"isActive: ${sclActive},",,,,,,,,,,,
+,,,actionedBy: ${sclCreatedBy},,,,,,,,,,,
+,,}],,,,,,,,,,,,
+,},,,,,,,,,,,,,
