@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Fliplearn V2 API Testing" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="grpBaseURL" elementType="Argument">
+            <stringProp name="Argument.name">grpBaseURL</stringProp>
+            <stringProp name="Argument.value">intgroup.fliplearn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="contentType" elementType="Argument">
+            <stringProp name="Argument.name">contentType</stringProp>
+            <stringProp name="Argument.value">application/json</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="csvGroupDataPath" elementType="Argument">
+            <stringProp name="Argument.name">csvGroupDataPath</stringProp>
+            <stringProp name="Argument.value">E:\APITesting\Ext_DataSet\Group_API_Test_Data_v1.1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Group_API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1386920045000</longProp>
+        <longProp name="ThreadGroup.end_time">1386920045000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Fliplearn Group API Headers" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">${contentType}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR3 - Add Group" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;group&quot;: [{&#xd;
+		&quot;groupName&quot;: &quot;${GR3grpName}&quot;,&#xd;
+		&quot;OwnerUuid&quot;: &quot;${GR3grpOwnerID}&quot;,&#xd;
+		&quot;groupTypeCode&quot;: &quot;${GR3grpTypeCode}&quot;,&#xd;
+		&quot;schoolCode&quot;: &quot;${GR3grpSchoolCode}&quot;,&#xd;
+		&quot;description&quot;: &quot;${GR3grpDescription}&quot;,&#xd;
+		&quot;groupLogo&quot;: &quot;${GR3grpLogo}&quot;,&#xd;
+		&quot;actionedBy&quot;: &quot;${GR3grpActionBy}&quot;&#xd;
+	}]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/addGroup</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR3 - Add Group Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR3_Add_Group.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR3grpName,GR3grpOwnerID,GR3grpTypeCode,GR3grpSchoolCode,GR3grpDescription,GR3grpLogo,GR3grpActionBy</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Group Code Extractor" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">GR3grpCode2Fetch</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;groupCode&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">GR3 groupCode Not Found</stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="AYID Extractor" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">sclAYID2Fetch</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;AYID&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">Ooops!! AYID Value Not Found.</stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR6 - Set Group Status By Group Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;isActive&quot;: &quot;${GR6grpActive}&quot;,&#xd;
+	&quot;groupCode&quot;: &quot;${GR6grpCode}&quot;,&#xd;
+	&quot;actionedBy&quot;:&quot;${GR6grpActionBy}&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/setGroupStatusByGroupCode</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR6 - Set Group Status By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR6_Set_Group_Status_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR6grpActive,GR6grpCode,GR6grpActionBy</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR8 - Update Group By Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;group&quot;: {&#xd;
+		&quot;groupCode&quot;: &quot;${GR8grpCode}&quot;,&#xd;
+		&quot;description&quot;: &quot;${GR8grpDescription}&quot;,&#xd;
+		&quot;actionedBy&quot;: &quot;${GR8grpActionBy}&quot;&#xd;
+		}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/updateGroupByCode</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR8 - Update Group By Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR8_Update_Group_By_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR8grpCode,GR8grpName,GR8grpDescription,GR8grpLogo,GR8grpActionBy</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR4  - Add User To Group By Group Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;group&quot;: {&#xd;
+      &quot;groupCode&quot;: &quot;${GR4grpCode}&quot;,&#xd;
+      &quot;schoolRoleCode&quot;: &quot;${GR4grpSclRoleCode}&quot;,&#xd;
+      &quot;activeDate&quot;: &quot;${GR4grpActivDate}&quot;,&#xd;
+      &quot;deactiveDate&quot;: &quot;${GR4grpDeactivDate}&quot;,&#xd;
+      &quot;actionedBy&quot;: &quot;${GR4grpActionBy}&quot;,&#xd;
+      &quot;uuid&quot;: &quot;${GR4grpUser1}&quot;&#xd;
+    	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/addUserToGroupByGroupCode</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR4  - Add User To Group By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR4_Add_User_To_Group_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR4grpCode,GR4grpSclRoleCode,GR4grpActivDate,GR4grpDeactivDate,GR4grpActionBy,GR4grpUser1,GR4grpUser2,GR4grpUser3,GR4grpUser4</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR7 - Block Unblock Users By Group Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;group&quot;: {&#xd;
+    &quot;groupCode&quot;: &quot;${GR7grpCode}&quot;,&#xd;
+    &quot;actionedBy&quot;: &quot;${GR7grpActionBy}&quot;,&#xd;
+    &quot;isActive&quot;: &quot;${GR7grpAcive}&quot;,&#xd;
+    &quot;groupUsers&quot;: [&#xd;
+      			&quot;${GR7grpUser1}&quot;,&#xd;
+      			&quot;${GR7grpUser2}&quot;,&#xd;
+      			&quot;${GR7grpUser3}&quot;,&#xd;
+      			&quot;${GR7grpUser4}&quot;&#xd;
+    				]&#xd;
+  	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/blockOrUnblockUsersByGroupCode</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR7 - Block Unblock Users By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR7_Block_Unblock_Users_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR7grpCode,GR7grpActionBy,GR7grpAcive,GR7grpUser1,GR7grpUser2,GR7grpUser3,GR7grpUser4</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR1 - Get Group User Mapping By UUID" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">group/getGroupsUsersMappingByUuids/${GR1grpUuid}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR1 - Get Group User Mapping By UUID Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR1_Get_Group_User_Mapping_By_UUID.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR1grpUuid</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR2 - Get Users By Group Code" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">group/getUsersByGroupCode/${GR2grpCode}?pageNum=${GR2grpPageNum}&amp;pageSize=${GR2grpPageSize}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR2 - Get Users By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR2_Get_Users_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR2grpCode,GR2grpPageNum,GR2grpPageSize</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR9 - Get Group Details By Group Code" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/getGroupDetailsByGroupCode/${GR9grpCode}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR9 - Get Group Details By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR9_Get_Group_Details_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR9grpCode</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR10 - Get Groups By Group Type" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/getGroupsByGroupType/${GR10grpSchoolCode}?groupType=${GR10grpTypeCode}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR10 - Get Groups By Group Type Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR10_Get_Groups_By_Group_Type.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR10grpSchoolCode,GR10grpTypeCode</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR12 - Update Role By Group Code" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;group&quot;: {&#xd;
+		&quot;groupCode&quot;: &quot;${GR12grpCode}&quot;,&#xd;
+		&quot;actionedBy&quot;: &quot;${GR12grpActionBy}&quot;,&#xd;
+		&quot;uuid&quot;: &quot;${GR12grpUUID}&quot;,&#xd;
+		&quot;groupRoleCode&quot;: &quot;${GR12grpRoleCode}&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/updateRoleByGroupCode</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR12 Update Role By Group Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR12_Update_Role_By_Group_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR12grpCode,GR12grpActionBy,GR12grpUUID,GR12grpRoleCode</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR13 - Update Group User" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;group&quot;: {&#xd;
+      &quot;groupCode&quot;: &quot;${GR13grpCode}&quot;,&#xd;
+      &quot;uuid&quot;: &quot;${GR13grpUuid}&quot;,&#xd;
+      &quot;groupRoleCode&quot;: &quot;${GR13grpRoleCode}&quot;,&#xd;
+      &quot;schoolRoleCode&quot;: &quot;${GR13grpSclRoleCode}&quot;,&#xd;
+      &quot;activeDate&quot;: &quot;${GR13grpAcivDate}&quot;,&#xd;
+      &quot;deactiveDate&quot;: &quot;${GR13grpDeactDate}&quot;,&#xd;
+      &quot;actionedBy&quot;: &quot;${GR13grpActionBy}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/updateGroupUser</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR13 - Update Group User Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR13_Update_Group_User.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR13grpCode,GR13grpUuid,GR13grpRoleCode,GR13grpSclRoleCode,GR13grpAcivDate,GR13grpDeactDate,GR13grpActionBy</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR15 - Update Profile" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;profile&quot;: {&#xd;
+    &quot;groupUserId&quot;: ${GR15grpUsrId},&#xd;
+    &quot;schoolRoleCode&quot;: &quot;${GR15grpSclRoleCode}&quot;,&#xd;
+    &quot;profileCode&quot;: &quot;${GR15grpProfCode}&quot;,&#xd;
+    &quot;baseProfileCode&quot;: &quot;${GR15grpBasProfCode}&quot;,&#xd;
+    &quot;refCode&quot;: &quot;${GR15grpRefCode}&quot;,&#xd;
+    &quot;profileName&quot;: &quot;${GR15grpProfName}&quot;,&#xd;
+    &quot;active&quot;: ${GR15grpActive}&#xd;
+  }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/addGroup</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR15 - Update Profile Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR15_Update_Profile.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR15grpUsrId,GR15grpSclRoleCode,GR15grpProfCode,GR15grpBasProfCode,GR15grpRefCode,GR15grpProfName,GR15grpActive</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR16 - Get Profile By Code" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">group/getProfileByCode/${GR16grpProfCode}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR16 - Get Profile By Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR16_Get_Profile_By_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR16grpProfCode</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR20 - Get Profiles By Base Code" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">group/getProfilesByBaseCode/${GR20grpBasProfCode}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR20 - Get Profiles By Base Code Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR20_Get_Profiles_By_Base_Code.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR20grpBasProfCode</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GR18 - Remove Role For User" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;group&quot;: {&#xd;
+    &quot;groupCode&quot;: &quot;${GR18grpCode}&quot;,&#xd;
+    &quot;schoolCode&quot;: &quot;${GR18grpSclCode}&quot;,&#xd;
+    &quot;schoolRoleCode&quot;: &quot;${GR18grpSclRolCode}&quot;,&#xd;
+    &quot;uuid&quot;: &quot;${GR18grpUuid}&quot;&#xd;
+  }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${grpBaseURL}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/group/removeRoleForUser</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR18 - Remove Role For User Data" enabled="true">
+            <stringProp name="filename">${csvGroupDataPath}\GR18_Remove_Role_For_User.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">GR18grpCode,GR18grpSclCode,GR18grpSclRolCode,GR18grpUuid</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="API Response Validation" enabled="false">
+        <stringProp name="JSON_PATH">$.error</stringProp>
+        <stringProp name="EXPECTED_VALUE"></stringProp>
+        <boolProp name="JSONVALIDATION">true</boolProp>
+        <boolProp name="EXPECT_NULL">true</boolProp>
+        <boolProp name="INVERT">false</boolProp>
+        <boolProp name="ISREGEX">true</boolProp>
+      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+      <hashTree/>
+      <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Assertion And Reporting" enabled="false">
+        <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
+import java.util.Date;
+
+String apiResData = new String(ResponseData);
+String apiResCode = new String(ResponseCode);
+String apiReqData = new String(SamplerData);
+String apiThreadGroup = ctx.getThreadGroup().getName();
+String apiSample = SampleResult.getSampleLabel();
+String apiResultCode = SampleResult.getResponseCode();
+String apiResultDesc = SampleResult.getResponseMessage();
+String apiPath = SampleResult.getURL().getPath();
+String apiHost = SampleResult.getURL().getHost();
+String apiResData404 = new String(&quot;HTML Error. Page Not Found&quot;);
+
+long apiResponseTime = SampleResult.getTime();
+long apiLatency = SampleResult.getLatency();
+long apiConnectTime = SampleResult.getConnectTime();
+
+int apiResErrorCount = SampleResult.getErrorCount();
+int apiBodySize = SampleResult.getBodySize();
+long apiTGroupStart = Long.parseLong(vars.get(&quot;TESTSTART.MS&quot;));
+long apiTGroupEnd = System.currentTimeMillis();
+
+// Date capture for reports
+Date apiDate = new Date(); 
+SimpleDateFormat apiFormatDT = new SimpleDateFormat(&quot;dd-MMM-yyyy hh:mm:ss a&quot;);
+SimpleDateFormat apiFormatDTFN = new SimpleDateFormat(&quot;ddMMMyyyy_hhmma&quot;);
+String apiRunDateTime = apiFormatDT.format(apiDate);
+String apiRunFileDT = apiFormatDTFN.format(apiDate);
+
+// Keep the result file path other than C:\ drive. Writting in C:\ drive is not permitted.
+FileWriter apiWrite = new FileWriter(&quot;E:\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+BufferedWriter apiOut = new BufferedWriter(apiWrite);
+
+//Response assertions
+if (ResponseCode.equals(&quot;200&quot;)) {
+	if (apiResErrorCount == 0){
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+	    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+	    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+	    	print(&quot;[MSG@ND] API Test Status: PASS\n----+++----+++---- END OF API ----+++----+++----&quot;);
+	    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;PASS&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+	else{
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+	    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+	    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+	    	print(&quot;[MSG@ND] API Test Status: PASS\n----+++----+++---- END OF API ----+++----+++----&quot;);
+	    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;REVIEW;Error code returns in response. Validate API error code with confluence.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+}
+else if (ResponseCode.equals(&quot;500&quot;)) {
+	if(ResponseData.length == 0){
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n[MSG@ND] Nothing returns in response...\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    		print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    		print(&quot;[MSG@ND] API Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;API Test Response Not Found.&quot;);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;FAIL;API returns nothing in response. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+	else {
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    		print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    		print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;FAIL;Server error observed. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+}
+else if(ResponseCode.contains(&quot;Non HTTP response code: java.net.URISyntaxException&quot;)){
+	print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+	print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+	print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    	print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+//    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;IGNORE&quot;);
+	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;java.net.URISyntaxException: Illegal characters in path&quot;);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+	apiOut.write(&quot;;FAIL;Illegal character validation condition not implemented in API.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+else {
+	print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+	print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+	print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    	print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData404);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+	apiOut.write(&quot;;FAIL;Test failed. Check deployment and provide correct request parameters.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+print(&quot;[MSG@ND] Thread Group &quot;+apiThreadGroup+&quot;Execution Duration: &quot;+(apiTGroupEnd - apiTGroupStart) / 1000 + &quot; seconds\n&quot;);</stringProp>
+        <stringProp name="BeanShellAssertion.filename"></stringProp>
+        <stringProp name="BeanShellAssertion.parameters"></stringProp>
+        <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+      </BeanShellAssertion>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>true</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>true</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
