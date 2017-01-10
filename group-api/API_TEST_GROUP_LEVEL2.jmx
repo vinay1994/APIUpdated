@@ -184,7 +184,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR3 - Add Group Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR3_Add_Group.csv</stringProp>
+            <stringProp name="filename">D:\TestData_APIs\group-api\Group_API_Test_Data\GR3_Add_Group.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR3grpName,GR3grpOwnerID,GR3grpTypeCode,GR3grpSchoolCode,GR3grpDescription,GR3grpLogo,GR3grpActionBy</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -666,7 +666,7 @@ String apiRunDateTime = apiFormatDT.format(apiDate);
 String apiRunFileDT = apiFormatDTFN.format(apiDate);
 
 // Keep the result file path other than C:\ drive. Writting in C:\ drive is not permitted.
-FileWriter apiWrite = new FileWriter(&quot;E:\\APITesting\\Test_Output\\TXT_API_Reports\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+FileWriter apiWrite = new FileWriter(&quot;D:\\TestData_APIs\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
 BufferedWriter apiOut = new BufferedWriter(apiWrite);
 
 //Response assertions
