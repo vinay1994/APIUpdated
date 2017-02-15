@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Fliplearn V2 API Testing" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="sonbBaseUrl" elementType="Argument">
+            <stringProp name="Argument.name">sonbBaseUrl</stringProp>
+            <stringProp name="Argument.value">intassets.fliplearn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="umsBaseUrl" elementType="Argument">
+            <stringProp name="Argument.name">umsBaseUrl</stringProp>
+            <stringProp name="Argument.value">intums.fliplearn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="blBaseUrl" elementType="Argument">
+            <stringProp name="Argument.name">blBaseUrl</stringProp>
+            <stringProp name="Argument.value">intbl.fliplearn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="s3BucketUrl" elementType="Argument">
+            <stringProp name="Argument.name">s3BucketUrl</stringProp>
+            <stringProp name="Argument.value">s3-ap-southeast-1.amazonaws.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="assetsUrl" elementType="Argument">
+            <stringProp name="Argument.name">assetsUrl</stringProp>
+            <stringProp name="Argument.value">devassets.fliplearn.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="csvSONBDataPath" elementType="Argument">
+            <stringProp name="Argument.name">csvSONBDataPath</stringProp>
+            <stringProp name="Argument.value">E:\APITesting\Ext_DataSet\SONB_API_Test_Files_v1.1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="fileUploadPathSONB" elementType="Argument">
+            <stringProp name="Argument.name">fileUploadPathSONB</stringProp>
+            <stringProp name="Argument.value">E:\APITesting\Ext_DataSet\SONB_API_Test_Files_v1.1\</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="School_Onboard_API" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1386920045000</longProp>
+        <longProp name="ThreadGroup.end_time">1386920045000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="UMS DB Connection" enabled="true">
+          <stringProp name="dataSource">usrOnbrd_db_conn</stringProp>
+          <stringProp name="poolMax">10</stringProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="checkQuery">Select 1</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://10.10.6.102:3306/ums_api</stringProp>
+          <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+          <stringProp name="username">root</stringProp>
+          <stringProp name="password">flip@159$$</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <MongoSourceElement guiclass="TestBeanGUI" testclass="MongoSourceElement" testname="SONB MongoDB Config" enabled="true">
+          <boolProp name="autoConnectRetry">false</boolProp>
+          <intProp name="connectTimeout">0</intProp>
+          <stringProp name="connection">10.10.6.102</stringProp>
+          <intProp name="connectionsPerHost">10</intProp>
+          <boolProp name="continueOnInsertError">false</boolProp>
+          <boolProp name="fsync">false</boolProp>
+          <longProp name="maxAutoConnectRetryTime">0</longProp>
+          <intProp name="maxWaitTime">120000</intProp>
+          <boolProp name="safe">false</boolProp>
+          <boolProp name="socketKeepAlive">false</boolProp>
+          <intProp name="socketTimeout">0</intProp>
+          <stringProp name="source">intapimongo</stringProp>
+          <intProp name="threadsAllowedToBlockForConnectionMultiplier">5</intProp>
+          <boolProp name="waitForJournaling">false</boolProp>
+          <intProp name="writeOperationNumberOfServers">0</intProp>
+          <intProp name="writeOperationTimeout">0</intProp>
+        </MongoSourceElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="School Onboard API Headers" enabled="false">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">loginId</stringProp>
+              <stringProp name="Header.value">knojiyak</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sessionToken</stringProp>
+              <stringProp name="Header.value">SYNBoY9yyx8et8JfCPaBtUPJu</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="XX1 - Guest Direct Upload" enabled="true">
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="${fileUploadPathSONB}${XX1sonbAstsFile}" elementType="HTTPFileArg">
+                <stringProp name="File.path">${fileUploadPathSONB}${XX1sonbAstsFile}</stringProp>
+                <stringProp name="File.paramname">file</stringProp>
+                <stringProp name="File.mimetype"></stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="path" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">${XX1sonvAstsPath}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">path</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${sonbBaseUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/assets/guestDirectUpload</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="XX1 - Guest Direct Upload Data" enabled="true">
+            <stringProp name="filename">${csvSONBDataPath}\XX1_Guest_Direct_Upload.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">XX1sonvAstsPath,XX1sonbAstsFile</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">XX1sonbRelatvPathEx</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;relativePath&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">Oops!! No Path</stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UA9 - User Login" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+&quot;login&quot;:{&#xd;
+	&quot;username&quot;:&quot;${UA9LoginId}&quot;,&#xd;
+	&quot;password&quot;:&quot;${UA9Password}&quot;,&#xd;
+	&quot;mac_address&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
+	&quot;imei_number&quot;:&quot;357870062622548&quot;,&#xd;
+	&quot;device_name&quot;:&quot;Gaurav&quot;,&#xd;
+	&quot;platform&quot;:&quot;androidmobile&quot;,&#xd;
+	&quot;os_name&quot;:&quot;Android&quot;,&#xd;
+	&quot;os_version&quot;:&quot;5.0&quot;,&#xd;
+	&quot;build_version&quot;:&quot;4.1.2.5&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${umsBaseUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Login API Header" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA9 - Login Credentials Data" enabled="true">
+            <stringProp name="filename">${csvSONBDataPath}\UA9_User_Login.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">UA9LoginId,UA9Password</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="UUID Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">sonbUuidEx</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;uuid&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">Oops!! No Session Token</stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Session Token Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">sonbUsrSessionEx</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;sessionToken&quot;:&quot;(.+?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">Oops!! No Session Token</stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <JDBCPostProcessor guiclass="TestBeanGUI" testclass="JDBCPostProcessor" testname="Get User Email ID From DB" enabled="true">
+            <stringProp name="dataSource">usrOnbrd_db_conn</stringProp>
+            <stringProp name="queryType">Select Statement</stringProp>
+            <stringProp name="query">SELECT 
+    email_id
+FROM
+    ums_api.user_profile
+WHERE
+    user_id = (SELECT 
+            id
+        FROM
+            ums_api.user_master
+        WHERE
+            uuid = &apos;${sonbUuidEx}&apos;)</stringProp>
+            <stringProp name="queryArguments"></stringProp>
+            <stringProp name="queryArgumentsTypes"></stringProp>
+            <stringProp name="variableNames">sonbEmailIdDb</stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+          </JDBCPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="XX2 - SONB Upload Details" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;details&quot;: {&#xd;
+		&quot;filePath&quot;: &quot;${XX1sonbRelatvPathEx}&quot;,&#xd;
+		&quot;type&quot;: &quot;${XX2sonbUpldType}&quot;,&#xd;
+		&quot;uuid&quot;: &quot;${sonbUuidEx}&quot;,&#xd;
+		&quot;emailId&quot;: &quot;sonbEmailIdDb_1&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${blBaseUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/schoolonboarding/uploadDetails</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="SONB Upload Details API Header" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">loginId</stringProp>
+                <stringProp name="Header.value">${UA9LoginId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">sessiontoken</stringProp>
+                <stringProp name="Header.value">${sonbUsrSessionEx}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="XX2 - SONB Upload Details Data" enabled="true">
+            <stringProp name="filename">${csvSONBDataPath}\UA9_User_Login.csv</stringProp>
+            <stringProp name="fileEncoding"></stringProp>
+            <stringProp name="variableNames">XX2sonbUpldType</stringProp>
+            <stringProp name="delimiter">,</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Ex Test" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${sonbBaseUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/${UA9LoginId}/-----/${sonbUuidEx}/------/${sonbUsrSessionEx}/---/${sonbEmailIdDb_1}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="4 Min Wait" enabled="true">
+          <stringProp name="TestPlan.comments">Waiting till cron job completes execution</stringProp>
+          <stringProp name="ConstantTimer.delay">240000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <MongoScriptSampler guiclass="TestBeanGUI" testclass="MongoScriptSampler" testname="Get UONB File Path From MongoDB" enabled="true">
+          <stringProp name="database">school_boarding_db</stringProp>
+          <stringProp name="password"></stringProp>
+          <stringProp name="source">intapimongo</stringProp>
+          <stringProp name="username"></stringProp>
+          <stringProp name="script">db.getCollection(&quot;download_result_details&quot;).findOne()</stringProp>
+        </MongoScriptSampler>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Download Path Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">uonbDwldPath</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$..download_path</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">nooo!!</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="S3 Bucket - Download UONB File" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${s3BucketUrl}/${assetsUrl}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/${uonbDwldPath}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="API Response Validation" enabled="false">
+        <stringProp name="JSON_PATH">$.error</stringProp>
+        <stringProp name="EXPECTED_VALUE"></stringProp>
+        <boolProp name="JSONVALIDATION">true</boolProp>
+        <boolProp name="EXPECT_NULL">true</boolProp>
+        <boolProp name="INVERT">false</boolProp>
+        <boolProp name="ISREGEX">true</boolProp>
+      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+      <hashTree/>
+      <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Assertion And Reporting" enabled="false">
+        <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
+import java.util.Date;
+
+String apiResData = new String(ResponseData);
+String apiResCode = new String(ResponseCode);
+String apiReqData = new String(SamplerData);
+String apiThreadGroup = ctx.getThreadGroup().getName();
+String apiSample = SampleResult.getSampleLabel();
+String apiResultCode = SampleResult.getResponseCode();
+String apiResultDesc = SampleResult.getResponseMessage();
+String apiPath = SampleResult.getURL().getPath();
+String apiHost = SampleResult.getURL().getHost();
+String apiResData404 = new String(&quot;HTML Error. Page Not Found&quot;);
+
+long apiResponseTime = SampleResult.getTime();
+long apiLatency = SampleResult.getLatency();
+long apiConnectTime = SampleResult.getConnectTime();
+
+int apiResErrorCount = SampleResult.getErrorCount();
+int apiBodySize = SampleResult.getBodySize();
+long apiTGroupStart = Long.parseLong(vars.get(&quot;TESTSTART.MS&quot;));
+long apiTGroupEnd = System.currentTimeMillis();
+
+// Date capture for reports
+Date apiDate = new Date(); 
+SimpleDateFormat apiFormatDT = new SimpleDateFormat(&quot;dd-MMM-yyyy hh:mm:ss a&quot;);
+SimpleDateFormat apiFormatDTFN = new SimpleDateFormat(&quot;ddMMMyyyy_hhmma&quot;);
+String apiRunDateTime = apiFormatDT.format(apiDate);
+String apiRunFileDT = apiFormatDTFN.format(apiDate);
+
+// Keep the result file path other than C:\ drive. Writting in C:\ drive is not permitted.
+FileWriter apiWrite = new FileWriter(&quot;E:\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+BufferedWriter apiOut = new BufferedWriter(apiWrite);
+
+//Response assertions
+if (ResponseCode.equals(&quot;200&quot;)) {
+	if (apiResErrorCount == 0){
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+	    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+	    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+	    	print(&quot;[MSG@ND] API Test Status: PASS\n----+++----+++---- END OF API ----+++----+++----&quot;);
+	    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;PASS&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+	else{
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+	    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+	    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+	    	print(&quot;[MSG@ND] API Test Status: PASS\n----+++----+++---- END OF API ----+++----+++----&quot;);
+	    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;REVIEW;Error code returns in response. Validate API error code with confluence.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+}
+else if (ResponseCode.equals(&quot;500&quot;)) {
+	if(ResponseData.length == 0){
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n[MSG@ND] Nothing returns in response...\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    		print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    		print(&quot;[MSG@ND] API Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;API Test Response Not Found.&quot;);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;FAIL;API returns nothing in response. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+	else {
+		print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    		print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+		print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+		print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    		print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    		print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	    	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData);
+		apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+		apiOut.write(&quot;;FAIL;Server error observed. Provide correct API parameters.&quot;);
+		apiOut.write(System.getProperty(&quot;line.separator&quot;));
+		apiOut.close();
+		apiWrite.close();
+	}
+}
+else if(ResponseCode.contains(&quot;Non HTTP response code: java.net.URISyntaxException&quot;)){
+	print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+	print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+	print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    	print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+//    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;IGNORE&quot;);
+	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;java.net.URISyntaxException: Illegal characters in path&quot;);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+	apiOut.write(&quot;;FAIL;Illegal character validation condition not implemented in API.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+else {
+	print(&quot;\n--++--++-- [MSG@ND] VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot; :: ----+++----+++----\n&quot;);
+    	print(apiReqData+&quot;\n--++--++-- [MSG@ND] GOT RESPONSE ----+++----+++----&quot;);
+	print(apiResData+&quot;\n\n----+++----+++----+++----+++----+++----+++----+++----+++----&quot;);
+	print(&quot;[MSG@ND] Got Response Code: &quot;+apiResultCode+&quot;\n[MSG@ND] Got Response Message: &quot;+apiResultDesc);
+    	print(&quot;[MSG@ND] API Error Count: &quot;+apiResErrorCount);
+    	print(&quot;[MSG@ND] Test Status: FAILED\n----+++----+++---- END OF API ----+++----+++----&quot;);
+    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;+apiSample+&quot;;&quot;+apiResultCode);
+	apiOut.write(&quot;;&quot;+apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;+apiResData404);
+	apiOut.write(&quot;;&quot;+apiBodySize+&quot;;&quot;+apiResponseTime+&quot;;&quot;+apiLatency+&quot;;&quot;+apiConnectTime);
+	apiOut.write(&quot;;FAIL;Test failed. Check deployment and provide correct request parameters.&quot;);
+	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+	apiOut.close();
+	apiWrite.close();
+}
+print(&quot;[MSG@ND] Thread Group &quot;+apiThreadGroup+&quot;Execution Duration: &quot;+(apiTGroupEnd - apiTGroupStart) / 1000 + &quot; seconds\n&quot;);</stringProp>
+        <stringProp name="BeanShellAssertion.filename"></stringProp>
+        <stringProp name="BeanShellAssertion.parameters"></stringProp>
+        <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+      </BeanShellAssertion>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>true</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>true</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+        <stringProp name="FileSaver.filename">uonb_data_</stringProp>
+        <boolProp name="FileSaver.errorsonly">false</boolProp>
+        <boolProp name="FileSaver.skipautonumber">false</boolProp>
+        <boolProp name="FileSaver.skipsuffix">false</boolProp>
+        <boolProp name="FileSaver.successonly">true</boolProp>
+        <stringProp name="FileSaver.variablename">manual</stringProp>
+        <boolProp name="FileSaver.addTimstamp">true</boolProp>
+      </ResultSaver>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>true</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <boolProp name="useGroupName">true</boolProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
