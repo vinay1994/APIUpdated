@@ -1,8 +1,0 @@
-knojiyaTest1,password1,Rachna2,,Sundriyal,,177277,Female,Rac,rachna.sundriyal@fliplearn.com,8767567876,,28-12-2009,0,0,05-01-2017 15:24,05-01-2017 15:24,29405618,,123,INI,,,Testing QA1,TestingQA2,1,1,10059,abc123
-knojiyaTest2,password1,,,Sundriyal,,177277,Female,Rac,rachna.sundriyal@fliplearn.com,8767567876,,28-12-2010,0,0,05-01-2017 15:24,05-01-2017 15:24,29405618,,123,INI,,,Testing QA1,TestingQA2,1,1,10059,abc123
-user1login,QA User,,One,M,2098312345,user1@fliplearn.com,01-01-1985,usr,1,TRUE,user12345,,,,,,,,,,,,,,,,,
-,QA User,,One,M,2098312345,user1@fliplearn.com,01-01-1985,usr,1,TRUE,user12345,,,,,,,,,,,,,,,,,
-user1login,,Qa,One,M,2098312345,user1@fliplearn.com,01-01-1985,usr,1,TRUE,user12345,,,,,,,,,,,,,,,,,
-user1login,QA User,,One,M,2098312345,user1@fliplearn,01-01-1985,usr,1,TRUE,user12345,,,,,,,,,,,,,,,,,
-user1login,QA User,,One,M,,user1@fliplearn.com,01-01-1985,usr,1,TRUE,,,,,,,,,,,,,,,,,,
-user@123,QA User,$#@!,One,M,,user1@,01-01-1985,usr,1,TRUE,,,,,,,,,,,,,,,,,,
