@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="baseURL" elementType="Argument">
             <stringProp name="Argument.name">baseURL</stringProp>
-            <stringProp name="Argument.value">devbl.fliplearn.com</stringProp>
+            <stringProp name="Argument.value">intbl.fliplearn.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="contentType" elementType="Argument">
@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="csvGroupDataPath" elementType="Argument">
             <stringProp name="Argument.name">csvGroupDataPath</stringProp>
-            <stringProp name="Argument.value">D:\TestData_APIs\BL_API_Test_Data_L2</stringProp>
+            <stringProp name="Argument.value">Business_Layer_API_Test_Data_v1.0</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -31,7 +31,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">7</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -76,7 +76,7 @@
         </Arguments>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Get API Request Data - Group" enabled="false">
-          <stringProp name="filename">${csvGroupDataPath}\Get_API_Data.csv</stringProp>
+          <stringProp name="filename">${csvGroupDataPath}/Get_API_Data.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">grpUUID,grpSchoolCode,grpTypeCode,grpCode,grpPageNum,grpPageSize</stringProp>
           <stringProp name="delimiter">,</stringProp>
@@ -95,7 +95,7 @@
           </collectionProp>
         </HeaderManager>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL12 - Get Subject Details By SectionCode" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL12 - Get Subject Details By SectionCode" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -124,7 +124,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Section Code Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL12_Get_Subject_Details_BySectionCode.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL12_Get_Subject_Details_BySectionCode.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blseccode</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -135,7 +135,7 @@
           </CSVDataSet>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL16 - Register User" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL16 - Register User" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -157,7 +157,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Uuid&apos;s Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL16_uuids.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL16_uuids.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">bluuid</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -169,7 +169,7 @@
           <hashTree/>
         </hashTree>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UserID &amp; session Data Set" enabled="false">
-          <stringProp name="filename">${csvGroupDataPath}\BL18_IsUserLoggedIn.csv</stringProp>
+          <stringProp name="filename">${csvGroupDataPath}/BL18_IsUserLoggedIn.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">blloginID,blsessionToken</stringProp>
           <stringProp name="delimiter">,</stringProp>
@@ -208,7 +208,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UUIDs Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL161_Get_User_ByUUID.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL161_Get_User_ByUUID.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">bluuid</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -248,7 +248,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/getUserByInviteCode</stringProp>
+          <stringProp name="HTTPSampler.path">/user/login</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -260,7 +260,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="login Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL17_Login.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL17_Login.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blusername,blpassword,blmacaddress,blimeinumber,bldevicename,blplatform,blosname,blosversion,blbuildversion</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -271,7 +271,7 @@
           </CSVDataSet>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL18 - Is User Logged In" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL18 - Is User Logged In" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -331,7 +331,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="LoginID Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL19_sendForgetVerificationCode.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL19_sendForgetVerificationCode.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blloginId</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -428,7 +428,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL22_verifyEmailViaOtp.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL22_verifyEmailViaOtp.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blloginId,blverifyCode</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -471,7 +471,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL23_verifyMobileViaOtp.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL23_verifyMobileViaOtp.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blloginId,blverifyCode</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -511,7 +511,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Login Ids Data set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL28_sendMobileVerificationCode.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL28_sendMobileVerificationCode.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blloginId</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -598,7 +598,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="uuid/oldpassword/new password Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL30_SetUserPassword.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL30_SetUserPassword.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">bluuid,bloldpassword,blnewpassword</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -642,7 +642,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Forget password Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL300_setForgetUserPassword.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL300_setForgetUserPassword.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">bluuid,blforgetCode,blnewPassword</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -682,7 +682,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Mobile Number Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL321_getUserByMobile.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL321_getUserByMobile.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blmobilenumber</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -722,7 +722,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Email Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL322_getUserByEmail.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL322_getUserByEmail.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">blemailid</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -762,7 +762,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="InviteCodes Data Set" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\BL33_getUserByInviteCode.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/BL33_getUserByInviteCode.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">inviteCode</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -1357,7 +1357,8 @@
         </hashTree>
       </hashTree>
       <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="API Test Assertions" enabled="true">
-        <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
+        <stringProp name="BeanShellAssertion.query">import org.apache.jmeter.services.FileServer;
+import java.text.SimpleDateFormat; 
 import java.util.Date;
 
 String apiResData = new String(ResponseData);
@@ -1388,7 +1389,8 @@ String apiRunDateTime = apiFormatDT.format(apiDate);
 String apiRunFileDT = apiFormatDTFN.format(apiDate);
 
 // Keep the result file path other than C:\ drive. Writting in C:\ drive is not permitted.
-FileWriter apiWrite = new FileWriter(&quot;D:\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+//FileWriter apiWrite = new FileWriter(&quot;D:\\&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+FileWriter apiWrite = new FileWriter(FileServer.getFileServer().getBaseDir()+&quot;/test-reports/&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
 BufferedWriter apiOut = new BufferedWriter(apiWrite);
 
 //Response assertions
