@@ -1,0 +1,1 @@
+22-Mar-2017 07:00:33 PM;BusinessLayer_API;LoginAPI;200;OK;intbl.fliplearn.com/user/login;{"status":null,"login":null,"error":{"errorCode":514,"errorMessage":"Session token not valid","internalMessage":"Session token not valid"}};150;557;557;239;PASS

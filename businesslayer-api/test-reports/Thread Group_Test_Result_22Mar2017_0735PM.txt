@@ -1,0 +1,2 @@
+22-Mar-2017 07:35:11 PM;Thread Group;LoginAPI;500;Internal Server Error;intbl.fliplearn.com/user/login;API Test Response Not Found.;5;408;408;257;FAIL;API returns nothing in response. Provide correct API parameters.
+22-Mar-2017 07:35:20 PM;Thread Group;LoginAPI;500;Internal Server Error;intbl.fliplearn.com/user/login;API Test Response Not Found.;5;261;261;113;FAIL;API returns nothing in response. Provide correct API parameters.

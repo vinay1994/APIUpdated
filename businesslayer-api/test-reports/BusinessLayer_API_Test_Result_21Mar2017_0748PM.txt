@@ -1,1 +1,0 @@
-21-Mar-2017 07:48:45 PM;BusinessLayer_API;BL17 - Login;404;Not Found;intbl.fliplearn.com/getUserByInviteCode;HTML Error. Page Not Found;884;645;645;417;FAIL;Test failed. Check deployment and provide correct request parameters.

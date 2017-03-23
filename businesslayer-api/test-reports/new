@@ -1,0 +1,6 @@
+200,OK,true,http://intbl.fliplearn.com/staticContent/getStaticContent/privacy
+200,OK,true,http://intbl.fliplearn.com/user/getUserByMobile/7838723209
+200,OK,true,http://intbl.fliplearn.com/user/getUserByEmailId/kewal@incaendo.com
+Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: ltbl.fliplearn.com: Name or service not known,false,http://ltbl.fliplearn.com/staticContent/getStaticContent/privacy
+Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: ltbl.fliplearn.com,false,http://ltbl.fliplearn.com/user/getUserByMobile/7838723209
+Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: ltbl.fliplearn.com,false,http://ltbl.fliplearn.com/user/getUserByEmailId/kewal@incaendo.com
