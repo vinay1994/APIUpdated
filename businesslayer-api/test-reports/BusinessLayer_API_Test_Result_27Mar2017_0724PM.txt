@@ -1,2 +1,0 @@
-27-Mar-2017 07:24:00 PM;BusinessLayer_API;BL17 - Login;Non HTTP response code: java.net.UnknownHostException;Non HTTP response message: intbl.fliplearn.com: Name or service not known;intbl.fliplearn.com/user/login;HTML Error. Page Not Found;2240;65;0;65;FAIL;Test failed. Check deployment and provide correct request parameters.
-27-Mar-2017 07:24:31 PM;BusinessLayer_API;BL17 - Login;200;OK;ltbl.fliplearn.com/user/login;{"data":null,"error":{"errorCode":500,"errorMessage":null,"internalMessage":"Exception in backend api call."}};110;187;187;59;PASS

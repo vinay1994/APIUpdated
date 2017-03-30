@@ -1,1 +1,0 @@
-27-Mar-2017 09:17:12 PM;BusinessLayer_API;B19 - Send Forget Verification Code;Non HTTP response code: java.net.SocketException;Non HTTP response message: Socket closed;ltbl.fliplearn.com/user/sendForgetVerificationCode/knojiyak;HTML Error. Page Not Found;2754;29198;0;0;FAIL;Test failed. Check deployment and provide correct request parameters.

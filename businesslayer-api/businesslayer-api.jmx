@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="baseURL" elementType="Argument">
             <stringProp name="Argument.name">baseURL</stringProp>
-            <stringProp name="Argument.value">ltbl.fliplearn.com</stringProp>
+            <stringProp name="Argument.value">intbl.fliplearn.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="contentType" elementType="Argument">
@@ -139,20 +139,20 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-&quot;login&quot;:&#xd;
-{&#xd;
-&quot;username&quot;:&quot;QAUSER4&quot;,&#xd;
-&quot;password&quot;:&quot;123456&quot;,&#xd;
-&quot;mac_address&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
-&quot;imei_number&quot;:&quot;357870062622548&quot;,&#xd;
-&quot;device_name&quot;:&quot;Kewal Kanojia&quot;,&#xd;
-&quot;platform&quot;:&quot;androidmobile&quot;,&#xd;
-&quot;os_name&quot;:&quot;Android&quot;,&#xd;
-&quot;os_version&quot;:&quot;5.0&quot;,&#xd;
-&quot;build_version&quot;:&quot;4.1.2.5&quot;,&#xd;
-&quot;deviceCode&quot;:&quot;ef0e515c3c4e&quot;&#xd;
-}&#xd;
-}</stringProp>
+ &quot;login&quot;:&#xd;
+	{&#xd;
+	&quot;loginId&quot;:&quot;QAUSER4&quot;,&#xd;
+	&quot;password&quot;:&quot;123456&quot;,&#xd;
+	&quot;macAddress&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
+	&quot;imeiNumber&quot;:&quot;357870062622548&quot;,&#xd;
+	&quot;deviceName&quot;:&quot;Kewal Kanojia&quot;,&#xd;
+	&quot;platform&quot;:&quot;androidmobile&quot;,&#xd;
+	&quot;osName&quot;:&quot;Android&quot;,&#xd;
+	&quot;osVersion&quot;:&quot;5.0&quot;,&#xd;
+	&quot;buildVersion&quot;:&quot;4.1.2.5&quot;,&#xd;
+	&quot;deviceCode&quot;:&quot;&quot;&#xd;
+	}&#xd;
+	}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -3764,7 +3764,7 @@ print(&quot;[MSG@ND] Thread Group &quot;+apiThreadGroup+&quot;Execution Duration
             <url>true</url>
           </value>
         </objProp>
-        <stringProp name="filename">/home/satya/FEPL_API_AUTOMATION/businesslayer-api/test-reports/new</stringProp>
+        <stringProp name="filename">test-reports/new</stringProp>
       </ResultCollector>
       <hashTree/>
       <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="API Response Validation" enabled="false">
@@ -3947,7 +3947,8 @@ String apiRunFileDT = apiFormatDTFN.format(apiDate);
 
 // Keep the result file path other than C:\ drive. Writting in C:\ drive is not permitted.
 //FileWriter apiWrite = new FileWriter(&quot;D:\\TestDatalogs\\Businesslayer&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
-//String directory = System.getProperty(&quot;user.dir&quot;);
+//String directory = System.getProperty(&quot;user.dir&quot;);release_feb2017
+print(FileServer.getFileServer().getBaseDir());
 FileWriter apiWrite = new FileWriter(FileServer.getFileServer().getBaseDir()+&quot;/test-reports/&quot;+apiThreadGroup+&quot;_Test_Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
 
 BufferedWriter apiOut = new BufferedWriter(apiWrite);
