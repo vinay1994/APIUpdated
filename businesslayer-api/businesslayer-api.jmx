@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="baseURL" elementType="Argument">
             <stringProp name="Argument.name">baseURL</stringProp>
-            <stringProp name="Argument.value">intbl.fliplearn.com</stringProp>
+            <stringProp name="Argument.value">ltumsp7.fliplearn.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="contentType" elementType="Argument">
@@ -103,7 +103,7 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Check if LoginId Exists" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Check if LoginId Exists" enabled="false">
             <stringProp name="filename">${csvGroupDataPath}/BL21_checkifLoginIdExists.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">grpUUID</stringProp>
@@ -123,11 +123,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">sessionToken</stringProp>
-              <stringProp name="Header.value">${blUsrSessionEx}</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">profileCode</stringProp>
-              <stringProp name="Header.value">6333</stringProp>
+              <stringProp name="Header.value">3RE0E3Bo1Jw4nba4SuSs377Zl</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
@@ -139,15 +135,15 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
- &quot;login&quot;:&#xd;
+	&quot;login&quot;:&#xd;
 	{&#xd;
 	&quot;loginId&quot;:&quot;QAUSER4&quot;,&#xd;
 	&quot;password&quot;:&quot;123456&quot;,&#xd;
 	&quot;macAddress&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
 	&quot;imeiNumber&quot;:&quot;357870062622548&quot;,&#xd;
 	&quot;deviceName&quot;:&quot;Kewal Kanojia&quot;,&#xd;
-	&quot;platform&quot;:&quot;androidmobile&quot;,&#xd;
-	&quot;osName&quot;:&quot;Android&quot;,&#xd;
+	&quot;platform&quot;:&quot;web&quot;,&#xd;
+	&quot;osName&quot;:&quot;web&quot;,&#xd;
 	&quot;osVersion&quot;:&quot;5.0&quot;,&#xd;
 	&quot;buildVersion&quot;:&quot;4.1.2.5&quot;,&#xd;
 	&quot;deviceCode&quot;:&quot;&quot;&#xd;
@@ -163,7 +159,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/user/login</stringProp>
+          <stringProp name="HTTPSampler.path">/login</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1675,7 +1671,17 @@
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="LoginHeader" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">loginId</stringProp>
+                <stringProp name="Header.value">QAUSER4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL74 - Get Profile Detail" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -1693,7 +1699,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/group/getProfileDetail/1417343515</stringProp>
+          <stringProp name="HTTPSampler.path">/group/getProfileDetail/1220712393</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1714,6 +1720,15 @@
             <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
           </CSVDataSet>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">loginId</stringProp>
+                <stringProp name="Header.value">QAUSER4</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="BL-75 getUserListForMobile" enabled="false">

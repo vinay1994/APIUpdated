@@ -1,0 +1,1 @@
+30-Mar-2017 05:41:02 PM;BusinessLayer_API;BL17 - Login;200;OK;ltbl.fliplearn.com/user/login;{"data":null,"error":{"errorCode":400,"errorMessage":"userName can not be blank.","internalMessage":"userName can not be blank."}};130;543;543;153;PASS

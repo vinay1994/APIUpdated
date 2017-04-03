@@ -1,0 +1,2 @@
+01-Apr-2017 01:34:34 PM;BusinessLayer_API;BL17 - Login;Non HTTP response code: java.net.UnknownHostException;Non HTTP response message: ltumsp7.fliplearn.com: Name or service not known;ltumsp7.fliplearn.com//user/login;HTML Error. Page Not Found;2242;198;0;198;FAIL;Test failed. Check deployment and provide correct request parameters.
+01-Apr-2017 01:34:54 PM;BusinessLayer_API;BL17 - Login;404;Not Found;ltumsp7.fliplearn.com/user/login;HTML Error. Page Not Found;886;155;155;122;FAIL;Test failed. Check deployment and provide correct request parameters.
