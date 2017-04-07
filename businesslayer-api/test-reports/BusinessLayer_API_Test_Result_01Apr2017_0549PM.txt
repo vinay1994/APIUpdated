@@ -1,1 +1,0 @@
-01-Apr-2017 05:49:44 PM;BusinessLayer_API;BL17 - Login;200;OK;ltblp7.fliplearn.com/user/login;{"data":{"forcePassword":false,"deviceCode":null,"uuid":"20825531","sessionToken":"54w6EgfuRVsl0gR2STasDPgbm","expiryDate":"2017-05-01 17:49:47","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null};238;334;334;61;PASS
