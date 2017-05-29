@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+<jmeterTestPlan version="1.2" properties="2.6" jmeter="2.11.20151206">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Fliplearn V2 API Testing" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="csvGroupDataPath" elementType="Argument">
             <stringProp name="Argument.name">csvGroupDataPath</stringProp>
-            <stringProp name="Argument.value">E:\APITesting\Ext_DataSet\Group_API_Test_Data</stringProp>
+            <stringProp name="Argument.value">Group_API_Test_Data</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -272,7 +272,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR8 - Update Group By Code Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR8_Update_Group_By_Code.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR8_Update_Group_By_Code.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR8grpCode,GR8grpName,GR8grpDescription,GR8grpLogo,GR8grpActionBy</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -316,7 +316,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR6 - Set Group Status By Group Code Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR6_Set_Group_Status_By_Group_Code.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR6_Set_Group_Status_By_Group_Code.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR6grpActive,GR6grpCode,GR6grpActionBy</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -372,7 +372,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR4  - Add User To Group By Group Code Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR4_Add_User_To_Group_By_Group_Code.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR4_Add_User_To_Group_By_Group_Code.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR4grpCode,GR4grpSclRoleCode,GR4grpActivDate,GR4grpDeactivDate,GR4grpActionBy,GR4grpUser1,GR4grpUser2,GR4grpUser3,GR4grpUser4</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -424,7 +424,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR7 - Block Unblock Users By Group Code Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR7_Block_Unblock_Users_By_Group_Code.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR7_Block_Unblock_Users_By_Group_Code.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR7grpCode,GR7grpActionBy,GR7grpAcive,GR7grpUser1,GR7grpUser2,GR7grpUser3,GR7grpUser4</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -555,7 +555,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR12 Update Role By Group Code Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR12_Update_Role_By_Group_Code.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR12_Update_Role_By_Group_Code.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR12grpCode,GR12grpActionBy,GR12grpUUID,GR12grpRoleCode</stringProp>
             <stringProp name="delimiter">,</stringProp>
@@ -607,7 +607,7 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GR13 - Update Group User Data" enabled="true">
-            <stringProp name="filename">${csvGroupDataPath}\GR13_Update_Group_User.csv</stringProp>
+            <stringProp name="filename">${csvGroupDataPath}/GR13_Update_Group_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">GR13grpCode,GR13grpUuid,GR13grpRoleCode,GR13grpSclRoleCode,GR13grpAcivDate,GR13grpDeactDate,GR13grpActionBy</stringProp>
             <stringProp name="delimiter">,</stringProp>
