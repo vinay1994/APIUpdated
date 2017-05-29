@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="umsBaseUrl" elementType="Argument">
             <stringProp name="Argument.name">umsBaseUrl</stringProp>
-            <stringProp name="Argument.value">devums.fliplearn.com</stringProp>
+            <stringProp name="Argument.value">intums.fliplearn.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -21,7 +21,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">3</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -48,7 +48,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;user&quot;: [&#xd;
+  &quot;user&quot;: &#xd;
     {&#xd;
       &quot;loginId&quot;: &quot;${umsLoginId}&quot;,&#xd;
       &quot;firstName&quot;: &quot;${umsFName}&quot;,&#xd;
@@ -59,10 +59,15 @@
       &quot;emailId&quot;: &quot;${umsEmailId}&quot;,&#xd;
       &quot;dateOfBirth&quot;: &quot;${umsDOB}&quot;,&#xd;
       &quot;nickname&quot;: &quot;${umsNickName}&quot;,&#xd;
-      &quot;updatedBy&quot;: ${umsUpdateBy},&#xd;
-      &quot;shouldInvite&quot;: &quot;${umsShldInvite}&quot;&#xd;
+      &quot;updatedBy&quot;: &quot;${umsUpdateBy}&quot;,&#xd;
+      &quot;shouldInvite&quot;: &quot;${umsShldInvite}&quot;,&#xd;
+      &quot;addressLine1&quot;:&quot;${umsaddressLine1}&quot;,&#xd;
+      &quot;addressLine2&quot;:&quot;${umsaddressLine2}&quot;,&#xd;
+      &quot;cityId&quot;: &quot;${umscityId}&quot;,&#xd;
+      &quot;stateId&quot;: &quot;${UmsStateId}&quot;,&#xd;
+       &quot;zipCode&quot;:&quot;${UmszipCode}&quot;&#xd;
     }&#xd;
-  ],&#xd;
+  ,&#xd;
   &quot;password&quot;: &quot;${umsPassword}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -87,10 +92,10 @@
         </HTTPSamplerProxy>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2 - Create Adult User Data" enabled="true">
-            <stringProp name="filename">API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
+            <stringProp name="filename">C:\Automation\FEPL_API_AUTOMATION\ums2-api\UMS2_API_Test_Data_v1.0\UA2_Create_Adult_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
-            <stringProp name="delimiter">,</stringProp>
+            <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsaddressLine1,umsaddressLine2,umscityId,UmsStateId,UmszipCode,umsPassword</stringProp>
+            <stringProp name="delimiter">,,</stringProp>
             <boolProp name="quotedData">true</boolProp>
             <boolProp name="recycle">false</boolProp>
             <boolProp name="stopThread">false</boolProp>
@@ -143,7 +148,7 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2-1 - Create Minor User Data" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2-1 - Create Minor User Data" enabled="false">
             <stringProp name="filename">API_TEST_DATA\UA2_Create_Minor_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
@@ -176,7 +181,7 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA1 - Get User By UUID data" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA1 - Get User By UUID data" enabled="false">
             <stringProp name="filename">API_TEST_DATA\UA1_User_UUID.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsUserUuid</stringProp>
@@ -189,7 +194,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USER_API_Create_Adult_User" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USER_API_Create_Adult_User" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -204,7 +209,7 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Fliplearn UMS2 API Headers" enabled="true">
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Fliplearn UMS2 API Headers" enabled="false">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Content-Type</stringProp>
@@ -258,7 +263,7 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2 - Create Adult User Data" enabled="true">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="UA2 - Create Adult User Data" enabled="false">
             <stringProp name="filename">API_TEST_DATA\UA2_Create_Adult_User.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">umsLoginId,umsFName,umsMName,umsLName,umsGender,umsMobileNum,umsEmailId,umsDOB,umsNickName,umsUpdateBy,umsShldInvite,umsPassword</stringProp>
@@ -271,7 +276,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Assertion And Reporting" enabled="true">
+      <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="Response Assertion And Reporting" enabled="false">
         <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
 import java.util.Date; 
 
