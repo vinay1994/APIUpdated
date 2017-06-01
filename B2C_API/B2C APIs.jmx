@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="B2C APIs" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="B2CAPIs" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -21,14 +21,14 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">5</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <longProp name="ThreadGroup.start_time">1495690427000</longProp>
-        <longProp name="ThreadGroup.end_time">1495690427000</longProp>
+        <longProp name="ThreadGroup.start_time">1496160047000</longProp>
+        <longProp name="ThreadGroup.end_time">1496160047000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
@@ -40,8 +40,8 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">	{&#xd;
 	&quot;login&quot;:&#xd;
-	   {&#xd;
-	&quot;loginId&quot;:&quot;sohail.khan&quot;,&#xd;
+	{&#xd;
+	&quot;loginId&quot;:&quot;arbaaz.khan&quot;,&#xd;
 	&quot;password&quot;:&quot;123456&quot;,&#xd;
 	&quot;macAddress&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
 	&quot;imeiNumber&quot;:&quot;357870062622548&quot;,&#xd;
@@ -51,7 +51,7 @@
 	&quot;osVersion&quot;:&quot;5.0&quot;,&#xd;
 	&quot;buildVersion&quot;:&quot;4.1.2.5&quot;,&#xd;
 	&quot;deviceCode&quot;:&quot;&quot;&#xd;
-	  }&#xd;
+	}&#xd;
 	}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -77,7 +77,7 @@
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">sessionToken</stringProp>
-                <stringProp name="Header.value">eyx8ZLMwEMhC7XTBulKGBVd5h</stringProp>
+                <stringProp name="Header.value"></stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -109,7 +109,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">loginId</stringProp>
-              <stringProp name="Header.value">sohail.khan</stringProp>
+              <stringProp name="Header.value">arbaaz.khan</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">sessionToken</stringProp>
@@ -577,19 +577,7 @@
           <boolProp name="HTTPSampler.monitor">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="delimiter">,</stringProp>
-            <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename"></stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames"></stringProp>
-          </CSVDataSet>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getOrdersList" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -718,6 +706,7 @@ if (ResponseCode.equals(&quot;200&quot;)) {
     	print(apiResData+&quot;\n\n---- END OF API\n&quot;);
     	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
     	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+    	
 	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
 	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
 	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;PASS&quot;);
@@ -731,6 +720,7 @@ else if (ResponseCode.equals(&quot;404&quot;)) {
     	print(apiResData+&quot;\n END OF API ]n&quot;);
     	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
     	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+    		
 	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
 	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
 	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Check API deployment.&quot;);
@@ -745,6 +735,7 @@ else if (ResponseCode.equals(&quot;500&quot;)) {
     		print(&quot;[MSG@ND] Nothing returns in response...\n\n END OF API \n&quot;);
     		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
     		apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+    			
 		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
 		apiOut.write(apiResponseTime+&quot; ms;API TEST RESPONSE NOT FOUND.&quot;);
 		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API returns nothing in response. Provide correct API parameters.&quot;);
@@ -758,6 +749,7 @@ else if (ResponseCode.equals(&quot;500&quot;)) {
 	    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
     		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
 	    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+	    		
 		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
 		apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
 		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Server error observed. Provide correct API parameters.&quot;);
@@ -772,6 +764,7 @@ else {
     	print(apiResData+&quot;\n\n END OF API\n&quot;);
     	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
     	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
+    		
 	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
 	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
 	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API test failed. Check deployment and prvide correct request parameters.&quot;);
@@ -783,6 +776,42 @@ else {
           <stringProp name="BeanShellAssertion.parameters"></stringProp>
           <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
         </BeanShellAssertion>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
         <hashTree/>
       </hashTree>
     </hashTree>
