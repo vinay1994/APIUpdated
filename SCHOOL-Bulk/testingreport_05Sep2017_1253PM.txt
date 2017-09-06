@@ -1,0 +1,11 @@
+{
+"api_name":"createSchool",
+"api_runTime":"05-Sep-2017 12:53:13 PM",
+"api_responseCode":"200",
+"api_resultDesc":"OK",
+OK,
+"api_responseTime":"299",
+"api_resultDesc":"OK",
+"api_responseBodySize":"622"
+"api_responseData":"{"school":{"ayid":2,"ayidStartDate":"2017-06-28","ayidEndDate":"2018-07-28","registrationCode":"FLIP001_2416033","schoolCode":"82156185","schoolType":"REAL","board":"cbse","boardName":"","name":"Fliplearn Load Testing School_2416033","logo":"ab.png","detail":"Fliplearn Educaion School","address":"Udyog Vihar Gurgaon","cityId":1,"stateId":1,"website":"http:\/\/www.fliplearn.com\/","email":"satya@fliplearn.com","contacts":"phone:12345,fax:78965","actionedBy":3,"isActive":null,"schoolErpCode":null,"enabledFees":0,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0,"nonCommunication":0},"error":null}"
+},

@@ -1,0 +1,1218 @@
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 01:02:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"793",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"mmTXQivqRF53vES82rrvg2fWL","expiryDate":"2017-07-15 13:01:35","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 01:02:59 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"351",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/14973356352591497335634.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"663"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 01:02:59 PM",
+"api_responseCode":"Non HTTP response code: java.net.SocketException"Non HTTP response message: Socket closed,
+"api_responseTime":"84",
+"api_responseData":"
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:158)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:271)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:281)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.receiveResponseHeader(MeasuringConnectionManager.java:212)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1166)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1155)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:475)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:418)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:249)
+	at java.lang.Thread.run(Thread.java:748)
+",
+"api_responseBodySize":"2754"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 05:47:04 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"168",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"5YrlB32jWTgxFkv4QguEtEKpH","expiryDate":"2017-07-15 17:47:11","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 05:47:04 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"395",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 05:47:04 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"267",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 05:47:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"270",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 05:47:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"327",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"7078173958","name":"All Teachers (S. J. Public School, Jaipur)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"2484132","name":"Javedmohammed ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"2484133","name":"Sarojsingh5070 ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"parents":null},"error":null}",
+"api_responseBodySize":"554"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"335",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement634716","messageCode":"13568101","postedByUuid":"985140743057","created":"2017-06-15 17:46:34","updated":"2017-06-15 17:46:34","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:46:34","updated":"2017-06-15 17:46:34"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:46:34","updated":"2017-06-15 17:46:34"}],"title":"Announcement634716","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog",
+"api_runTime":"15-Jun-2017 05:47:06 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"343",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement634716","messageCode":"96826450","postedByUuid":"985140743057","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05"}],"title":"Announcement634716","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 05:47:06 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"442",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"16191253","postedByUuid":"985140743057","created":"2017-06-15 17:46:35","updated":"2017-06-15 17:46:35","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 17:46:35","updated":"2017-06-15 17:46:35"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:46:35","updated":"2017-06-15 17:46:35"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"acessLog2",
+"api_runTime":"15-Jun-2017 05:47:06 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"407",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"19969760","postedByUuid":"985140743057","created":"2017-06-15 17:47:06","updated":"2017-06-15 17:47:06","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 17:47:06","updated":"2017-06-15 17:47:06"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:06","updated":"2017-06-15 17:47:06"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"GetMessageDetails",
+"api_runTime":"15-Jun-2017 05:47:07 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"327",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Announcement634716","messageCode":96826450,"title":"Announcement634716","postedByUuid":"985140743057","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05","eventStartTime":null,"eventEndTime":null,"tags":[{"tags":"#announcement","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05"}],"target":[{"targetId":"135675805700","type":"G","targetName":"LKG-Tulip","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05","roleCode":"","uuid":""}],"blocked":0,"assetSetCode":"","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"likedCount":0,"selfLike":false,"messageAssets":null},"error":null}",
+"api_responseBodySize":"849"
+},
+{
+"api_name":"EditAlbum",
+"api_runTime":"15-Jun-2017 05:47:07 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"290",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 17:47:07","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"EditAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:07 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"289",
+"api_responseData":"
+{"message":{"sendsms":1,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Annonce","messageCode":96826450,"postedByUuid":"985140743057","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:46:36","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:05","updated":"2017-06-15 17:47:05"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"EditHomework",
+"api_runTime":"15-Jun-2017 05:47:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"288",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"home","messageCode":47950813,"postedByUuid":"985140743057","created":"2017-06-07 12:51:53","updated":"2017-06-15 17:47:07","blocked":0,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"title":"Homework_updated","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-07 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"772"
+},
+{
+"api_name":"GetSubjectsForTeacher",
+"api_runTime":"15-Jun-2017 05:47:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"296",
+"api_responseData":"
+{"sections":null,"error":{"errorCode":409,"errorMessage":"Record doesn't exist with given criteria :","internalMessage":"Record doesn't exist with given criteria :"}}",
+"api_responseBodySize":"166"
+},
+{
+"api_name":"DeleteAlbum",
+"api_runTime":"15-Jun-2017 05:47:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"320",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 17:46:37","blocked":1,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"DeleteAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"317",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Annonce","messageCode":40135988,"postedByUuid":"985140743057","created":"2017-06-07 12:53:16","updated":"2017-06-15 17:47:08","blocked":1,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"DeleteHomework",
+"api_runTime":"15-Jun-2017 05:47:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"323",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Homework","messageCode":88590900,"postedByUuid":"985140743057","created":"2017-06-07 12:55:05","updated":"2017-06-15 17:46:38","blocked":1,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"title":"Homwwork","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-08 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"768"
+},
+{
+"api_name":"GetSectionForAttendence",
+"api_runTime":"15-Jun-2017 05:47:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"254",
+"api_responseData":"
+{"classes":null,"editFlag":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"187"
+},
+{
+"api_name":"GetUserByGroupCode",
+"api_runTime":"15-Jun-2017 05:47:10 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"293",
+"api_responseData":"
+{"users":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"169"
+},
+{
+"api_name":"GetAttendenceForSection",
+"api_runTime":"15-Jun-2017 05:47:10 PM",
+"api_responseCode":"Non HTTP response code: java.net.SocketException"Non HTTP response message: Socket closed,
+"api_responseTime":"43",
+"api_responseData":"
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:158)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:271)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:281)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.receiveResponseHeader(MeasuringConnectionManager.java:212)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1166)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1155)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:475)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:418)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:249)
+	at java.lang.Thread.run(Thread.java:748)
+",
+"api_responseBodySize":"2754"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 05:47:25 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"204",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"GTkCX97mSltF7AEjNNLMuNkos","expiryDate":"2017-07-15 17:47:32","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 05:47:26 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"373",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 05:47:26 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"266",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 05:47:26 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"250",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 05:47:26 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"324",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"7078173958","name":"All Teachers (S. J. Public School, Jaipur)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"2484132","name":"Javedmohammed ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"2484133","name":"Sarojsingh5070 ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"parents":null},"error":null}",
+"api_responseBodySize":"554"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:27 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"357",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement294082","messageCode":"18992354","postedByUuid":"985140743057","created":"2017-06-15 17:46:55","updated":"2017-06-15 17:46:55","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:46:55","updated":"2017-06-15 17:46:55"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:46:55","updated":"2017-06-15 17:46:55"}],"title":"Announcement294082","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog",
+"api_runTime":"15-Jun-2017 05:47:27 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"357",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement294082","messageCode":"20112085","postedByUuid":"985140743057","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27"}],"title":"Announcement294082","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 05:47:28 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"444",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"11079099","postedByUuid":"985140743057","created":"2017-06-15 17:46:56","updated":"2017-06-15 17:46:56","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 17:46:56","updated":"2017-06-15 17:46:56"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:46:56","updated":"2017-06-15 17:46:56"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"acessLog2",
+"api_runTime":"15-Jun-2017 05:47:28 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"395",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"27984496","postedByUuid":"985140743057","created":"2017-06-15 17:47:28","updated":"2017-06-15 17:47:28","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 17:47:28","updated":"2017-06-15 17:47:28"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:28","updated":"2017-06-15 17:47:28"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"GetMessageDetails",
+"api_runTime":"15-Jun-2017 05:47:28 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"277",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Announcement294082","messageCode":20112085,"title":"Announcement294082","postedByUuid":"985140743057","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27","eventStartTime":null,"eventEndTime":null,"tags":[{"tags":"#announcement","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27"}],"target":[{"targetId":"135675805700","type":"G","targetName":"LKG-Tulip","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27","roleCode":"","uuid":""}],"blocked":0,"assetSetCode":"","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"likedCount":0,"selfLike":false,"messageAssets":null},"error":null}",
+"api_responseBodySize":"849"
+},
+{
+"api_name":"EditAlbum",
+"api_runTime":"15-Jun-2017 05:47:29 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"332",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 17:47:28","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"EditAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:29 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"298",
+"api_responseData":"
+{"message":{"sendsms":1,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Annonce","messageCode":20112085,"postedByUuid":"985140743057","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:46:57","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 17:47:27","updated":"2017-06-15 17:47:27"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"EditHomework",
+"api_runTime":"15-Jun-2017 05:47:29 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"327",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"home","messageCode":47950813,"postedByUuid":"985140743057","created":"2017-06-07 12:51:53","updated":"2017-06-15 17:47:29","blocked":0,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"title":"Homework_updated","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-07 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"772"
+},
+{
+"api_name":"GetSubjectsForTeacher",
+"api_runTime":"15-Jun-2017 05:47:30 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"334",
+"api_responseData":"
+{"sections":null,"error":{"errorCode":409,"errorMessage":"Record doesn't exist with given criteria :","internalMessage":"Record doesn't exist with given criteria :"}}",
+"api_responseBodySize":"166"
+},
+{
+"api_name":"DeleteAlbum",
+"api_runTime":"15-Jun-2017 05:47:30 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"283",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 17:46:58","blocked":1,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"DeleteAnnouncement",
+"api_runTime":"15-Jun-2017 05:47:30 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"270",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Annonce","messageCode":40135988,"postedByUuid":"985140743057","created":"2017-06-07 12:53:16","updated":"2017-06-15 17:47:30","blocked":1,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"DeleteHomework",
+"api_runTime":"15-Jun-2017 05:47:30 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"316",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Homework","messageCode":88590900,"postedByUuid":"985140743057","created":"2017-06-07 12:55:05","updated":"2017-06-15 17:46:59","blocked":1,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"title":"Homwwork","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-08 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"768"
+},
+{
+"api_name":"GetSectionForAttendence",
+"api_runTime":"15-Jun-2017 05:47:31 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"290",
+"api_responseData":"
+{"classes":null,"editFlag":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"187"
+},
+{
+"api_name":"GetUserByGroupCode",
+"api_runTime":"15-Jun-2017 05:47:31 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"259",
+"api_responseData":"
+{"users":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"169"
+},
+{
+"api_name":"GetAttendenceForSection",
+"api_runTime":"15-Jun-2017 05:47:31 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"379",
+"api_responseData":"
+{"attendance":[{"attendanceRangeDate":"2017-06-01","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":836,"uuid":"186149796201","status":"L","created":"2017-06-01 17:50:59","updated":"2017-06-01 17:50:59","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":0,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-02","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":864,"uuid":"824400044092","status":"L","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null},{"attendanceId":864,"uuid":"186149796201","status":"A","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-04","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":871,"uuid":"824400044092","status":"A","created":"2017-06-04 16:31:15","updated":"2017-06-04 16:31:15","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-05","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":876,"uuid":"824400044092","status":"A","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null},{"attendanceId":876,"uuid":"186149796201","status":"H","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":1,"isHoliday":null}},{"attendanceRangeDate":"2017-06-06","groupCode":"548938880033","actionedBy":"116837845404","users":[{"attendanceId":886,"uuid":"186149796201","status":"A","created":"2017-06-06 19:18:09","updated":"2017-06-06 19:18:09","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-07","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":887,"uuid":"824400044092","status":"A","created":"2017-06-15 17:46:46","updated":"2017-06-15 17:46:46","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}}],"error":null}",
+"api_responseBodySize":"2525"
+},
+{
+"api_name":"MarkAttendence",
+"api_runTime":"15-Jun-2017 05:47:32 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"335",
+"api_responseData":"
+{"status":true,"attendance":{"groupCode":"548938880033","attendanceDate":"2017-06-07","created":"2017-06-07 08:42:54","updated":"2017-06-15 17:47:00","actionedBy":"985140743057","users":[{"uuid":"824400044092","status":"A","created":"2017-06-15 17:47:00","updated":"2017-06-15 17:47:00"}],"sectionCode":548938880033,"postedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"356"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 06:07:07 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"206",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"hAAs1FSIDgtJcWQnCtol76CmM","expiryDate":"2017-07-15 18:05:43","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 06:07:07 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"363",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 06:07:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"340",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 06:07:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"285",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 06:07:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"342",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"7078173958","name":"All Teachers (S. J. Public School, Jaipur)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"2484132","name":"Javedmohammed ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"2484133","name":"Sarojsingh5070 ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"parents":null},"error":null}",
+"api_responseBodySize":"554"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 06:07:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"373",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement220746","messageCode":"20473324","postedByUuid":"985140743057","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08"}],"title":"Announcement220746","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog_announcement",
+"api_runTime":"15-Jun-2017 06:07:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"578",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 06:07:10 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"462",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"11569577","postedByUuid":"985140743057","created":"2017-06-15 18:06:38","updated":"2017-06-15 18:06:38","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 18:06:38","updated":"2017-06-15 18:06:38"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:06:38","updated":"2017-06-15 18:06:38"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"acessLog_album",
+"api_runTime":"15-Jun-2017 06:07:10 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"486",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateHomework",
+"api_runTime":"15-Jun-2017 06:07:11 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"405",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"homework","messageCode":"20813143","postedByUuid":"985140743057","created":"2017-06-15 18:07:10","updated":"2017-06-15 18:07:10","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#homework","created":"2017-06-15 18:07:10","updated":"2017-06-15 18:07:10"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:07:10","updated":"2017-06-15 18:07:10"}],"title":"homework","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"acessLog_Homework",
+"api_runTime":"15-Jun-2017 06:07:11 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"500",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"GetMessageDetails",
+"api_runTime":"15-Jun-2017 06:07:12 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"353",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Announcement220746","messageCode":20473324,"title":"Announcement220746","postedByUuid":"985140743057","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08","eventStartTime":null,"eventEndTime":null,"tags":[{"tags":"#announcement","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08"}],"target":[{"targetId":"135675805700","type":"G","targetName":"LKG-Tulip","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08","roleCode":"","uuid":""}],"blocked":0,"assetSetCode":"","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"likedCount":0,"selfLike":false,"messageAssets":null},"error":null}",
+"api_responseBodySize":"849"
+},
+{
+"api_name":"EditAlbum",
+"api_runTime":"15-Jun-2017 06:07:12 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"342",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 18:07:12","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"EditAnnouncement",
+"api_runTime":"15-Jun-2017 06:07:12 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"316",
+"api_responseData":"
+{"message":{"sendsms":1,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Annonce","messageCode":20473324,"postedByUuid":"985140743057","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:06:41","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:07:08","updated":"2017-06-15 18:07:08"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"EditHomework",
+"api_runTime":"15-Jun-2017 06:07:13 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"318",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"home","messageCode":47950813,"postedByUuid":"985140743057","created":"2017-06-07 12:51:53","updated":"2017-06-15 18:07:12","blocked":0,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"title":"Homework_updated","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-07 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"772"
+},
+{
+"api_name":"GetSubjectsForTeacher",
+"api_runTime":"15-Jun-2017 06:07:13 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"284",
+"api_responseData":"
+{"sections":null,"error":{"errorCode":409,"errorMessage":"Record doesn't exist with given criteria :","internalMessage":"Record doesn't exist with given criteria :"}}",
+"api_responseBodySize":"166"
+},
+{
+"api_name":"DeleteAlbum",
+"api_runTime":"15-Jun-2017 06:07:13 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"291",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 18:06:42","blocked":1,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"DeleteAnnouncement",
+"api_runTime":"15-Jun-2017 06:07:13 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"311",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Annonce","messageCode":40135988,"postedByUuid":"985140743057","created":"2017-06-07 12:53:16","updated":"2017-06-15 18:07:13","blocked":1,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"DeleteHomework",
+"api_runTime":"15-Jun-2017 06:07:14 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"304",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Homework","messageCode":88590900,"postedByUuid":"985140743057","created":"2017-06-07 12:55:05","updated":"2017-06-15 18:06:42","blocked":1,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"title":"Homwwork","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-08 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"768"
+},
+{
+"api_name":"GetSectionForAttendence",
+"api_runTime":"15-Jun-2017 06:07:14 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"361",
+"api_responseData":"
+{"classes":null,"editFlag":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"187"
+},
+{
+"api_name":"GetUserByGroupCode",
+"api_runTime":"15-Jun-2017 06:07:14 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"269",
+"api_responseData":"
+{"users":null,"error":{"errorCode":409,"errorMessage":"Records are not present for this Page Number.","internalMessage":"Records are not present for this Page Number."}}",
+"api_responseBodySize":"169"
+},
+{
+"api_name":"GetAttendenceForSection",
+"api_runTime":"15-Jun-2017 06:07:15 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"421",
+"api_responseData":"
+{"attendance":[{"attendanceRangeDate":"2017-06-01","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":836,"uuid":"186149796201","status":"L","created":"2017-06-01 17:50:59","updated":"2017-06-01 17:50:59","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":0,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-02","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":864,"uuid":"824400044092","status":"L","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null},{"attendanceId":864,"uuid":"186149796201","status":"A","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-04","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":871,"uuid":"824400044092","status":"A","created":"2017-06-04 16:31:15","updated":"2017-06-04 16:31:15","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-05","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":876,"uuid":"824400044092","status":"A","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null},{"attendanceId":876,"uuid":"186149796201","status":"H","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":1,"isHoliday":null}},{"attendanceRangeDate":"2017-06-06","groupCode":"548938880033","actionedBy":"116837845404","users":[{"attendanceId":886,"uuid":"186149796201","status":"A","created":"2017-06-06 19:18:09","updated":"2017-06-06 19:18:09","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-07","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":887,"uuid":"824400044092","status":"A","created":"2017-06-15 17:47:00","updated":"2017-06-15 17:47:00","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}}],"error":null}",
+"api_responseBodySize":"2525"
+},
+{
+"api_name":"MarkAttendence",
+"api_runTime":"15-Jun-2017 06:07:15 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"433",
+"api_responseData":"
+{"status":true,"attendance":{"groupCode":"548938880033","attendanceDate":"2017-06-07","created":"2017-06-07 08:42:54","updated":"2017-06-15 18:07:15","actionedBy":"985140743057","users":[{"uuid":"824400044092","status":"A","created":"2017-06-15 18:07:15","updated":"2017-06-15 18:07:15"}],"sectionCode":548938880033,"postedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"356"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 06:18:56 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"215",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"xZQ7JSEhFEJGXRxlrMYTevHgh","expiryDate":"2017-07-15 18:17:33","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 06:18:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"331",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 06:18:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"295",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 06:18:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"301",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 06:18:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"278",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"7078173958","name":"All Teachers (S. J. Public School, Jaipur)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"2484132","name":"Javedmohammed ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"2484133","name":"Sarojsingh5070 ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"parents":null},"error":null}",
+"api_responseBodySize":"554"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 06:18:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"328",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement761466","messageCode":"19656229","postedByUuid":"985140743057","created":"2017-06-15 18:18:58","updated":"2017-06-15 18:18:58","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:18:58","updated":"2017-06-15 18:18:58"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:18:58","updated":"2017-06-15 18:18:58"}],"title":"Announcement761466","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog_announcement",
+"api_runTime":"15-Jun-2017 06:18:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"620",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 06:18:59 PM",
+"api_responseCode":"Non HTTP response code: java.net.SocketException"Non HTTP response message: Socket closed,
+"api_responseTime":"342",
+"api_responseData":"
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:158)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:271)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:281)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.receiveResponseHeader(MeasuringConnectionManager.java:212)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1166)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1155)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:475)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:418)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:249)
+	at java.lang.Thread.run(Thread.java:748)
+",
+"api_responseBodySize":"2754"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 06:19:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"185",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"bQHAZxx6NX51yZo4YswJrepJJ","expiryDate":"2017-07-15 18:19:08","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 06:19:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"335",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 06:19:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"321",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 06:19:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"316",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 06:19:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"303",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"7078173958","name":"All Teachers (S. J. Public School, Jaipur)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"2484132","name":"Javedmohammed ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"2484133","name":"Sarojsingh5070 ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"parents":null},"error":null}",
+"api_responseBodySize":"554"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 06:19:03 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"338",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Announcement667204","messageCode":"48410610","postedByUuid":"985140743057","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31"}],"title":"Announcement667204","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog_announcement",
+"api_runTime":"15-Jun-2017 06:19:03 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"556",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 06:19:04 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"421",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"Album","messageCode":"98874115","postedByUuid":"985140743057","created":"2017-06-15 18:19:03","updated":"2017-06-15 18:19:03","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 18:19:03","updated":"2017-06-15 18:19:03"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:19:03","updated":"2017-06-15 18:19:03"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"acessLog_album",
+"api_runTime":"15-Jun-2017 06:19:04 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"527",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateHomework",
+"api_runTime":"15-Jun-2017 06:19:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"407",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"13989259","schoolAyid":"3","messageText":"homework","messageCode":"93370521","postedByUuid":"985140743057","created":"2017-06-15 18:18:33","updated":"2017-06-15 18:18:33","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#homework","created":"2017-06-15 18:18:33","updated":"2017-06-15 18:18:33"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:18:33","updated":"2017-06-15 18:18:33"}],"title":"homework","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"acessLog_Homework",
+"api_runTime":"15-Jun-2017 06:19:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"613",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"GetMessageDetails",
+"api_runTime":"15-Jun-2017 06:19:05 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"309",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Announcement667204","messageCode":48410610,"title":"Announcement667204","postedByUuid":"985140743057","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31","eventStartTime":null,"eventEndTime":null,"tags":[{"tags":"#announcement","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31"}],"target":[{"targetId":"135675805700","type":"G","targetName":"LKG-Tulip","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31","roleCode":"","uuid":""}],"blocked":0,"assetSetCode":"","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"likedCount":0,"selfLike":false,"messageAssets":null},"error":null}",
+"api_responseBodySize":"849"
+},
+{
+"api_name":"EditAlbum",
+"api_runTime":"15-Jun-2017 06:19:06 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"382",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 18:18:34","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"EditAnnouncement",
+"api_runTime":"15-Jun-2017 06:19:06 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"345",
+"api_responseData":"
+{"message":{"sendsms":1,"tocClassLevel":null,"tocClassName":null,"schoolCode":13989259,"schoolAyid":3,"messageText":"Annonce","messageCode":48410610,"postedByUuid":"985140743057","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:19:06","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:18:31","updated":"2017-06-15 18:18:31"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"EditHomework",
+"api_runTime":"15-Jun-2017 06:19:06 PM",
+"api_responseCode":"Non HTTP response code: java.net.SocketException"Non HTTP response message: Socket closed,
+"api_responseTime":"169",
+"api_responseData":"
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:158)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:271)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:281)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.receiveResponseHeader(MeasuringConnectionManager.java:212)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1166)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1155)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:475)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:418)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:249)
+	at java.lang.Thread.run(Thread.java:748)
+",
+"api_responseBodySize":"2754"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 06:19:08 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"188",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"el57bUChUR1tllh0Y7acTj58M","expiryDate":"2017-07-15 18:19:15","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 06:19:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"405",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 06:19:09 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"295",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 06:19:09 PM",
+"api_responseCode":"Non HTTP response code: java.net.SocketException"Non HTTP response message: Socket closed,
+"api_responseTime":"79",
+"api_responseData":"
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:158)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:271)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:281)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.receiveResponseHeader(MeasuringConnectionManager.java:212)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1166)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1155)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:475)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:418)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:249)
+	at java.lang.Thread.run(Thread.java:748)
+",
+"api_responseBodySize":"2754"
+},
+{
+"api_name":"Login_Api",
+"api_runTime":"15-Jun-2017 06:24:55 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"197",
+"api_responseData":"
+{"data":{"forcePassword":false,"deviceCode":null,"uuid":"985140743057","sessionToken":"5b2TMzd0PZpTLh2comNlgsPWf","expiryDate":"2017-07-15 18:25:02","createdDate":null,"updatedDate":null,"platform":"web","deviceIdentifier":null},"error":null}",
+"api_responseBodySize":"242"
+},
+{
+"api_name":"GetUserProfile",
+"api_runTime":"15-Jun-2017 06:24:56 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"266",
+"api_responseData":"
+{"response":[{"schoolCode":16273117,"groupName":"FLIPLEARN STAGING SCHOOL","groupCode":"9041124569","groupTypeCode":"SCHG","uuid":"985140743057","profileCode":"2850387145","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","schoolRoleCode":"TEA","ayid":"4","roleActive":"1","groupActive":"true","groupUserActive":"true","baseProfile":"2850387145","refCode":null,"profileName":"Ram Gopal Verma Teacher","schoolName":"FLIPLEARN QA SCHOOL (LIVE)","rollNo":null,"admissionNo":null,"refProfileCode":null,"schoolType":"REAL","enabledFees":1,"enabledBook":0,"option1":0,"option2":0,"option3":0,"chat":0,"scPro":0}],"error":null}",
+"api_responseBodySize":"656"
+},
+{
+"api_name":"GetUserByUUID",
+"api_runTime":"15-Jun-2017 06:24:56 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"196",
+"api_responseData":"
+{"user":[{"id":null,"uuid":"985140743057","loginId":"ram.gopal","password":null,"firstName":"Ram","middleName":"Gopal","lastName":"sharma","updatedBy":16269016,"createdDate":"2017-04-24 18:28:24","updatedDate":"2017-06-15 15:10:26","lastLogin":null,"inviteCode":"21226cf67a53","gender":"Male","nickname":null,"emailId":"priyanka@fliplearn.com","mobileNumber":"8588085772","profilePicture":"http:\/\/ugcproduction.fliplearn.com\/Events\/images1497519625.jpg","dateOfBirth":"2017-05-11","emailVerified":0,"mobileVerified":1,"addressLine1":"578, lokhandwala complex,Andheri","addressLine2":"578, lokhandwala complex,Andheri","cityId":15446,"stateId":81,"zipCode":null,"shouldInvite":null,"status":"CTD","isAdult":null,"adultMobile":null,"userType":"A","tacDate":null,"sendOtp":null,"otpNumber":null}],"error":null}",
+"api_responseBodySize":"811"
+},
+{
+"api_name":"GetUserMessages",
+"api_runTime":"15-Jun-2017 06:24:56 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"276",
+"api_responseData":"
+{"pageNum":null,"pageSize":null,"messageCount":null,"message":null,"postedByUUIDCount":null,"error":{"errorCode":400,"errorMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format.","internalMessage":"Invalid Start date format, use YYYY-MM-DD HH:MM:SS format."}}",
+"api_responseBodySize":"273"
+},
+{
+"api_name":"GetSchoolAddressBook",
+"api_runTime":"15-Jun-2017 06:24:56 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"304",
+"api_responseData":"
+{"addressBook":{"schoolStaff":[{"type":"group","code":"9074112452","name":"All Teachers (FLIPLEARN STAGING SCHOOL)","associatedType":"teachers","entityType":"ATG","isExpandable":"true","entityName":"All Teachers Group"},{"type":"users","code":"102063","name":"Ajay Jain","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"127913143002","name":"princi1 Staging","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"137808798606","name":"Saurabh Chhabra","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"3082763","name":"Ankit tiwari","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"411102657033","name":"test teacherprinci","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"551092012015","name":"chiragg ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"742604988084","name":"soniag ","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"967525870941","name":"prasoon gupta","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"116837845404","name":"LILY potter","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"120307515806","name":"lily potter","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"122973435070","name":"mukesh duli","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"144402240302","name":"Mukesh Gupta","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"183032380200","name":"Admin Flip","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"210813166800","name":"Guest Check","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"585039369010","name":"guestuser4 nfcnf","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"658341848090","name":"liLy PoTTer","associatedType":"","entityType":"SAD","isExpandable":"false","entityName":"School Admin"},{"type":"users","code":"798909613087","name":"Principal Ajay","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"861751662098","name":"Principal FlipPrincy","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"135567027606","name":"Pillow Gupta","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"183609212905","name":"Mukesh ","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"208668148406","name":"lily potter","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"},{"type":"users","code":"643356976086","name":"kanchan singh","associatedType":"","entityType":"PRI","isExpandable":"false","entityName":"School Principal"}],"groups":[{"type":"group","code":"135675805700","name":"LKG-Tulip","associatedType":"students","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"886032556002","name":"Class 11-Crew Members-Social Science","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"180053373500","name":"Class 11-Star Cast-Sanskrit","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"126951469300","name":"Class 11-EXTRAS","associatedType":"students","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"419190094005","name":"Class 10-D","associatedType":"students","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"690123003003","name":"Class 6-A Mukesh-MATHEMATICS","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"178727756200","name":"Class 9-A","associatedType":"students","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"548938880033","name":"Class 10-F","associatedType":"students","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"695352344006","name":"Class 6-A Mukesh-HINDI","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"400836808003","name":"Class 10-E-W","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"122773588700","name":"Class 6-A Mukesh-ENGLISH Updated","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"160118249300","name":"Class 10-E-Q","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"185607200500","name":"Class 10-E-U","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"},{"type":"group","code":"200468848600","name":"Class 10-E-Moral Science","associatedType":"students","entityType":"SUBG","isExpandable":"true","entityName":"Subject Group"}],"parents":[{"type":"group","code":"135675805700","name":"LKG-Tulip","associatedType":"studentsParents","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"126951469300","name":"Class 11-EXTRAS","associatedType":"studentsParents","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"419190094005","name":"Class 10-D","associatedType":"studentsParents","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"178727756200","name":"Class 9-A","associatedType":"studentsParents","entityType":"SECG","isExpandable":"true","entityName":"Section Group"},{"type":"group","code":"548938880033","name":"Class 10-F","associatedType":"studentsParents","entityType":"SECG","isExpandable":"true","entityName":"Section Group"}]},"error":null}",
+"api_responseBodySize":"6782"
+},
+{
+"api_name":"CreateAnnouncement",
+"api_runTime":"15-Jun-2017 06:24:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"233",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"16273117","schoolAyid":"4","messageText":"Announcement241422","messageCode":"20053524","postedByUuid":"985140743057","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25"}],"title":"Announcement241422","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"781"
+},
+{
+"api_name":"accessLog_announcement",
+"api_runTime":"15-Jun-2017 06:24:57 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"606",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateAlbum",
+"api_runTime":"15-Jun-2017 06:24:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"353",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"16273117","schoolAyid":"4","messageText":"Album","messageCode":"16804629","postedByUuid":"985140743057","created":"2017-06-15 18:24:57","updated":"2017-06-15 18:24:57","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-15 18:24:57","updated":"2017-06-15 18:24:57"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:24:57","updated":"2017-06-15 18:24:57"}],"title":"Album","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"756"
+},
+{
+"api_name":"acessLog_album",
+"api_runTime":"15-Jun-2017 06:24:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"558",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"CreateHomework",
+"api_runTime":"15-Jun-2017 06:24:58 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"281",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":"16273117","schoolAyid":"4","messageText":"homework","messageCode":"18402859","postedByUuid":"985140743057","created":"2017-06-15 18:24:27","updated":"2017-06-15 18:24:27","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#homework","created":"2017-06-15 18:24:27","updated":"2017-06-15 18:24:27"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:24:27","updated":"2017-06-15 18:24:27"}],"title":"homework","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"acessLog_Homework",
+"api_runTime":"15-Jun-2017 06:24:59 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"544",
+"api_responseData":"
+
+{"response":"true","code":200,"type":"userLogs","pushResponse":302}",
+"api_responseBodySize":"68"
+},
+{
+"api_name":"GetMessageDetails",
+"api_runTime":"15-Jun-2017 06:24:59 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"224",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Announcement241422","messageCode":20053524,"title":"Announcement241422","postedByUuid":"985140743057","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25","eventStartTime":null,"eventEndTime":null,"tags":[{"tags":"#announcement","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25"}],"target":[{"targetId":"135675805700","type":"G","targetName":"LKG-Tulip","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25","roleCode":"","uuid":""}],"blocked":0,"assetSetCode":"","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"likedCount":0,"selfLike":false,"messageAssets":null},"error":null}",
+"api_responseBodySize":"849"
+},
+{
+"api_name":"EditAlbum",
+"api_runTime":"15-Jun-2017 06:24:59 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"234",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 18:24:59","blocked":0,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"EditAnnouncement",
+"api_runTime":"15-Jun-2017 06:25:00 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"269",
+"api_responseData":"
+{"message":{"sendsms":1,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Annonce","messageCode":20053524,"postedByUuid":"985140743057","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:28","blocked":0,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-15 18:24:25","updated":"2017-06-15 18:24:25"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"EditHomework",
+"api_runTime":"15-Jun-2017 06:25:00 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"229",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"home","messageCode":47950813,"postedByUuid":"985140743057","created":"2017-06-07 12:51:53","updated":"2017-06-15 18:25:00","blocked":0,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:51:53","updated":"2017-06-07 12:51:53"}],"title":"Homework_updated","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-07 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"772"
+},
+{
+"api_name":"GetSubjectsForTeacher",
+"api_runTime":"15-Jun-2017 06:25:00 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"519",
+"api_responseData":"
+{"sections":[{"profileName":null,"displayName":"Class 11-Crew Members","sectionName":"Crew Members","sectionCode":202558848100,"groupCode":"202558848100","classCode":"202558848100","classTeacherUuid":null,"actionedBy":"102063","subject":[{"profileName":null,"displayName":"Class 11-Crew Members-Social Science","sectionCode":202558848100,"groupCode":886032556002,"name":"Social Science","subjectTeacherUuid":"985140743057","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-05 17:18:36","updated":"2017-06-05 17:19:11","subjectCode":886032556002}],"count":null},{"profileName":null,"displayName":"Class 11-Star Cast","sectionName":"Star Cast","sectionCode":112306509500,"groupCode":"112306509500","classCode":"112306509500","classTeacherUuid":null,"actionedBy":"102063","subject":[{"profileName":null,"displayName":"Class 11-Star Cast-Sanskrit","sectionCode":112306509500,"groupCode":180053373500,"name":"Sanskrit","subjectTeacherUuid":"202442740706","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-05 17:18:30","updated":"2017-06-05 17:19:28","subjectCode":180053373500}],"count":null},{"profileName":null,"displayName":"Class 6-A Mukesh","sectionName":"A Mukesh","sectionCode":214112735400,"groupCode":"214112735400","classCode":"214112735400","classTeacherUuid":null,"actionedBy":"102063","subject":[{"profileName":null,"displayName":"Class 6-A Mukesh-MATHEMATICS","sectionCode":214112735400,"groupCode":690123003003,"name":"MATHEMATICS","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-06 15:00:29","updated":"2017-06-06 15:01:29","subjectCode":690123003003},{"profileName":null,"displayName":"Class 6-A Mukesh-HINDI","sectionCode":214112735400,"groupCode":695352344006,"name":"HINDI","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-06 15:01:29","updated":"2017-06-06 15:02:29","subjectCode":695352344006},{"profileName":null,"displayName":"Class 6-A Mukesh-ENGLISH Updated","sectionCode":214112735400,"groupCode":122773588700,"name":"ENGLISH Updated","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-06 15:00:29","updated":"2017-06-06 15:01:06","subjectCode":122773588700}],"count":null},{"profileName":null,"displayName":"Class 10-E","sectionName":"E","sectionCode":168128357800,"groupCode":"168128357800","classCode":"168128357800","classTeacherUuid":null,"actionedBy":"102063","subject":[{"profileName":null,"displayName":"Class 10-E-W","sectionCode":168128357800,"groupCode":400836808003,"name":"W","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-05 17:21:38","updated":"2017-06-05 17:22:35","subjectCode":400836808003},{"profileName":null,"displayName":"Class 10-E-Q","sectionCode":168128357800,"groupCode":160118249300,"name":"Q","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-05 17:21:38","updated":"2017-06-05 17:22:14","subjectCode":160118249300},{"profileName":null,"displayName":"Class 10-E-U","sectionCode":168128357800,"groupCode":185607200500,"name":"U","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-05 17:21:38","updated":"2017-06-05 17:22:14","subjectCode":185607200500},{"profileName":null,"displayName":"Class 10-E-Moral Science","sectionCode":168128357800,"groupCode":200468848600,"name":"Moral Science","subjectTeacherUuid":"uuid002","flipSubjectCode":null,"isOptional":0,"actionedBy":"102063","created":"2017-06-14 18:31:30","updated":"2017-06-14 18:32:52","subjectCode":200468848600}],"count":null}],"error":null}",
+"api_responseBodySize":"3772"
+},
+{
+"api_name":"DeleteAlbum",
+"api_runTime":"15-Jun-2017 06:25:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"226",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Album","messageCode":16587269,"postedByUuid":"985140743057","created":"2017-06-07 12:54:51","updated":"2017-06-15 18:25:00","blocked":1,"assetSetCode":"75322762","tags":[{"tags":"#album","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:54:51","updated":"2017-06-07 12:54:51"}],"title":"Album_Edit","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"755"
+},
+{
+"api_name":"DeleteAnnouncement",
+"api_runTime":"15-Jun-2017 06:25:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"229",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Annonce","messageCode":40135988,"postedByUuid":"985140743057","created":"2017-06-07 12:53:16","updated":"2017-06-15 18:24:29","blocked":1,"assetSetCode":"","tags":[{"tags":"#announcement","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"target":[{"targetId":"135675805700","type":"G","created":"2017-06-07 12:53:16","updated":"2017-06-07 12:53:16"}],"title":"Announcement_update","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":null,"actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"765"
+},
+{
+"api_name":"DeleteHomework",
+"api_runTime":"15-Jun-2017 06:25:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"213",
+"api_responseData":"
+{"message":{"sendsms":0,"tocClassLevel":null,"tocClassName":null,"schoolCode":16273117,"schoolAyid":4,"messageText":"Homework","messageCode":88590900,"postedByUuid":"985140743057","created":"2017-06-07 12:55:05","updated":"2017-06-15 18:25:01","blocked":1,"assetSetCode":"","tags":[{"tags":"#homework","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"target":[{"targetId":"886032556002","type":"G","created":"2017-06-07 12:55:05","updated":"2017-06-07 12:55:05"}],"title":"Homwwork","tocSubjectCode":null,"tocSubjectName":null,"tocBookCode":null,"tocBookName":null,"tocChapterCode":null,"tocChapterName":null,"tocTopicCode":null,"tocTopicName":null,"eventStartTime":null,"eventEndTime":"2017-06-08 23:59:59","actionedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"768"
+},
+{
+"api_name":"GetSectionForAttendence",
+"api_runTime":"15-Jun-2017 06:25:01 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"388",
+"api_responseData":"
+{"classes":[{"ayid":4,"schoolCode":16273117,"levelId":13,"className":"LKG","classCode":13071297,"orderBy":1,"actionedBy":"102063","created":"2017-06-05 17:18:59","updated":"2017-06-05 05:19:34","section":[{"profileName":null,"displayName":"LKG-Tulip","sectionName":"Tulip","sectionCode":135675805700,"groupCode":"135675805700","classCode":13071297,"classTeacherUuid":null,"actionedBy":"102063","subject":null,"count":null}]},{"ayid":4,"schoolCode":16273117,"levelId":11,"className":"Class 11","classCode":13240988,"orderBy":1,"actionedBy":"102063","created":"2017-06-05 17:18:29","updated":"2017-06-05 05:19:05","section":[{"profileName":null,"displayName":"Class 11-EXTRAS","sectionName":"EXTRAS","sectionCode":126951469300,"groupCode":"126951469300","classCode":13240988,"classTeacherUuid":null,"actionedBy":"102063","subject":null,"count":null}]},{"ayid":4,"schoolCode":16273117,"levelId":10,"className":"Class 10","classCode":20237406,"orderBy":1,"actionedBy":"202679783906","created":"2017-04-19 14:13:57","updated":"2017-04-19 14:13:57","section":[{"profileName":null,"displayName":"Class 10-D","sectionName":"D","sectionCode":419190094005,"groupCode":"419190094005","classCode":20237406,"classTeacherUuid":null,"actionedBy":"102063","subject":null,"count":null},{"profileName":null,"displayName":"Class 10-F","sectionName":"F","sectionCode":548938880033,"groupCode":"548938880033","classCode":20237406,"classTeacherUuid":null,"actionedBy":"102063","subject":null,"count":null}]},{"ayid":4,"schoolCode":16273117,"levelId":9,"className":"Class 9","classCode":18213073,"orderBy":1,"actionedBy":"102063","created":"2017-06-05 17:18:21","updated":"2017-06-05 05:19:19","section":[{"profileName":null,"displayName":"Class 9-A","sectionName":"A","sectionCode":178727756200,"groupCode":"178727756200","classCode":18213073,"classTeacherUuid":null,"actionedBy":"102063","subject":null,"count":null}]}],"editFlag":null,"error":null}",
+"api_responseBodySize":"1928"
+},
+{
+"api_name":"GetUserByGroupCode",
+"api_runTime":"15-Jun-2017 06:25:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"256",
+"api_responseData":"
+{"users":[{"uuid":"149983895109","firstName":"Bag","middleName":null,"lastName":"Gupta","emailId":"mz@gmail.com","mobileNumber":"6412041209","role":"STU","profilePicture":null,"rollNumber":null,"children":null},{"uuid":"182152270903","firstName":"Harry","middleName":null,"lastName":"Potter Thomas","emailId":"vineet.chaudhary@fliplearn.com","mobileNumber":"9818613519","role":"STU","profilePicture":null,"rollNumber":null,"children":null},{"uuid":"186149796201","firstName":"OneStudent","middleName":null,"lastName":"name","emailId":"karan.rawat@fliplearn.com","mobileNumber":null,"role":"STU","profilePicture":null,"rollNumber":"1","children":null},{"uuid":"824400044092","firstName":"Ronald","middleName":null,"lastName":"W","emailId":"kjsjs@gmail.com","mobileNumber":null,"role":"STU","profilePicture":null,"rollNumber":null,"children":null}],"error":null}",
+"api_responseBodySize":"860"
+},
+{
+"api_name":"GetAttendenceForSection",
+"api_runTime":"15-Jun-2017 06:25:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"306",
+"api_responseData":"
+{"attendance":[{"attendanceRangeDate":"2017-06-01","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":836,"uuid":"186149796201","status":"L","created":"2017-06-01 17:50:59","updated":"2017-06-01 17:50:59","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":0,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-02","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":864,"uuid":"824400044092","status":"L","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null},{"attendanceId":864,"uuid":"186149796201","status":"A","created":"2017-06-02 21:50:08","updated":"2017-06-02 21:50:08","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":1,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-04","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":871,"uuid":"824400044092","status":"A","created":"2017-06-04 16:31:15","updated":"2017-06-04 16:31:15","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-05","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":876,"uuid":"824400044092","status":"A","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null},{"attendanceId":876,"uuid":"186149796201","status":"H","created":"2017-06-05 20:26:13","updated":"2017-06-05 20:26:13","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":1,"isHoliday":null}},{"attendanceRangeDate":"2017-06-06","groupCode":"548938880033","actionedBy":"116837845404","users":[{"attendanceId":886,"uuid":"186149796201","status":"A","created":"2017-06-06 19:18:09","updated":"2017-06-06 19:18:09","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}},{"attendanceRangeDate":"2017-06-07","groupCode":"548938880033","actionedBy":"985140743057","users":[{"attendanceId":887,"uuid":"824400044092","status":"A","created":"2017-06-15 18:07:15","updated":"2017-06-15 18:07:15","attendance":null}],"sectionCode":"548938880033","attendancestatus":null,"summary":{"totalAbsent":1,"totalLeave":0,"totalHalfday":0,"isHoliday":null}}],"error":null}",
+"api_responseBodySize":"2525"
+},
+{
+"api_name":"MarkAttendence",
+"api_runTime":"15-Jun-2017 06:25:02 PM",
+"api_responseCode":"200"OK,
+"api_responseTime":"254",
+"api_responseData":"
+{"status":true,"attendance":{"groupCode":"548938880033","attendanceDate":"2017-06-07","created":"2017-06-07 08:42:54","updated":"2017-06-15 18:24:31","actionedBy":"985140743057","users":[{"uuid":"824400044092","status":"A","created":"2017-06-15 18:24:31","updated":"2017-06-15 18:24:31"}],"sectionCode":548938880033,"postedBy":"985140743057"},"error":null}",
+"api_responseBodySize":"356"
+},

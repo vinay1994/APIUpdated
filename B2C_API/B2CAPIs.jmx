@@ -9,7 +9,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="baseUrl" elementType="Argument">
             <stringProp name="Argument.name">baseUrl</stringProp>
-            <stringProp name="Argument.value">intmarketplace.fliplearn.com</stringProp>
+            <stringProp name="Argument.value">marketplace.fliplearn.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -17,6 +17,15 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
+      <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="ReportVariable" enabled="true">
+        <stringProp name="variableName">reportVariable</stringProp>
+        <stringProp name="outputFormat"></stringProp>
+        <stringProp name="minimumValue">999999</stringProp>
+        <stringProp name="maximumValue">999999</stringProp>
+        <stringProp name="randomSeed"></stringProp>
+        <boolProp name="perThread">false</boolProp>
+      </RandomVariableConfig>
+      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="B2CAPIs" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -32,6 +41,23 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="B2CAPIsHeaders" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">loginId</stringProp>
+              <stringProp name="Header.value">script.user</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sessionToken</stringProp>
+              <stringProp name="Header.value">${sessionToken}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="loginAPI" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -41,7 +67,7 @@
                 <stringProp name="Argument.value">	{&#xd;
 	&quot;login&quot;:&#xd;
 	{&#xd;
-	&quot;loginId&quot;:&quot;arbaaz.khan&quot;,&#xd;
+	&quot;loginId&quot;:&quot;script.user&quot;,&#xd;
 	&quot;password&quot;:&quot;123456&quot;,&#xd;
 	&quot;macAddress&quot;:&quot;1c:87:2c:9e:8a:21&quot;,&#xd;
 	&quot;imeiNumber&quot;:&quot;357870062622548&quot;,&#xd;
@@ -57,7 +83,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">intbl.fliplearn.com</stringProp>
+          <stringProp name="HTTPSampler.domain">bl.fliplearn.com</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
@@ -87,7 +113,7 @@
             <stringProp name="RegexExtractor.refname">sessionToken</stringProp>
             <stringProp name="RegexExtractor.regex">&quot;sessionToken&quot;:&quot;(.+?)&quot;</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+            <stringProp name="RegexExtractor.default">cQ8UJu767c0SZxFI9AMgnwkWe</stringProp>
             <stringProp name="RegexExtractor.match_number">0</stringProp>
           </RegexExtractor>
           <hashTree/>
@@ -101,23 +127,6 @@
           </RegexExtractor>
           <hashTree/>
         </hashTree>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="B2CAPIsHeaders" enabled="true">
-          <collectionProp name="HeaderManager.headers">
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">content-type</stringProp>
-              <stringProp name="Header.value">application/json</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">loginId</stringProp>
-              <stringProp name="Header.value">arbaaz.khan</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">sessionToken</stringProp>
-              <stringProp name="Header.value">${sessionToken}</stringProp>
-            </elementProp>
-          </collectionProp>
-        </HeaderManager>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getCategoryList" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -128,7 +137,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/rest/api/v1/getCategoryList</stringProp>
+          <stringProp name="HTTPSampler.path">/rest/api/v1/getCategoryList/PAR</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -144,7 +153,7 @@
             <stringProp name="RegexExtractor.regex">&quot;id&quot;:&quot;(.+?)&quot;</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">3</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
           </RegexExtractor>
           <hashTree/>
           <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="e-tutorCategotyIdExtractor" enabled="true">
@@ -153,7 +162,7 @@
             <stringProp name="RegexExtractor.regex">&quot;id&quot;:&quot;(.+?)&quot;</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
-            <stringProp name="RegexExtractor.match_number">4</stringProp>
+            <stringProp name="RegexExtractor.match_number">2</stringProp>
           </RegexExtractor>
           <hashTree/>
         </hashTree>
@@ -187,7 +196,7 @@
           </RegexExtractor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getProductListEtutor" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getProductListEtutor" enabled="false">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -225,19 +234,8 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
 	&quot;items&quot;: [{&#xd;
-		&quot;uuid&quot;: ${UUID},&#xd;
-		&quot;skuCode&quot;: ${digitalSKU},&#xd;
-		&quot;count&quot;: 1,&#xd;
-		&quot;schoolName&quot;: &quot;New School&quot;,&#xd;
-		&quot;couponCode&quot;: &quot;&quot;,&#xd;
-		&quot;className&quot;: &quot;3 B&quot;,&#xd;
-		&quot;parentName&quot;: &quot;Anand&quot;,&#xd;
-		&quot;roleCode&quot;: &quot;STU&quot;,&#xd;
-		&quot;admissionNumber&quot;: &quot;FLIP-32411354&quot;&#xd;
-	},&#xd;
-	{&#xd;
-	     &quot;uuid&quot;: ${UUID},&#xd;
-		&quot;skuCode&quot;: ${tutorSKU},&#xd;
+		&quot;uuid&quot;: &quot;179081728202&quot;,&#xd;
+		&quot;skuCode&quot;: &quot;${digitalSKU}&quot;,&#xd;
 		&quot;count&quot;: 1,&#xd;
 		&quot;schoolName&quot;: &quot;New School&quot;,&#xd;
 		&quot;couponCode&quot;: &quot;&quot;,&#xd;
@@ -279,7 +277,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">rest/api/v1/cart/getCart/${UUID}</stringProp>
+          <stringProp name="HTTPSampler.path">rest/api/v1/cart/getCart/179081728202</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -316,9 +314,9 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
 &quot;params&quot;:{&#xd;
-&quot;couponCode&quot;: &quot;TEST&quot;,&#xd;
-&quot;uuid&quot;: ${UUID},&#xd;
-&quot;skuCode&quot;: ${digitalSKU}&#xd;
+&quot;couponCode&quot;: &quot;&quot;,&#xd;
+&quot;uuid&quot;: &quot;179081728202&quot;,&#xd;
+&quot;skuCode&quot;: &quot;${digitalSKU}&quot;&#xd;
  }&#xd;
 }&#xd;
 </stringProp>
@@ -378,7 +376,7 @@
                 <stringProp name="Argument.value">{&#xd;
     &quot;email&quot;: &quot;satyaprakash.solanki@fliplearn.com&quot;,&#xd;
     &quot;mobile&quot;: &quot;9932144000&quot;,&#xd;
-    &quot;quoteId&quot;: &quot;4736&quot;&#xd;
+    &quot;quoteId&quot;: &quot;95625&quot;&#xd;
 }&#xd;
 </stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -401,7 +399,7 @@
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createCoupon" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createCoupon" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -409,18 +407,14 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
 	&quot;params&quot;: {&#xd;
-        &quot;requestId&quot;: &quot;${random_number}&quot;,&#xd;
-        &quot;amount&quot;: &quot;100&quot;,&#xd;
-        &quot;couponCount&quot;: &quot;2&quot;,&#xd;
-        &quot;isOneTime&quot;: &quot;false&quot;,&#xd;
-        &quot;categoryId&quot;: &quot;&quot;,&#xd;
-        &quot;schoolCode&quot;: &quot;DEMO&quot;,&#xd;
-        &quot;schoolName&quot;: &quot;DEMO&quot;,&#xd;
-        &quot;couponPerUsage&quot;: &quot;10&quot;,&#xd;
-        &quot;maxNumberUsage&quot;: &quot;1000&quot;,&#xd;
-        &quot;type&quot;: &quot;fixed&quot;,&#xd;
-        &quot;createdByUuid&quot;: ${UUID},&#xd;
-        &quot;expiryDate&quot;: &quot;12/12/2018&quot;&#xd;
+     &quot;requestId&quot;: &quot;ab${random_number}&quot;,&#xd;
+    &quot;amount&quot;: &quot;7000&quot;,&#xd;
+    &quot;couponCount&quot;: &quot;100&quot;,&#xd;
+    &quot;schoolCode&quot;: &quot;DEMO&quot;,&#xd;
+    &quot;schoolName&quot;: &quot;DEMO&quot;,&#xd;
+    &quot;createdByUuid&quot;: &quot;68227799&quot;,&#xd;
+    &quot;type&quot;:&quot;fixed&quot;,&#xd;
+    &quot;skuCode&quot;:&quot;10001&quot;&#xd;
       }&#xd;
     }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -453,7 +447,7 @@
           </RandomVariableConfig>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getCoupon" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getCoupon" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -498,9 +492,9 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
 &quot;params&quot;:{&#xd;
-&quot;couponCode&quot;: &quot;${couponCode}&quot;,&#xd;
-&quot;uuid&quot;: ${UUID},&#xd;
-&quot;skuCode&quot;: ${digitalSKU}&#xd;
+&quot;couponCode&quot;: &quot;04IJPJN&quot;,&#xd;
+&quot;uuid&quot;: &quot;179081728202&quot;,&#xd;
+&quot;skuCode&quot;: &quot;${digitalSKU}&quot;&#xd;
  }&#xd;
 }&#xd;
 </stringProp>
@@ -669,9 +663,11 @@
         </ResultCollector>
         <hashTree/>
         <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="APIs Assertion" enabled="true">
-          <stringProp name="BeanShellAssertion.query">import java.text.SimpleDateFormat; 
-import java.util.Date; 
-
+          <stringProp name="BeanShellAssertion.query">import java.util.*; 
+import java.text.SimpleDateFormat; 
+Date apiDate = new Date(); 
+SimpleDateFormat apiFormatDT = new SimpleDateFormat(&quot;dd-MMM-yyyy hh:mm:ss a&quot;);
+SimpleDateFormat apiFormatDTFN = new SimpleDateFormat(&quot;ddMMMyyyy_hh:mm&quot;);
 String apiResData = new String(ResponseData);
 String apiResCode = new String(ResponseCode);
 String apiReqData = new String(SamplerData);
@@ -679,105 +675,75 @@ String apiThreadGroup = ctx.getThreadGroup().getName();
 String apiSample = SampleResult.getSampleLabel();
 String apiResultCode = SampleResult.getResponseCode();
 String apiResultDesc = SampleResult.getResponseMessage();
-String apiPath = SampleResult.getURL().getPath();
-String apiHost = SampleResult.getURL().getHost();
-
 long apiResponseTime = SampleResult.getTime();
-//long apiLatency = SampleResult.getLatency();
 int apiBodySize = SampleResult.getBodySize();
 
-Date apiDate = new Date(); 
-SimpleDateFormat apiFormatDT = new SimpleDateFormat(&quot;dd-MMM-yyyy hh:mm:ss a&quot;);
-SimpleDateFormat apiFormatDTFN = new SimpleDateFormat(&quot;ddMMMyyyy_hhmma&quot;);
 String apiRunDateTime = apiFormatDT.format(apiDate);
 String apiRunFileDT = apiFormatDTFN.format(apiDate);
-
-FileWriter apiWrite = new FileWriter(&quot;/home/satya/Documents/FEPL_API_AUTOMATION/B2C_API/&quot;+apiThreadGroup+&quot; Test Result.txt&quot;,true);
-
-//FileWriter apiWrite = new FileWriter(&quot;/home/satya/Documents/FEPL_API_AUTOMATION/B2C_API/&quot;+apiThreadGroup+&quot;+&quot;_&quot;+ &quot;+apiRunFileDT+&quot;+&quot; Test Result.txt&quot;,true);
-
+FileWriter apiWrite = new FileWriter(&quot;/home/satya/Documents/Web_Load_Test/Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
+//FileWriter apiWrite = new FileWriter(&quot;/opt/automation/Result_&quot;+apiRunFileDT+&quot;.txt&quot;,true);
 BufferedWriter apiOut = new BufferedWriter(apiWrite);
-//print(&quot;-------------------+++-------------------+++-------------------&quot;);
-//print(&quot;API TEST ON: &quot;+apiSample+&quot;. API URL: &quot;+apiHost+apiPath);
-if (ResponseCode.equals(&quot;200&quot;)) {
-//	print(&quot;Load/response time: &quot;+apiResponseTime+&quot;. Latency: &quot;+apiLatency);
-    	print(&quot;\n*********VERIFICATION OF API SAMPLE********* :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot;\n&quot;);
-    	print(apiReqData+&quot;\n\n&quot;);
-    	print(apiResData+&quot;\n\n---- END OF API\n&quot;);
-    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
-    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
-    	
-	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
-	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
-	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;PASS&quot;);
-	apiOut.write(System.getProperty(&quot;line.separator&quot;));
+    	print(&quot;\n****Starting Execution*********\n&quot;);
+    	print(apiReqData+&quot;\n&quot;);
+    	print(apiResData+&quot;\n&quot;);
+    	//apiOut.write(&quot;\n*******&quot;+apiThreadGroup+&quot;********\n\n&quot;);
+    	//apiOut.write(apiReqData+&quot;\n&quot;);
+    	apiOut.write(&quot;{\n&quot;);
+    	apiOut.write(&quot;\&quot;api_name\&quot;:\&quot;&quot;+apiSample+&quot;\&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_runTime\&quot;:\&quot;&quot;+apiRunDateTime+&quot;\&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_responseCode\&quot;:\&quot;&quot;+apiResultCode+&quot;\&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_resultDesc\&quot;:\&quot;&quot;+apiResultDesc+&quot;\&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_responseTime\&quot;:\&quot;&quot;+apiResponseTime+&quot;\&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_responseData\&quot;:\&quot;\n&quot;+apiResData+&quot;\&quot;,\n&quot;);
+    	//apiOut.write(&quot;api_resultDesc:&quot;+apiResultDesc+&quot;,\n&quot;);
+    	apiOut.write(&quot;\&quot;api_responseBodySize\&quot;:\&quot;&quot;+apiBodySize+&quot;\&quot;\n&quot;);
+	apiOut.write(&quot;},\n&quot;);
 	apiOut.close();
 	apiWrite.close();
-}
-else if (ResponseCode.equals(&quot;404&quot;)) {
-	print(&quot;\n*********VERIFICATION OF API SAMPLE********* :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot;\n&quot;);
-    	print(apiReqData+&quot;\n\n&quot;);
-    	print(apiResData+&quot;\n END OF API ]n&quot;);
-    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
-    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
-    		
-	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
-	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
-	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Check API deployment.&quot;);
-	apiOut.write(System.getProperty(&quot;line.separator&quot;));
-	apiOut.close();
-	apiWrite.close();
-}
-else if (ResponseCode.equals(&quot;500&quot;)) {
-	if(ResponseData.length == 0){
-		print(&quot;\n*********VERIFICATION OF API SAMPLE********* :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot;\n&quot;);
-    		print(apiReqData+&quot;\n&quot;);
-    		print(&quot;[MSG@ND] Nothing returns in response...\n\n END OF API \n&quot;);
-    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
-    		apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
-    			
-		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
-		apiOut.write(apiResponseTime+&quot; ms;API TEST RESPONSE NOT FOUND.&quot;);
-		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API returns nothing in response. Provide correct API parameters.&quot;);
-		apiOut.write(System.getProperty(&quot;line.separator&quot;));
-		apiOut.close();
-		apiWrite.close();
-	}
-	else{
-		print(&quot;\n*********VERIFICATION OF API SAMPLE********* :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot;\n&quot;);
-    		print(apiReqData+&quot;\n----+++----+++---- OOOO ----+++----+++----\n&quot;);
-	    	print(apiResData+&quot;\n\n----+++----+++---- END OF API ----+++----+++----&quot;);
-    		apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
-	    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
-	    		
-		apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
-		apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
-		apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;Server error observed. Provide correct API parameters.&quot;);
-		apiOut.write(System.getProperty(&quot;line.separator&quot;));
-		apiOut.close();
-		apiWrite.close();
-	}
-}
-else {
-	print(&quot;\n-VERIFICATION OF API SAMPLE :: &quot;+apiSample+&quot; AT &quot;+apiRunDateTime+&quot;\n&quot;);
-    	print(apiReqData+&quot;\n\n&quot;);
-    	print(apiResData+&quot;\n\n END OF API\n&quot;);
-    	apiOut.write(apiRunDateTime+&quot;;&quot;+apiThreadGroup+&quot;;&quot;);
-    	apiOut.write(apiSample+&quot;;&quot;+apiResultCode+&quot;;&quot;);
-    		
-	apiOut.write(apiResultDesc+&quot;;&quot;+apiHost+apiPath+&quot;;&quot;);
-	apiOut.write(apiResponseTime+&quot; ms;&quot;+apiResData);
-	apiOut.write(&quot;;&quot;+apiBodySize+&quot; Byte;FAIL;API test failed. Check deployment and prvide correct request parameters.&quot;);
-	apiOut.write(System.getProperty(&quot;line.separator&quot;));
-	apiOut.close();
-	apiWrite.close();
-}</stringProp>
+	print(apiOut);
+	print(&quot;\n****Ending of API Execution*********\n&quot;);</stringProp>
           <stringProp name="BeanShellAssertion.filename"></stringProp>
           <stringProp name="BeanShellAssertion.parameters"></stringProp>
           <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
         </BeanShellAssertion>
         <hashTree/>
         <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
