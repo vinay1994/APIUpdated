@@ -23,9 +23,10 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 
 
 public class Xls_Reader {
-	LoadProperty loadProperty = new LoadProperty();
-	String currentEnv = (String) loadProperty.getProperty("project_env");
-	public String filename = System.getProperty("user.dir")+"/src/config/" + currentEnv +"/Testdata.xls";
+	//LoadProperty loadProperty = new LoadProperty();
+	//String currentEnv = (String) loadProperty.getProperty("project_env");
+	//public String filename = System.getProperty("user.dir")+"/src/config/" + currentEnv +"/Testdata.xls";
+	public String filename = System.getProperty("user.dir")+"/TestData/APIResults.xls";
 	/*public String path;*/
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut =null;
