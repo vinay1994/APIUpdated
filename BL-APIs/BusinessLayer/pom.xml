@@ -92,5 +92,12 @@
     <artifactId>mysql-connector-java</artifactId>
     <version>5.1.6</version>
 </dependency>
+<dependency>
+    <groupId>net.javacrumbs.json-unit</groupId>
+    <artifactId>json-unit</artifactId>
+    <version>1.5.0</version>
+    <scope>test</scope>
+</dependency>
+
   </dependencies>
 </project>
