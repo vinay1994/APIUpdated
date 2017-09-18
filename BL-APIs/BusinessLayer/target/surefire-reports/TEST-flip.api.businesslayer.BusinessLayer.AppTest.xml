@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="flip.api.businesslayer.BusinessLayer.AppTest" time="5.32" errors="0" skipped="0">
+<testsuite tests="26" failures="1" name="flip.api.businesslayer.BusinessLayer.AppTest" time="31.229" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
@@ -65,6 +65,47 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="loginRequest" time="4.906"/>
-  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserProfile" time="0.414"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="addBulkSectionsForClass" time="0.002"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="addBulkSubjectsForSchool" time="0.001"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="addClass" time="7.301"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="checkifLoginIdExists" time="1.489"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getClassTeacherDetailsBySectionCodes" time="1.574"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getClassesBySchoolCode" time="2.039"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getFlipMasterSubjectList" time="0.892"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getInviteCodesForRoles" time="2.029"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getSchoolDetailBySchoolInviteCode" time="1.152"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getSectionsWithSubjectsByClass" time="1.22"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getStaticContent" time="0.94"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserByEmail" time="1.309"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserByMobile" time="1.297"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserByUuid" time="1.799">
+    <failure message="JSONObject[&quot;user&quot;] not found." type="org.json.JSONException">org.json.JSONException: JSONObject[&quot;user&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:472)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:619)
+	at flip.api.businesslayer.BusinessLayer.AppTest.getUserByUuid(AppTest.java:221)
+</failure>
+    <system-out>
+*********************************************
+Executing for getUserByUuid
+***********************************************
+35oFSUAJHcXbrVJXBoDcW7qp6
+3984746503
+
+Status Code is 200
+
+Status Code is 200
+</system-out>
+  </testcase>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserProfileAccountView" time="1.087"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="isUserLoggedIn" time="1.702"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="sendEmailVerificationCode" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="sendMobileVerificationCode" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="setForgetUserPassword" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="setUserPassword" time="2.317"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="unlinkParentToStudent" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="verifyEmailViaOtp" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="verifyForgotPasswordCode" time="0.001"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="verifyMobileViaOtp" time="0"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="loginRequest" time="1.942"/>
+  <testcase classname="flip.api.businesslayer.BusinessLayer.AppTest" name="getUserProfile" time="1.136"/>
 </testsuite>

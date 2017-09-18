@@ -31,6 +31,13 @@
          <artifactId>groovy-all</artifactId>
          <version>2.3.5</version>
       </dependency>
+      
+      <dependency>
+    <groupId>com.jayway.restassured</groupId>
+    <artifactId>json-schema-validator</artifactId>
+    <version>2.2.0</version>
+</dependency>
+      
       <dependency>
          <groupId>org.testng</groupId>
          <artifactId>testng</artifactId>
@@ -98,6 +105,18 @@
     <version>1.5.0</version>
     <scope>test</scope>
 </dependency>
-
   </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>

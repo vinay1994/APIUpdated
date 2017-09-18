@@ -24,7 +24,7 @@ public class DBConnection{
 	}    
 
 	public static void connectGroupDB(){
-		String dbUrl = "jdbc:mysql://2groupdbm.fliplearn.com:3306/";
+		String dbUrl = "jdbc:mysql://10.0.6.21:3306/";
 		String username = "mukeshg";String password = "mukeshg@321";String DbName = "group_api";
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
@@ -34,7 +34,7 @@ public class DBConnection{
 	}  
 
 	public static void connectbusinessLayerDB(){
-		String dbUrl = "jdbc:mysql://2bldbm.fliplearn.com:3306/";
+		String dbUrl = "jdbc:mysql://10.0.6.204:3306/";
 		String username = "mukeshg";String password = "mukeshg@321";String DbName = "flip_bl";
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
@@ -44,7 +44,7 @@ public class DBConnection{
 	}  
 
 	public static void connectSchoolDB(){
-		String dbUrl = "jdbc:mysql://2schooldbm.fliplearn.com:3306/";
+		String dbUrl = "jdbc:mysql://10.0.6.226:3306/";
 		String username = "mukeshg";String password = "mukeshg@321";String DbName = "school_api";
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 

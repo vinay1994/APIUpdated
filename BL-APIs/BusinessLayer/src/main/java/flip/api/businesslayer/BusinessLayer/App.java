@@ -1,9 +1,14 @@
 package flip.api.businesslayer.BusinessLayer;
 
 import static com.jayway.restassured.RestAssured.given;
+import static com.jayway.restassured.RestAssured.when;
+
+
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.testng.Assert;
 
 import util.DBConnection;
 import util.Xls_Reader;
@@ -13,18 +18,22 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
 public class App {
-	public static String loginId="satya.script";
-	public static String sessionToken="PTjPFREcW7TCS1964hVNjwFeC";
+	public static String loginId="";
+	public static String sessionToken="";
 	public static String uuid="";
 	public static String profileCode="";
 	public static String SupportedApiVersion="1";
 	public static final String Content_Type="application/json";
+	public static String APIName="";
+	public static String APIMethod="";
 	public static String APIUrl="";
 	public static String APIBody="";
 	public static String APIResponse="";
 	public static String errorMessage="";
 	public static int errorCode=200;
 	public static String sheetName="";
+
+
 
 
 	public Response hitPostRequest(String loginid, String APIUrl,String APIBody){
@@ -42,6 +51,24 @@ public class App {
 		}
 		return response;
 	}
+
+	public Response hitPutRequest(String loginid, String APIUrl,String APIBody){
+		Response response = null;
+		try {
+			RequestSpecBuilder builder = new RequestSpecBuilder();
+			builder.setBody(APIBody);			
+			builder.setContentType(Content_Type);			
+			RequestSpecification requestSpec = builder.build();
+			response = given().headers("loginId", ""+loginid+"", "sessionToken",""+sessionToken+"",
+					"profileCode",""+profileCode+"","SupportedApiVersion",""+SupportedApiVersion+"")
+					.authentication().preemptive().basic("", "").spec(requestSpec).when().put(APIUrl);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+
 
 	public Response hitGetRequest(String loginid, String APIUrl){
 		Response response = null;
@@ -78,7 +105,7 @@ public class App {
 		}
 		return sessionToken;
 	}
-	
+
 	public String getProfileCode(){
 		DBConnection.connectGroupDB();
 		try {
@@ -106,4 +133,16 @@ public class App {
 
 		return loginId;
 	}
+
+
+	public void verifyExecutionResult(Xls_Reader xls, String Sheetname, String actual, int i){
+		try {
+			Assert.assertEquals(actual, xls.getCellData(Sheetname, "API_RESPONSE_Expected", i).toString(), "");		
+			xls.setCellData(Sheetname, "RESULT", i, "Pass");
+		} catch (AssertionError e) {
+			xls.setCellData(Sheetname, "RESULT", i, "Fail");
+		}
+	}
+
+
 }

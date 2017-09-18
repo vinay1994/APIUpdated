@@ -5,8 +5,8 @@
     <classes>
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
         <methods>
-          <include name="loginRequest"/>
-          <include name="getUserProfile"/>
+          <include name="CloseProcesses"/>
+          <include name="getUserByUuid"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->

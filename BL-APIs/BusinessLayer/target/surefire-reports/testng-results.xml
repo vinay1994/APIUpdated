@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="26" passed="25">
   <reporter-output>
   </reporter-output>
-  <suite name="flip.api.businesslayer.BusinessLayer.AppTest" duration-ms="5556" started-at="2017-09-12T11:21:06Z" finished-at="2017-09-12T11:21:12Z">
+  <suite name="flip.api.businesslayer.BusinessLayer.AppTest" duration-ms="31563" started-at="2017-09-15T06:10:50Z" finished-at="2017-09-15T06:11:22Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="5556" started-at="2017-09-12T11:21:06Z" finished-at="2017-09-12T11:21:12Z">
+    <test name="Command line test" duration-ms="31563" started-at="2017-09-15T06:10:50Z" finished-at="2017-09-15T06:11:22Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@7921b0a2]" name="initialize" is-config="true" duration-ms="226" started-at="2017-09-12T16:51:06Z" finished-at="2017-09-12T16:51:06Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="initialize" is-config="true" duration-ms="307" started-at="2017-09-15T11:40:50Z" finished-at="2017-09-15T11:40:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginRequest()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@7921b0a2]" name="loginRequest" duration-ms="4906" started-at="2017-09-12T16:51:06Z" finished-at="2017-09-12T16:51:11Z">
+        <test-method status="PASS" signature="addBulkSectionsForClass()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="addBulkSectionsForClass" duration-ms="1" started-at="2017-09-15T11:40:51Z" finished-at="2017-09-15T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBulkSectionsForClass -->
+        <test-method status="PASS" signature="addClass()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="addClass" duration-ms="7303" started-at="2017-09-15T11:40:51Z" finished-at="2017-09-15T11:40:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addClass -->
+        <test-method status="PASS" signature="addBulkSubjectsForSchool()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="addBulkSubjectsForSchool" duration-ms="0" started-at="2017-09-15T11:40:51Z" finished-at="2017-09-15T11:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBulkSubjectsForSchool -->
+        <test-method status="PASS" signature="checkifLoginIdExists()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="checkifLoginIdExists" duration-ms="1489" started-at="2017-09-15T11:40:58Z" finished-at="2017-09-15T11:40:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkifLoginIdExists -->
+        <test-method status="PASS" signature="getClassTeacherDetailsBySectionCodes()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getClassTeacherDetailsBySectionCodes" duration-ms="1575" started-at="2017-09-15T11:40:59Z" finished-at="2017-09-15T11:41:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getClassTeacherDetailsBySectionCodes -->
+        <test-method status="PASS" signature="getClassesBySchoolCode()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getClassesBySchoolCode" duration-ms="2038" started-at="2017-09-15T11:41:01Z" finished-at="2017-09-15T11:41:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getClassesBySchoolCode -->
+        <test-method status="PASS" signature="getFlipMasterSubjectList()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getFlipMasterSubjectList" duration-ms="891" started-at="2017-09-15T11:41:03Z" finished-at="2017-09-15T11:41:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFlipMasterSubjectList -->
+        <test-method status="PASS" signature="getInviteCodesForRoles()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getInviteCodesForRoles" duration-ms="2030" started-at="2017-09-15T11:41:04Z" finished-at="2017-09-15T11:41:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInviteCodesForRoles -->
+        <test-method status="PASS" signature="getSchoolDetailBySchoolInviteCode()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getSchoolDetailBySchoolInviteCode" duration-ms="1152" started-at="2017-09-15T11:41:06Z" finished-at="2017-09-15T11:41:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSchoolDetailBySchoolInviteCode -->
+        <test-method status="PASS" signature="getSectionsWithSubjectsByClass()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getSectionsWithSubjectsByClass" duration-ms="1218" started-at="2017-09-15T11:41:07Z" finished-at="2017-09-15T11:41:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSectionsWithSubjectsByClass -->
+        <test-method status="PASS" signature="getStaticContent()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getStaticContent" duration-ms="942" started-at="2017-09-15T11:41:08Z" finished-at="2017-09-15T11:41:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getStaticContent -->
+        <test-method status="PASS" signature="getUserByEmail()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getUserByEmail" duration-ms="1310" started-at="2017-09-15T11:41:09Z" finished-at="2017-09-15T11:41:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByEmail -->
+        <test-method status="PASS" signature="getUserByMobile()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getUserByMobile" duration-ms="1297" started-at="2017-09-15T11:41:11Z" finished-at="2017-09-15T11:41:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByMobile -->
+        <test-method status="FAIL" signature="getUserByUuid()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getUserByUuid" duration-ms="1794" started-at="2017-09-15T11:41:12Z" finished-at="2017-09-15T11:41:14Z">
+          <exception class="org.json.JSONException">
+            <message>
+              <![CDATA[JSONObject["user"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.json.JSONException: JSONObject["user"] not found.
+	at org.json.JSONObject.get(JSONObject.java:472)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:619)
+	at flip.api.businesslayer.BusinessLayer.AppTest.getUserByUuid(AppTest.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.json.JSONException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserByUuid -->
+        <test-method status="PASS" signature="getUserProfileAccountView()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getUserProfileAccountView" duration-ms="1091" started-at="2017-09-15T11:41:14Z" finished-at="2017-09-15T11:41:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserProfileAccountView -->
+        <test-method status="PASS" signature="isUserLoggedIn()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="isUserLoggedIn" duration-ms="1702" started-at="2017-09-15T11:41:15Z" finished-at="2017-09-15T11:41:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isUserLoggedIn -->
+        <test-method status="PASS" signature="sendEmailVerificationCode()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="sendEmailVerificationCode" duration-ms="0" started-at="2017-09-15T11:41:16Z" finished-at="2017-09-15T11:41:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmailVerificationCode -->
+        <test-method status="PASS" signature="sendMobileVerificationCode()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="sendMobileVerificationCode" duration-ms="1" started-at="2017-09-15T11:41:16Z" finished-at="2017-09-15T11:41:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendMobileVerificationCode -->
+        <test-method status="PASS" signature="setUserPassword()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="setUserPassword" duration-ms="2319" started-at="2017-09-15T11:41:16Z" finished-at="2017-09-15T11:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUserPassword -->
+        <test-method status="PASS" signature="setForgetUserPassword()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="setForgetUserPassword" duration-ms="0" started-at="2017-09-15T11:41:16Z" finished-at="2017-09-15T11:41:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setForgetUserPassword -->
+        <test-method status="PASS" signature="verifyEmailViaOtp()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="verifyEmailViaOtp" duration-ms="1" started-at="2017-09-15T11:41:19Z" finished-at="2017-09-15T11:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailViaOtp -->
+        <test-method status="PASS" signature="unlinkParentToStudent()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="unlinkParentToStudent" duration-ms="0" started-at="2017-09-15T11:41:19Z" finished-at="2017-09-15T11:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unlinkParentToStudent -->
+        <test-method status="PASS" signature="verifyForgotPasswordCode()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="verifyForgotPasswordCode" duration-ms="0" started-at="2017-09-15T11:41:19Z" finished-at="2017-09-15T11:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPasswordCode -->
+        <test-method status="PASS" signature="verifyMobileViaOtp()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="verifyMobileViaOtp" duration-ms="1" started-at="2017-09-15T11:41:19Z" finished-at="2017-09-15T11:41:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMobileViaOtp -->
+        <test-method status="PASS" signature="loginRequest()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="loginRequest" duration-ms="1943" started-at="2017-09-15T11:41:19Z" finished-at="2017-09-15T11:41:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginRequest -->
-        <test-method status="PASS" signature="getUserProfile()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@7921b0a2]" name="getUserProfile" duration-ms="415" started-at="2017-09-12T16:51:11Z" finished-at="2017-09-12T16:51:12Z">
+        <test-method status="PASS" signature="getUserProfile()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="getUserProfile" duration-ms="1137" started-at="2017-09-15T11:41:21Z" finished-at="2017-09-15T11:41:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserProfile -->
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3c756e4d]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-09-15T11:41:22Z" finished-at="2017-09-15T11:41:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseProcesses -->
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
     </test> <!-- Command line test -->
   </suite> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->

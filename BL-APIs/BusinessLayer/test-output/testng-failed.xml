@@ -6,7 +6,7 @@
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
         <methods>
           <include name="CloseProcesses"/>
-          <include name="getClassesBySchoolCode"/>
+          <include name="loginRequest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
