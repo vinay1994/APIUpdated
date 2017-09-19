@@ -1,193 +1,208 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>flip.api.businesslayer</groupId>
-  <artifactId>BusinessLayer</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>BusinessLayer</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-         <groupId>com.jayway.restassured</groupId>
-         <artifactId>rest-assured</artifactId>
-         <version>2.3.4</version>
-      </dependency>
-      <dependency>
-         <groupId>org.codehaus.groovy</groupId>
-         <artifactId>groovy-all</artifactId>
-         <version>2.4.12</version>
-      </dependency>
-      
-      <dependency>
-    <groupId>com.jayway.restassured</groupId>
-    <artifactId>json-schema-validator</artifactId>
-    <version>2.2.0</version>
-</dependency>
-      
-      <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.11</version>
-</dependency>
-
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>poi</artifactId>
-         <version>3.9</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>poi-ooxml</artifactId>
-         <version>3.9</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>poi-ooxml-schemas</artifactId>
-         <version>3.9</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>poi-scratchpad</artifactId>
-         <version>3.9</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>ooxml-schemas</artifactId>
-         <version>1.1</version>
-      </dependency>
-      <dependency>
-         <groupId>org.apache.poi</groupId>
-         <artifactId>openxml4j</artifactId>
-         <version>1.0-beta</version>
-      </dependency>
-      <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
-    <version>2.53.1</version>
-</dependency>
-<dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20170516</version>
-</dependency>
-<dependency>
-    <groupId>com.jayway.jsonpath</groupId>
-    <artifactId>json-path</artifactId>
-    <version>0.9.1</version>
-</dependency>
-<dependency>
-    <groupId>com.jcraft</groupId>
-    <artifactId>jsch</artifactId>
-    <version>0.1.49</version>
-</dependency>
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.6</version>
-</dependency>
-<dependency>
-    <groupId>net.javacrumbs.json-unit</groupId>
-    <artifactId>json-unit</artifactId>
-    <version>1.5.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>flip.api.businesslayer</groupId>
+    <artifactId>BusinessLayer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>BusinessLayer</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>ooxml-schemas</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>openxml4j</artifactId>
+            <version>1.0-beta</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>2.53.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20170516</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.49</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>net.javacrumbs.json-unit</groupId>
+            <artifactId>json-unit</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+    <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.4</version>
     <scope>test</scope>
 </dependency>
-  </dependencies>
-  <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
-            <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
-            </configuration>
-        </plugin>
-        
-		 <!-- Suirefire plugin to run xml files --> 
-		 <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>2.18.1</version>
+        	
+    </dependencies>
+    <build>
+    <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <!-- Suirefire plugin to run xml files -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <properties>
+					<!-- Setting ReportNG listeners -->
+					    <property>
+	                        <name>listener</name>
+	                        <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+                    	</property>
+</properties>
+                </configuration>
+            </plugin>
+            <!-- Post-Man plugin -->
+            <plugin>
+                <groupId>ch.fortysix</groupId>
+                <artifactId>maven-postman-plugin</artifactId>
+                <version>0.1.6</version>
+                <executions>
+                    <execution>
+                        <id>send a mail</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>send-mail</goal>
+                        </goals>
+                        <inherited>true</inherited>
+                        <configuration>
+                            <!-- From Email address -->
+                            <from>fliplearn.appaccess@gmail.com</from>
+                            <!--  Email subject -->
+                            <subject>Test Automation Report</subject>
+                            <!-- Fail the build if the mail doesnt reach -->
+                            <failonerror>true</failonerror>
+                            <!-- host -->
+                            <mailhost>smtp.gmail.com</mailhost>
+                            <!-- port of the host -->
+                            <mailport>465</mailport>
+                            <mailssl>true</mailssl>
+                            <mailAltConfig>true</mailAltConfig>
+                            <!-- Email Authentication(USername and Password) -->
+                            <mailuser>fliplearn.appaccess@gmail.com</mailuser>
+                            <mailpassword>appaccess@123</mailpassword>
+                            <receivers>
+                                <!-- To Email address -->
+                                <receiver>satyaprakash.solanki@fliplearn.com</receiver>
+                            </receivers>
+                            <fileSets>
+                                <fileSet>
+                                    <!-- Report directory Path -->
+                                    <directory>/Users/satya/Desktop/FEPL_API_AUTOMATION/BL-APIs/BusinessLayer/TestData</directory>
+                                    <includes>
+                                        <!-- Report file name -->
+                                        <include>APIResults.xls</include>
+                                    </includes>
+                                    <!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
+                                </fileSet>
+                            </fileSets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+		<plugins>
+		<!-- TestNG-xslt related configuration. -->
+		  <plugin>
+			<groupId>org.reportyng</groupId>
+			<artifactId>reporty-ng</artifactId>
+			<version>1.2</version>
 			<configuration>
-				<suiteXmlFiles>
-					<suiteXmlFile>testng.xml</suiteXmlFile>
-				</suiteXmlFiles>
+			  <!-- Output directory for the testng xslt report -->
+			  <outputDir>/target/testng-xslt-report</outputDir>
+			  <sortTestCaseLinks>true</sortTestCaseLinks>
+			  <testDetailsFilter>FAIL,SKIP,PASS,CONF,BY_CLASS</testDetailsFilter>
+			  <showRuntimeTotals>true</showRuntimeTotals>
 			</configuration>
-		 </plugin>
-		 
-		 	<!-- Post-Man plugin -->
-		 <plugin>
-			<groupId>ch.fortysix</groupId>
-			<artifactId>maven-postman-plugin</artifactId>
-			<version>0.1.6</version>
-			<executions>
-				<execution>
-				
-				<id>send a mail</id>
-				<phase>test</phase>
-				<goals>
-				<goal>send-mail</goal>
-				</goals>
-				<inherited>true</inherited>
-				
-				<configuration>
-					<!-- From Email address -->
-					<from>satyaprakash.solanki@fliplearn.com</from>
-					
-					<!--  Email subject -->
-					<subject>Test Automation Report</subject>
-					
-					<!-- Fail the build if the mail doesnt reach -->
-					<failonerror>true</failonerror>
-					
-					<!-- host -->
-					<mailhost>smtp.gmail.com</mailhost>
-					<!-- port of the host -->
-					<mailport>465</mailport>
-					<mailssl>true</mailssl>
-					<mailAltConfig>true</mailAltConfig>
-					
-					<!-- Email Authentication(USername and Password) -->
-					<mailuser>satyaprakash.solanki@fliplearn.com</mailuser>
-					<mailpassword>thakursahab92</mailpassword>
-					
-					<receivers>
-						<!-- To Email address -->
-						<receiver>satyaprakash.solanki@fliplearn.com</receiver>
-					</receivers>
-					
-					<fileSets>
-					<fileSet>
-						<!-- Report directory Path -->
-						<directory>/Users/satya/Desktop/FEPL_API_AUTOMATION/BL-APIs/BusinessLayer/TestData</directory>
-						<includes>
-							<!-- Report file name -->
-							<include>APIResults.xls</include>
-						</includes>
-						<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
-						</fileSet>
-					</fileSets>				
-				
-				</configuration>
-				</execution>
-			</executions>
-		</plugin>
-		 
-    </plugins>
-</build>
+		  </plugin>
+		</plugins>
+</reporting>
 </project>
