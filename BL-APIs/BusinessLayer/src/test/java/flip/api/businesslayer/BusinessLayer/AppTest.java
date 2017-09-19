@@ -1,5 +1,9 @@
 package flip.api.businesslayer.BusinessLayer;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.sql.SQLException;
 import org.json.JSONArray;
@@ -54,9 +58,6 @@ public class AppTest extends App{
 				int statusCode=response.getStatusCode();
 				printStatement("\nStatus Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-				
-				
-				
 				verifyExecutionResult(xls, sheetName, response.body().asString(), i);
 			}else if(APIMethod.equalsIgnoreCase("PUT")){
 				Response response=hitPutRequest(loginId,APIUrl, APIBody);
@@ -74,7 +75,30 @@ public class AppTest extends App{
 
 
 
-	@Test(priority=1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	////@Testiority=1)
 	public void loginRequest() throws JSONException,InterruptedException {
 		loginId=load.getProperty("Student").toString();
 		getSessionToken(loginId);
@@ -97,20 +121,20 @@ public class AppTest extends App{
 				sessionToken=JSONResponseBody.getJSONObject("data").getString("sessionToken");
 				uuid=JSONResponseBody.getJSONObject("data").getString("uuid");
 				System.out.println("\nsessionToke is "+sessionToken);
-				Assert.assertEquals(uuid, load.getProperty("UUIDStu").toString());
+				AssertJUnit.assertEquals(uuid, load.getProperty("UUIDStu").toString());
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			}else if(response.body().asString().contains(":40")){
 				errorMessage=JSONResponseBody.getJSONObject("error").getString("errorMessage");
 				errorCode=JSONResponseBody.getJSONObject("error").getInt("errorCode");
 				System.out.println("\nerror Code is "+errorCode);
 				System.out.println(errorMessage);
-				Assert.assertEquals(errorMessage, xls.getCellData(sheetName, "API_RESPONSE_Expected	", i));
+				AssertJUnit.assertEquals(errorMessage, xls.getCellData(sheetName, "API_RESPONSE_Expected	", i));
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			}
 		}
 	}
 
-	@Test(priority=2)
+	////@Testiority=2)
 	public void getUserProfile() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n***********************************");
@@ -131,7 +155,7 @@ public class AppTest extends App{
 			profileCode = jsonArray.getJSONObject(0).getString("profileCode");
 			printStatement("\nProfile code is "+profileCode);
 			try {
-				Assert.assertEquals(profileCode, load.getProperty("ProfileCodeStu").toString());
+				AssertJUnit.assertEquals(profileCode, load.getProperty("ProfileCodeStu").toString());
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -139,7 +163,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void getClassTeacherDetailsBySectionCodes() throws JSONException{
 		loginId=load.getProperty("Teacher").toString();
 		printStatement("\n************************************************");
@@ -156,7 +180,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -164,7 +188,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void getClassesBySchoolCode() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -181,7 +205,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -189,7 +213,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void addClass() throws JSONException{
 		loginId=load.getProperty("Admin").toString();
 		printStatement("\n*********************************************");
@@ -206,7 +230,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -214,7 +238,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void getSectionsWithSubjectsByClass() throws JSONException{
 		loginId=load.getProperty("Admin").toString();
 		printStatement("\n*********************************************");
@@ -231,7 +255,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -240,7 +264,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void getUserByUuid() throws JSONException{
 		loginId=load.getProperty("Teacher").toString();
 		printStatement("\n*********************************************");
@@ -258,7 +282,7 @@ public class AppTest extends App{
 			printStatement("\nStatus Code is "+statusCode);
 			if(response.body().asString().contains(":40")){
 				try {
-					Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+					AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 					xls.setCellData(sheetName, "RESULT", i, "Pass");
 				} catch (AssertionError e) {
 					xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -270,8 +294,8 @@ public class AppTest extends App{
 				String loginId_new = jsonArray.getJSONObject(0).getString("loginId");
 				String UUID_new = jsonArray.getJSONObject(0).getString("uuid");
 				try {
-					Assert.assertEquals(loginId_new, loginId, "");
-					Assert.assertEquals(UUID_new, uuid, "");
+					AssertJUnit.assertEquals(loginId_new, loginId, "");
+					AssertJUnit.assertEquals(UUID_new, uuid, "");
 					xls.setCellData(sheetName, "RESULT", i, "Pass");
 				} catch (AssertionError e) {
 					xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -280,7 +304,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void getUserProfileAccountView() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -300,8 +324,8 @@ public class AppTest extends App{
 			String loginId_new=jsonObject.getJSONObject("userAccountView").getString("loginId");
 			String UUID_new=jsonObject.getJSONObject("userAccountView").getString("uuid");
 			try {
-				Assert.assertEquals(loginId_new, loginId, "");
-				Assert.assertEquals(UUID_new, uuid, "");
+				AssertJUnit.assertEquals(loginId_new, loginId, "");
+				AssertJUnit.assertEquals(UUID_new, uuid, "");
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -309,7 +333,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void isUserLoggedIn() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -326,7 +350,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -334,7 +358,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void getStaticContent() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -351,7 +375,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -359,7 +383,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void checkifLoginIdExists() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -376,7 +400,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -384,7 +408,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void getUserByMobile() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -401,7 +425,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -409,7 +433,7 @@ public class AppTest extends App{
 		}	
 	}
 
-	@Test
+	//@Test
 	public void getUserByEmail() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -426,7 +450,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -434,7 +458,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test	
+	//@Test	
 	public void setUserPassword() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -451,7 +475,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -459,7 +483,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void getSchoolDetailBySchoolInviteCode(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -476,7 +500,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -484,7 +508,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void getInviteCodesForRoles(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -501,7 +525,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -509,7 +533,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void getFlipMasterSubjectList(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -526,7 +550,7 @@ public class AppTest extends App{
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 			printStatement("\nStatus Code is "+statusCode);
 			try {
-				Assert.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
+				AssertJUnit.assertEquals(response.body().asString(), xls.getCellData(sheetName, "API_RESPONSE_Expected", i).toString(), "");		
 				xls.setCellData(sheetName, "RESULT", i, "Pass");
 			} catch (AssertionError e) {
 				xls.setCellData(sheetName, "RESULT", i, "Fail");
@@ -534,7 +558,7 @@ public class AppTest extends App{
 		}
 	}
 
-	@Test
+	//@Test
 	public void unlinkParentToStudent(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -543,7 +567,7 @@ public class AppTest extends App{
 	}
 
 
-	@Test
+	//@Test
 	public void addBulkSectionsForClass(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -551,7 +575,7 @@ public class AppTest extends App{
 		printStatement("*********************************************");
 	}
 
-	@Test
+	//@Test
 	public void addBulkSubjectsForSchool(){
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -560,7 +584,7 @@ public class AppTest extends App{
 	}
 
 
-	@Test
+	//@Test
 	public void verifyEmailViaOtp() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -569,7 +593,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void verifyMobileViaOtp() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -578,7 +602,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void sendMobileVerificationCode() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -587,7 +611,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void sendEmailVerificationCode() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -596,7 +620,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void verifyForgotPasswordCode() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");
@@ -605,7 +629,7 @@ public class AppTest extends App{
 
 	}
 
-	@Test
+	//@Test
 	public void setForgetUserPassword() throws JSONException{
 		loginId=load.getProperty("Student").toString();
 		printStatement("\n*********************************************");

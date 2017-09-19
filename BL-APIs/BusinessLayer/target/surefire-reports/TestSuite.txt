@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: flip.api.businesslayer.BusinessLayer.AppTest
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.549 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.528 sec - in TestSuite
