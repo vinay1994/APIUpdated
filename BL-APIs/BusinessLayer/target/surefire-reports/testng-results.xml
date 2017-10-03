@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14395" started-at="2017-09-19T07:58:45Z" finished-at="2017-09-19T07:58:59Z">
+  <suite name="Business layer Api Automation" duration-ms="92222" started-at="2017-09-26T12:03:43Z" finished-at="2017-09-26T12:05:16Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14395" started-at="2017-09-19T07:58:45Z" finished-at="2017-09-19T07:58:59Z">
+    <test name="Test" duration-ms="92222" started-at="2017-09-26T12:03:43Z" finished-at="2017-09-26T12:05:16Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5f2108b5]" name="initialize" is-config="true" duration-ms="283" started-at="2017-09-19T13:28:45Z" finished-at="2017-09-19T13:28:45Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="initialize" is-config="true" duration-ms="436" started-at="2017-09-26T17:33:43Z" finished-at="2017-09-26T17:33:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5f2108b5]" name="executeAndVerifyResult" duration-ms="14091" started-at="2017-09-19T13:28:45Z" finished-at="2017-09-19T13:28:59Z">
+        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="executeAndVerifyResult" duration-ms="91767" started-at="2017-09-26T17:33:44Z" finished-at="2017-09-26T17:35:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5f2108b5]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-09-19T13:28:59Z" finished-at="2017-09-19T13:28:59Z">
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-09-26T17:35:16Z" finished-at="2017-09-26T17:35:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseProcesses -->
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Business layer Api Automation -->
 </testng-results>

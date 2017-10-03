@@ -1,7 +1,6 @@
 package flip.api.businesslayer.BusinessLayer;
 
 import static com.jayway.restassured.RestAssured.given;
-import static com.jayway.restassured.RestAssured.when;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.testng.Assert;
@@ -26,8 +25,12 @@ public class App {
 	public static String errorMessage="";
 	public static int errorCode=200;
 	public static String sheetName="ExecutionSheet";
+	public static String AssertionType="";
 
 
+	public static void main(String[] args) {
+
+	}
 
 
 	public Response hitPostRequest(String loginid, String APIUrl,String APIBody){
@@ -90,7 +93,7 @@ public class App {
 			while(rs.next()){
 				sessionToken=rs.getString("session_token");
 				uuid=rs.getString("uuid");
-				System.out.println(sessionToken);
+				//System.out.println(sessionToken);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -107,7 +110,7 @@ public class App {
 					+ "(select id from group_api.group_users where uuid='"+uuid+"' and is_active=1) order by updated desc limit 1");
 			while(rs.next()){
 				profileCode=rs.getString("base_profile_code");
-				System.out.println(profileCode);
+				//System.out.println(profileCode);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -129,12 +132,20 @@ public class App {
 	}
 
 
-	public void verifyExecutionResult(Xls_Reader xls, String Sheetname, String actual, int i){
+	public void verifyExecutionResult(Xls_Reader xls, String Sheetname, String actual, int i, String assertionType){
 		try {
-			Assert.assertEquals(actual, xls.getCellData(Sheetname, "API_RESPONSE_Expected", i).toString(), "");		
-			xls.setCellData(Sheetname, "RESULT", i, "Pass");
+			if(assertionType.equalsIgnoreCase("Response")){
+				Assert.assertEquals(actual, xls.getCellData(Sheetname, "API_RESPONSE_Expected", i).toString(), "");		
+				xls.setCellData(Sheetname, "RESULT", i, "Pass");
+				printStatement("Pass");
+			}else if(assertionType.equalsIgnoreCase("Key-value")){
+				Assert.assertTrue(actual.contains(xls.getCellData(Sheetname, "API_RESPONSE_Expected", i)));	
+				xls.setCellData(Sheetname, "RESULT", i, "Pass");
+				printStatement("Pass");
+			}
 		} catch (AssertionError e) {
 			xls.setCellData(Sheetname, "RESULT", i, "Fail");
+			printStatement("Fail");
 		}
 	}
 

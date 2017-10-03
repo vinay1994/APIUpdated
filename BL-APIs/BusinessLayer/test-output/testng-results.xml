@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17997" started-at="2017-09-15T06:50:37Z" finished-at="2017-09-15T06:50:55Z">
+  <suite name="Default suite" duration-ms="306" started-at="2017-09-26T11:37:54Z" finished-at="2017-09-26T11:37:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17997" started-at="2017-09-15T06:50:37Z" finished-at="2017-09-15T06:50:55Z">
+    <test name="Default test" duration-ms="306" started-at="2017-09-26T11:37:54Z" finished-at="2017-09-26T11:37:54Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="initialize" is-config="true" duration-ms="224" started-at="2017-09-15T12:20:37Z" finished-at="2017-09-15T12:20:37Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@56235b8e]" name="initialize" is-config="true" duration-ms="276" started-at="2017-09-26T17:07:54Z" finished-at="2017-09-26T17:07:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="executeAndVerifyResult" duration-ms="17761" started-at="2017-09-15T12:20:37Z" finished-at="2017-09-15T12:20:55Z">
+        <test-method status="PASS" signature="aa()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@56235b8e]" name="aa" duration-ms="6" started-at="2017-09-26T17:07:54Z" finished-at="2017-09-26T17:07:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="CloseProcesses" is-config="true" duration-ms="0" started-at="2017-09-15T12:20:55Z" finished-at="2017-09-15T12:20:55Z">
+        </test-method> <!-- aa -->
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@56235b8e]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-09-26T17:07:54Z" finished-at="2017-09-26T17:07:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseProcesses -->
