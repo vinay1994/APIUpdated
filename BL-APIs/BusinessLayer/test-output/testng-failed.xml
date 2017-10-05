@@ -6,8 +6,8 @@
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
         <methods>
           <include name="CloseProcesses"/>
+          <include name="createAnnouncement"/>
           <include name="initialize"/>
-          <include name="executeAndVerifyResult"/>
         </methods>
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
     </classes>

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="91.767">
+           time="95.267">
   <properties />
   
   
-            <testcase name="executeAndVerifyResult" time="91.767" classname="flip.api.businesslayer.BusinessLayer.AppTest" />
+            <testcase name="executeAndVerifyResult" time="95.267" classname="flip.api.businesslayer.BusinessLayer.AppTest" />
       
 </testsuite>
