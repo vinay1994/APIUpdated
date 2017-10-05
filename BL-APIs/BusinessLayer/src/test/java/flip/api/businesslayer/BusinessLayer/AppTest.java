@@ -22,24 +22,6 @@ public class AppTest extends App{
 	public void CloseProcesses() throws ClassNotFoundException, SQLException{
 	}
 
-	@Test
-	public void createAnnouncement(){
-		sheetName="homework_create_uuid";
-		APIName="http://commevent.fliplearn.com:8084/event";
-		//APIName="http://10.8.0.118:8084/event";
-		int rowCount=xls.getRowCount(sheetName);
-		for(int i=2;i<rowCount+1;i++){
-			APIBody= getRequestJson(i, sheetName, "HOMEWORK_CREATE");
-			printStatement(APIName);
-			printStatement(APIBody);
-			Response response=hitPostRequest(APIName, APIBody);
-			System.out.println("Response is-->>> "+response.asString());
-			int statusCode=response.getStatusCode();
-			printStatement("Status Code is "+statusCode);
-			xls.setCellData(sheetName, "Result", i, response.asString());
-		}
-	}
-
 
 	@Test
 	public void executeAndVerifyResult(){
@@ -79,4 +61,23 @@ public class AppTest extends App{
 			}
 		}
 	}
+	
+	
+// Do not execute Below Function
+	public void createAnnouncement(){
+		sheetName="homework_create_uuid";
+		APIName="http://commevent.fliplearn.com:8084/event";
+		int rowCount=xls.getRowCount(sheetName);
+		for(int i=2;i<rowCount+1;i++){
+			APIBody= getRequestJson(i, sheetName, "HOMEWORK_CREATE");
+			printStatement(APIName);
+			printStatement(APIBody);
+			Response response=hitPostRequest(APIName, APIBody);
+			System.out.println("Response is-->>> "+response.asString());
+			int statusCode=response.getStatusCode();
+			printStatement("Status Code is "+statusCode);
+			xls.setCellData(sheetName, "Result", i, response.asString());
+		}
+	}
+	
 }
