@@ -14,8 +14,8 @@ public class DBConnection{
 	static int id=0,irs=0;
 
 	public static void connectUmsDB(){
-		String dbUrl = "jdbc:mysql://10.0.6.85:3306/";
-		String username = "mukeshg";String password = "mukeshg@321";String DbName = "ums_api";
+		String dbUrl = "jdbc:mysql://int4soadb.fliplearn.com:3306/";
+		String username = "soa_app";String password = "flip@159$$";String DbName = "ums_api";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			umsConnection=DriverManager.getConnection(dbUrl+DbName,username,password);

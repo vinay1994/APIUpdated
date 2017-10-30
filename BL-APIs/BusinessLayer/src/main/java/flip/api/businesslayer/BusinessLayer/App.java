@@ -27,10 +27,10 @@ import com.model.Event;
 import com.model.Payload;
 
 public class App {
-	public static String loginId="";
-	public static String sessionToken="";
+	public static String loginId="teacher_2.chabr_517788";
+	public static String sessionToken="61lCtizT4epHzO14GYZOAvDaq";
 	public static String uuid="";
-	public static String profileCode="";
+	public static String profileCode="7395309297";
 	public static String SupportedApiVersion="1";
 	public static final String Content_Type="application/json";
 	public static String APIName="";
@@ -175,6 +175,24 @@ public class App {
 		}
 		return response;
 	}
+	
+	public Response hitDeleteRequest(String loginid, String APIUrl,String APIBody){
+		Response response = null;
+		try {
+			RequestSpecBuilder builder = new RequestSpecBuilder();
+			builder.setBody(APIBody);			
+			builder.setContentType(Content_Type);			
+			RequestSpecification requestSpec = builder.build();
+			response = given().headers("loginId", ""+loginid+"", "sessionToken",""+sessionToken+"",
+					"profileCode",""+profileCode+"","SupportedApiVersion",""+SupportedApiVersion+"")
+					.authentication().preemptive().basic("", "").spec(requestSpec).when().delete(APIUrl);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+	
 
 	public void setResponseCodeWithResponseData(String Sheetname, int i, int statusCode, String response){
 		Xls_Reader xls = new Xls_Reader();
@@ -206,7 +224,7 @@ public class App {
 			ResultSet rs = DBConnection.executeQuery("SELECT * from group_api.group_user_roles where group_user_id in "
 					+ "(select id from group_api.group_users where uuid='"+uuid+"' and is_active=1) order by updated desc limit 1");
 			while(rs.next()){
-				profileCode=rs.getString("base_profile_code");
+				//profileCode=rs.getString("base_profile_code");
 				//System.out.println(profileCode);
 			}
 		} catch (SQLException e) {
@@ -236,6 +254,10 @@ public class App {
 				xls.setCellData(Sheetname, "RESULT", i, "Pass");
 				printStatement("Pass");
 			}else if(assertionType.equalsIgnoreCase("Key-value")){
+				Assert.assertTrue(actual.contains(xls.getCellData(Sheetname, "API_RESPONSE_Expected", i)));	
+				xls.setCellData(Sheetname, "RESULT", i, "Pass");
+				printStatement("Pass");
+			}else if(assertionType.equalsIgnoreCase("RESP_CODE")){
 				Assert.assertTrue(actual.contains(xls.getCellData(Sheetname, "API_RESPONSE_Expected", i)));	
 				xls.setCellData(Sheetname, "RESULT", i, "Pass");
 				printStatement("Pass");
