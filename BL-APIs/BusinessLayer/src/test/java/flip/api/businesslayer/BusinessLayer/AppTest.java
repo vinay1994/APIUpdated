@@ -54,25 +54,42 @@ public class AppTest extends App{
 				} catch (Exception e) {}
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-				verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
+					verifyExecutionResult(xls, sheetName, String.valueOf(statusCode), i,AssertionType);
+				}else{
+					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				}
+				
 			}else if(APIMethod.equalsIgnoreCase("POST")){
 				Response response=hitPostRequest(loginId,APIUrl, APIBody);
 				statusCode=response.getStatusCode();
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-				verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
+					verifyExecutionResult(xls, sheetName, String.valueOf(statusCode), i,AssertionType);
+				}else{
+					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				}
 			}else if(APIMethod.equalsIgnoreCase("PUT")){
 				Response response=hitPutRequest(loginId,APIUrl, APIBody);
 				statusCode=response.getStatusCode();
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-				verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
+					verifyExecutionResult(xls, sheetName, String.valueOf(statusCode), i,AssertionType);
+				}else{
+					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				}
 			}else if(APIMethod.equalsIgnoreCase("Delete")){
 				Response response=hitPutRequest(loginId,APIUrl, APIBody);
 				statusCode=response.getStatusCode();
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-				verifyExecutionResult(xls, sheetName, String.valueOf(statusCode), i,AssertionType);
+				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
+					verifyExecutionResult(xls, sheetName, String.valueOf(statusCode), i,AssertionType);
+				}else{
+					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
+				}
 			}
 		}
 	}

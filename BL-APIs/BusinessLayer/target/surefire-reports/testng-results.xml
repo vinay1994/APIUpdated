@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Business layer Api Automation" duration-ms="132567" started-at="2017-10-30T06:31:21Z" finished-at="2017-10-30T06:33:34Z">
+  <suite name="Business layer Api Automation" duration-ms="102836" started-at="2017-10-30T07:56:51Z" finished-at="2017-10-30T07:58:34Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="132567" started-at="2017-10-30T06:31:21Z" finished-at="2017-10-30T06:33:34Z">
+    <test name="Test" duration-ms="102836" started-at="2017-10-30T07:56:51Z" finished-at="2017-10-30T07:58:34Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="initialize" is-config="true" duration-ms="12" started-at="2017-10-30T12:01:21Z" finished-at="2017-10-30T12:01:21Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="initialize" is-config="true" duration-ms="7" started-at="2017-10-30T13:26:51Z" finished-at="2017-10-30T13:26:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="executeAndVerifyResult" duration-ms="132535" started-at="2017-10-30T12:01:21Z" finished-at="2017-10-30T12:03:34Z">
+        <test-method status="FAIL" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="executeAndVerifyResult" duration-ms="102805" started-at="2017-10-30T13:26:51Z" finished-at="2017-10-30T13:28:34Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@3f49dace]" name="CloseProcesses" is-config="true" duration-ms="0" started-at="2017-10-30T12:03:34Z" finished-at="2017-10-30T12:03:34Z">
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@1e397ed7]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-10-30T13:28:34Z" finished-at="2017-10-30T13:28:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseProcesses -->

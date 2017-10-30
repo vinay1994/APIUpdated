@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.042 sec <<< FAILURE! - in TestSuite
-executeAndVerifyResult(flip.api.businesslayer.BusinessLayer.AppTest)  Time elapsed: 0.3 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 118.462 sec <<< FAILURE! - in TestSuite
+executeAndVerifyResult(flip.api.businesslayer.BusinessLayer.AppTest)  Time elapsed: 102.869 sec  <<< FAILURE!
 java.lang.NullPointerException: null
-	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:35)
+	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:56)
 
