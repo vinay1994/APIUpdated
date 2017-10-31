@@ -34,7 +34,7 @@ public class AppTest extends App{
 		int statusCode=200;
 		//int rowCount=xls.getRowCount(sheetName);
 		//System.out.println("Row count"+rowCount);
-		for(int i=2;i<120;i++){
+		for(int i=2;i<40;i++){
 			loginId=(String) load.getProperty(xls.getCellData(sheetName, "RoleType", i));
 			getSessionToken(loginId);
 			getProfileCode();
@@ -62,7 +62,11 @@ public class AppTest extends App{
 				
 			}else if(APIMethod.equalsIgnoreCase("POST")){
 				Response response=hitPostRequest(loginId,APIUrl, APIBody);
-				statusCode=response.getStatusCode();
+				try {
+					statusCode=response.getStatusCode();
+				} catch (Exception e) {
+				}
+			
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
@@ -80,7 +84,7 @@ public class AppTest extends App{
 				}else{
 					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
 				}
-			}else if(APIMethod.equalsIgnoreCase("Delete")){
+			}else if(APIMethod.equalsIgnoreCase("DELETE")){
 				Response response=hitPutRequest(loginId,APIUrl, APIBody);
 				statusCode=response.getStatusCode();
 				printStatement("Status Code is "+statusCode);

@@ -4,14 +4,14 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="102.805">
+           time="8.280">
   <properties />
-            <testcase name="executeAndVerifyResult" time="102.805" classname="flip.api.businesslayer.BusinessLayer.AppTest">
+            <testcase name="executeAndVerifyResult" time="8.280" classname="flip.api.businesslayer.BusinessLayer.AppTest">
                 <failure type="java.lang.NullPointerException"
                   message="(null)"
               >
 <![CDATA[java.lang.NullPointerException
-  flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:56)
+  flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:71)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -29,8 +29,8 @@
   org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
   org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
   java.util.concurrent.FutureTask.run(FutureTask.java:266)
-  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
   java.lang.Thread.run(Thread.java:748)
 ]]>
       </failure>

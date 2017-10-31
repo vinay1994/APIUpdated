@@ -1,477 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="102.869" tests="1" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="8.422" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
-    <property name="java.vm.version" value="25.144-b01"/>
-    <property name="user.country.format" value="IN"/>
-    <property name="gopherProxySet" value="false"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
+    <property name="java.vm.version" value="25.131-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/satya/Desktop/FEPL_API_AUTOMATION/BL-APIs/BusinessLayer"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Dell-Flip\workspace\FEPL_API_AUTOMATION\BL-APIs\BusinessLayer"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=":"/>
+    <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="US"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/satya/Desktop/FEPL_API_AUTOMATION/BL-APIs/BusinessLayer"/>
-    <property name="java.runtime.version" value="1.8.0_144-b01"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/endorsed"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/c0/tg0nhbwj4qbdn0h487vdl06m0000gn/T/"/>
+    <property name="user.dir" value="C:\Users\Dell-Flip\workspace\FEPL_API_AUTOMATION\BL-APIs\BusinessLayer"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\DELL-F~1\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.5.0/libexec/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/satya/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/usr/local/Cellar/maven/3.5.0/libexec/conf"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\OpenVPN\bin;C:\Users\Dell-Flip\Downloads\Setups\android-sdk-windows\platform-tools;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\Users\Dell-Flip\Downloads\apache-ant-1.9.9-bin\apache-ant-1.9.9\bin;C:\Users\Dell-Flip\AppData\Local\Programs\Fiddler;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.5"/>
-    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.5.0/libexec/lib/jansi-native/osx64"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/satya"/>
-    <property name="user.timezone" value="Asia/Kolkata"/>
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\lib\jansi-native\windows64"/>
+    <property name="user.home" value="C:\Users\Dell-Flip"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="satya"/>
-    <property name="java.class.path" value="/usr/local/Cellar/maven/3.5.0/libexec/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Dell-Flip"/>
+    <property name="java.class.path" value="C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_144"/>
-    <property name="java.ext.dirs" value="/Users/satya/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/classes"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/usr/local/Cellar/maven/3.5.0/libexec"/>
-    <property name="file.separator" value="/"/>
+    <property name="maven.home" value="C:\Users\Dell-Flip\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\.."/>
+    <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="executeAndVerifyResult" classname="flip.api.businesslayer.BusinessLayer.AppTest" time="102.869">
+  <testcase name="executeAndVerifyResult" classname="flip.api.businesslayer.BusinessLayer.AppTest" time="8.422">
     <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
-	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:56)
+	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:71)
 </failure>
     <system-out><![CDATA[[TestNG] [WARN] Ignoring duplicate listener : org.uncommons.reportng.HTMLReporter
 [TestNG] [WARN] Ignoring duplicate listener : org.uncommons.reportng.JUnitXMLReporter
 
 *********************************************
-Executing for getSchoolBySchoolCode
+Executing for saveStudentReportCardMarks
 Status Code is 200
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 404
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Fail
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 200
-Pass
-
-*********************************************
-Executing for updateSectionByCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for addSection
-Status Code is 200
-Fail
-
-*********************************************
-Executing for addSection
-Status Code is 200
-Pass
-
-*********************************************
-Executing for addSection
-Status Code is 200
-Pass
-
-*********************************************
-Executing for addSection
-Status Code is 405
-Pass
-
-*********************************************
-Executing for addSection
-Status Code is 405
-Pass
-
-*********************************************
-Executing for addSection
-Status Code is 405
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 200
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 404
-Fail
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 200
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 200
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getSchoolBySchoolCode
-Status Code is 405
-Fail
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 405
-Pass
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 405
-Pass
-
-*********************************************
-Executing for removeReportCardTermData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Fail
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Fail
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Pass
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Pass
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Fail
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 405
-Pass
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 200
-Pass
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 405
-Pass
-
-*********************************************
-Executing for mapSchoolSubjectToSection
-Status Code is 405
-Fail
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 200
-Fail
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 200
-Pass
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 200
-Fail
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 405
-Pass
-
-*********************************************
-Executing for getClassSectionSubjectDetail
-Status Code is 405
-Fail
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 405
-Pass
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 405
-Pass
-
-*********************************************
-Executing for removeAllSectionSubjectMapping
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Pass
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Pass
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Pass
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Pass
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Fail
-
-*********************************************
-Executing for insertReportCardStudent
-Status Code is 200
-Pass
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 404
-Fail
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 404
-Fail
-
-*********************************************
-Executing for downloadStudentMasterData
-Status Code is 404
-Fail
-
-*********************************************
-Executing for removeAllStudentMasterData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for removeAllStudentMasterData
-Status Code is 200
-Fail
-
-*********************************************
-Executing for removeFromStudentMaster
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeFromStudentMaster
-Status Code is 200
-Pass
-
-*********************************************
-Executing for removeFromStudentMaster
-Status Code is 405
-Pass
-
-*********************************************
-Executing for removeFromStudentMaster
-Status Code is 200
-Fail
-
-*********************************************
-Executing for removeFromStudentMaster
-Status Code is 405
-Pass
-
-*********************************************
-Executing for downloadTemplateForSubjectMapping
-Status Code is 405
 ]]></system-out>
     <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.BasicClientConnectionManager).
 log4j:WARN Please initialize the log4j system properly.
-java.net.ConnectException: Connection refused (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
+java.net.SocketException: Permission denied: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
 	at java.net.Socket.connect(Socket.java:589)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
@@ -483,26 +95,19 @@ java.net.ConnectException: Connection refused (Connection refused)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
 	at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
 	at com.jayway.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:1717)
-	at com.jayway.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:482)
-	at com.jayway.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:431)
-	at com.jayway.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1233)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor109.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:807)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
-	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1075)
+	at com.jayway.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:333)
+	at com.jayway.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1056)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
@@ -512,13 +117,22 @@ java.net.ConnectException: Connection refused (Connection refused)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:807)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:128)
 	at com.jayway.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:31)
 	at com.jayway.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:124)
 	at com.jayway.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:49)
 	at com.jayway.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeFilterChain(RequestSpecificationImpl.groovy:950)
-	at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
@@ -529,10 +143,13 @@ java.net.ConnectException: Connection refused (Connection refused)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1373)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
-	at sun.reflect.GeneratedMethodAccessor60.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
@@ -543,11 +160,13 @@ java.net.ConnectException: Connection refused (Connection refused)
 	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:149)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:151)
-	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
-	at flip.api.businesslayer.BusinessLayer.App.hitGetRequest(App.java:172)
-	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:51)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:155)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at flip.api.businesslayer.BusinessLayer.App.hitPostRequest(App.java:142)
+	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -565,8 +184,8 @@ java.net.ConnectException: Connection refused (Connection refused)
 	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
 	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
 ]]></system-err>
   </testcase>

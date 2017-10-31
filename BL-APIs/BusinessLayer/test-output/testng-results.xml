@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="128947" started-at="2017-10-30T06:49:54Z" finished-at="2017-10-30T06:52:03Z">
+  <suite name="Default suite" duration-ms="7489" started-at="2017-10-31T06:17:42Z" finished-at="2017-10-31T06:17:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="128947" started-at="2017-10-30T06:49:54Z" finished-at="2017-10-30T06:52:03Z">
+    <test name="Default test" duration-ms="7489" started-at="2017-10-31T06:17:42Z" finished-at="2017-10-31T06:17:50Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="initialize" is-config="true" duration-ms="16" started-at="2017-10-30T12:19:54Z" finished-at="2017-10-30T12:19:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="initialize" is-config="true" duration-ms="20" started-at="2017-10-31T11:47:42Z" finished-at="2017-10-31T11:47:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="executeAndVerifyResult" duration-ms="128879" started-at="2017-10-30T12:19:54Z" finished-at="2017-10-30T12:22:03Z">
+        <test-method status="FAIL" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="executeAndVerifyResult" duration-ms="7414" started-at="2017-10-31T11:47:42Z" finished-at="2017-10-31T11:47:50Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:51)
+	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -47,7 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="CloseProcesses" is-config="true" duration-ms="4" started-at="2017-10-30T12:22:03Z" finished-at="2017-10-30T12:22:03Z">
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-10-31T11:47:50Z" finished-at="2017-10-31T11:47:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseProcesses -->
