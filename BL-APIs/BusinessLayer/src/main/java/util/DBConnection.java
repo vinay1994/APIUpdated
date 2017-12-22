@@ -14,7 +14,7 @@ public class DBConnection{
 	static int id=0,irs=0;
 
 	public static void connectUmsDB(){
-		String dbUrl = "jdbc:mysql://int4soadb.fliplearn.com:3306/";
+		String dbUrl = "jdbc:mysql://int8soadb.fliplearn.com:3306/";
 		String username = "soa_app";String password = "flip@159$$";String DbName = "ums_api";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

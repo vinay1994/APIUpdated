@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7489" started-at="2017-10-31T06:17:42Z" finished-at="2017-10-31T06:17:50Z">
+  <suite name="Default suite" duration-ms="3403841" started-at="2017-12-11T12:21:27Z" finished-at="2017-12-11T13:18:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7489" started-at="2017-10-31T06:17:42Z" finished-at="2017-10-31T06:17:50Z">
+    <test name="Default test" duration-ms="3403841" started-at="2017-12-11T12:21:27Z" finished-at="2017-12-11T13:18:11Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="initialize" is-config="true" duration-ms="20" started-at="2017-10-31T11:47:42Z" finished-at="2017-10-31T11:47:42Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="initialize" is-config="true" duration-ms="7" started-at="2017-12-11T17:51:27Z" finished-at="2017-12-11T17:51:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="executeAndVerifyResult" duration-ms="7414" started-at="2017-10-31T11:47:42Z" finished-at="2017-10-31T11:47:50Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at flip.api.businesslayer.BusinessLayer.AppTest.executeAndVerifyResult(AppTest.java:71)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="hitTopicIds()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="hitTopicIds" duration-ms="3403813" started-at="2017-12-11T17:51:27Z" finished-at="2017-12-11T18:48:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@a67c67e]" name="CloseProcesses" is-config="true" duration-ms="1" started-at="2017-10-31T11:47:50Z" finished-at="2017-10-31T11:47:50Z">
+        </test-method> <!-- hitTopicIds -->
+        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="CloseProcesses" is-config="true" duration-ms="2" started-at="2017-12-11T18:48:11Z" finished-at="2017-12-11T18:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseProcesses -->
