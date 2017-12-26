@@ -11,7 +11,8 @@ import java.util.Properties;
  * Created by Satya Prakash Solanki
  */
 public class LoadProperty {
-	    private final String PROPS_PATH = System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/envConfig.properties"; 
+	   //private final String PROPS_PATH="";
+	    static String PROPS_PATH = System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/Execute.properties"; 
        // private final String PROPS_PATH = System.getProperty("user.dir") + "/Config.properties";
         private static Properties loadProps = null;
         private boolean isLoaded = false;
@@ -28,6 +29,26 @@ public class LoadProperty {
             return result;
         }
 
+        public String setPropertyPath(){
+         String env= (String) getProperty("Env");
+         switch (env.toString()) {
+		case "Prod":
+			PROPS_PATH=System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/envConfigProd.properties"; 
+			System.out.println("Env is "+PROPS_PATH);
+			break;
+		case "Stag":
+			PROPS_PATH=System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/envConfigStag.properties"; 
+			break;
+		case "INT":
+			PROPS_PATH=System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/envConfigINT.properties"; 
+			break;
+		default:
+			break;
+		}
+        	return PROPS_PATH;
+        }
+        
+        
         public Object getProperty(String propertyName) {
             return getProperty(propertyName, null);
         }

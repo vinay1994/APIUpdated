@@ -34,7 +34,6 @@ public class DBConnection{
 		String username=(String) load.getProperty("GROUP_DB_USERNAME");
 		String password=(String) load.getProperty("GROUP_DB_PASSWORD");
 		String dbUrl = "jdbc:mysql://"+dbhost+":3306/";
-		System.out.println(dbUrl);
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			groupConnection=DriverManager.getConnection(dbUrl+DbName,username,password);

@@ -27,6 +27,8 @@ public class AppTest extends App{
 
 	@BeforeClass
 	public void initialize() throws ClassNotFoundException, SQLException, IOException{
+		load=new LoadProperty();
+		load.setPropertyPath();
 		setBaseUrl();
 	}
 	@AfterClass
