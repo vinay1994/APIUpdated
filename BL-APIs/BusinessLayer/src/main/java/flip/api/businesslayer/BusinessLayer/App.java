@@ -17,6 +17,7 @@ import java.util.TimeZone;
 import org.testng.Assert;
 
 import util.DBConnection;
+import util.LoadProperty;
 import util.Xls_Reader;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,10 +28,11 @@ import com.model.Event;
 import com.model.Payload;
 
 public class App {
+	public static String baseUlr="";
 	public static String loginId="teacher_2.chabr_517788";
-	public static String sessionToken="61lCtizT4epHzO14GYZOAvDaq";
+	public static String sessionToken="";
 	public static String uuid="";
-	public static String profileCode="7395309297";
+	public static String profileCode="";
 	public static String SupportedApiVersion="1";
 	public static final String Content_Type="application/json";
 	public static String APIName="";
@@ -44,76 +46,16 @@ public class App {
 	public static String AssertionType="";
 
 
-	public static void main(String[] args) {
-
+	public String setBaseUrl(){
+		LoadProperty load = new LoadProperty();
+		baseUlr =(String) load.getProperty("BaseUrl");
+		System.out.println("Base Urls is "+baseUlr);
+		return baseUlr;
 	}
 
-	public String getRequestJson(int i, String sheetName, String eventType){
-		 Xls_Reader xls=new Xls_Reader();
-		 Event event = new Event();
-		 Payload payload = new Payload();
-		 String jsonStr = null;
-		 payload.setSchoolCode(xls.getCellData(sheetName, "school_code", i));
-		 payload.setAyid(xls.getCellData(sheetName, "ayid", i));
-		 payload.setGroupCodeList(new ArrayList<String>(Arrays.asList(xls.getCellData(sheetName, "groupCodeList", i).split(","))));
-		 payload.setMessageCode(xls.getCellData(sheetName, "message_code", i));
-		 payload.setUuidList(new ArrayList<String>(Arrays.asList(xls.getCellData(sheetName, "uuid", i).split(","))));
-		 payload.setSmsEnabled(xls.getCellData(sheetName, "sendsms", i).equals("1") ? true : false);
-//		 event.setEventTime(new Date("2017-09-12T17:58:43.511Z"));
 
-		 String s = "2017-10-04T22:58:00.000Z";
-		 DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
-		 Date d = null;
-		try {
-			d = formatter.parse(s);
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 
-		 System.out.println("Formatted Date in current time zone = " + formatter.format(d));
 
-		 TimeZone tx=TimeZone.getTimeZone("Asia/Calcutta");
-		 formatter.setTimeZone(tx);
-		 System.out.println("Formatted date in IST = " + formatter.format(d));
-		 
-		 Instant instant = Instant.now();
-		 System.out.println(instant.toString());
-		 String in = instant.toString();
-		 
-		 event.setEventType("HOMEWORK_CREATE");
-		 event.setEventDate(in);
-		 ObjectMapper payloadMapper = new ObjectMapper();
-         String payloadJson = "";
-	        try {
-	            // get event object as a json string
-	             payloadJson= payloadMapper.writeValueAsString(payload);
-	            //System.out.println(payloadJson);
-	        } catch (IOException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
-		 event.setPayload(payloadJson);
-		 ObjectMapper mapperObj = new ObjectMapper();
-         
-	        try {
-	            // get event object as a json string
-	            jsonStr = mapperObj.writeValueAsString(event);
-	            //System.out.println(jsonStr);
-	        } catch (IOException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
-		return jsonStr;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
 	public Response hitPostRequest(String APIUrl,String APIBody){
 		Response response = null;
 		try {
@@ -128,8 +70,8 @@ public class App {
 		}
 		return response;
 	}
-	
-	
+
+
 	public Response hitPostRequest(String loginid, String APIUrl,String APIBody){
 		Response response = null;
 		try {
@@ -175,7 +117,7 @@ public class App {
 		}
 		return response;
 	}
-	
+
 	public Response hitDeleteRequest(String loginid, String APIUrl,String APIBody){
 		Response response = null;
 		try {
@@ -192,7 +134,7 @@ public class App {
 		return response;
 	}
 
-	
+
 
 	public void setResponseCodeWithResponseData(String Sheetname, int i, int statusCode, String response){
 		Xls_Reader xls = new Xls_Reader();
@@ -267,6 +209,74 @@ public class App {
 			printStatement("Fail");
 		}
 	}
+
+
+	public String getRequestJson(int i, String sheetName, String eventType){
+		Xls_Reader xls=new Xls_Reader();
+		Event event = new Event();
+		Payload payload = new Payload();
+		String jsonStr = null;
+		payload.setSchoolCode(xls.getCellData(sheetName, "school_code", i));
+		payload.setAyid(xls.getCellData(sheetName, "ayid", i));
+		payload.setGroupCodeList(new ArrayList<String>(Arrays.asList(xls.getCellData(sheetName, "groupCodeList", i).split(","))));
+		payload.setMessageCode(xls.getCellData(sheetName, "message_code", i));
+		payload.setUuidList(new ArrayList<String>(Arrays.asList(xls.getCellData(sheetName, "uuid", i).split(","))));
+		payload.setSmsEnabled(xls.getCellData(sheetName, "sendsms", i).equals("1") ? true : false);
+		//		 event.setEventTime(new Date("2017-09-12T17:58:43.511Z"));
+
+		String s = "2017-10-04T22:58:00.000Z";
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSX");
+		Date d = null;
+		try {
+			d = formatter.parse(s);
+		} catch (ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		System.out.println("Formatted Date in current time zone = " + formatter.format(d));
+
+		TimeZone tx=TimeZone.getTimeZone("Asia/Calcutta");
+		formatter.setTimeZone(tx);
+		System.out.println("Formatted date in IST = " + formatter.format(d));
+
+		Instant instant = Instant.now();
+		System.out.println(instant.toString());
+		String in = instant.toString();
+
+		event.setEventType("HOMEWORK_CREATE");
+		event.setEventDate(in);
+		ObjectMapper payloadMapper = new ObjectMapper();
+		String payloadJson = "";
+		try {
+			// get event object as a json string
+			payloadJson= payloadMapper.writeValueAsString(payload);
+			//System.out.println(payloadJson);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		event.setPayload(payloadJson);
+		ObjectMapper mapperObj = new ObjectMapper();
+
+		try {
+			// get event object as a json string
+			jsonStr = mapperObj.writeValueAsString(event);
+			//System.out.println(jsonStr);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return jsonStr;
+	}
+
+
+
+
+
+
+
+
 
 
 }

@@ -12,10 +12,15 @@ public class DBConnection{
 	static Connection schoolConnection = null;
 	static Session session = null;
 	static int id=0,irs=0;
+	static LoadProperty load;
 
 	public static void connectUmsDB(){
-		String dbUrl = "jdbc:mysql://int8soadb.fliplearn.com:3306/";
-		String username = "soa_app";String password = "flip@159$$";String DbName = "ums_api";
+		load = new LoadProperty();
+		String dbhost=(String) load.getProperty("UMS_DB_HOST");
+		String DbName = "ums_api";
+		String username=(String) load.getProperty("UMS_DB_USERNAME");
+		String password=(String) load.getProperty("UMS_DB_PASSWORD");
+		String dbUrl = "jdbc:mysql://"+dbhost+":3306/";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			umsConnection=DriverManager.getConnection(dbUrl+DbName,username,password);
@@ -24,8 +29,12 @@ public class DBConnection{
 	}    
 
 	public static void connectGroupDB(){
-		String dbUrl = "jdbc:mysql://10.0.6.21:3306/";
-		String username = "mukeshg";String password = "mukeshg@321";String DbName = "group_api";
+		String dbhost=(String) load.getProperty("GROUP_DB_HOST");
+		String DbName = "group_api";
+		String username=(String) load.getProperty("GROUP_DB_USERNAME");
+		String password=(String) load.getProperty("GROUP_DB_PASSWORD");
+		String dbUrl = "jdbc:mysql://"+dbhost+":3306/";
+		System.out.println(dbUrl);
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			groupConnection=DriverManager.getConnection(dbUrl+DbName,username,password);
@@ -34,8 +43,11 @@ public class DBConnection{
 	}  
 
 	public static void connectbusinessLayerDB(){
-		String dbUrl = "jdbc:mysql://10.0.6.204:3306/";
-		String username = "mukeshg";String password = "mukeshg@321";String DbName = "flip_bl";
+		String dbhost=(String) load.getProperty("BL_DB_HOST");
+		String DbName = "flip_bl";
+		String username=(String) load.getProperty("BL_DB_USERNAME");
+		String password=(String) load.getProperty("BL_DB_PASSWORD");
+		String dbUrl = "jdbc:mysql://"+dbhost+":3306/";
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			blConnection=DriverManager.getConnection(dbUrl+DbName,username,password);
@@ -44,8 +56,11 @@ public class DBConnection{
 	}  
 
 	public static void connectSchoolDB(){
-		String dbUrl = "jdbc:mysql://10.0.6.226:3306/";
-		String username = "mukeshg";String password = "mukeshg@321";String DbName = "school_api";
+		String dbhost=(String) load.getProperty("SCHOOL_DB_HOST");
+		String DbName = "school_api";
+		String username=(String) load.getProperty("SCHOOL_DB_USERNAME");
+		String password=(String) load.getProperty("SCHOOL_DB_PASSWORD");
+		String dbUrl = "jdbc:mysql://"+dbhost+":3306/";
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			schoolConnection=DriverManager.getConnection(dbUrl+DbName,username,password);

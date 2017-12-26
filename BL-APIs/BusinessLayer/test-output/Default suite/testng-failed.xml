@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="flip.api.businesslayer.BusinessLayer.TopicIdTest">
+      <class name="flip.api.businesslayer.BusinessLayer.AppTest">
         <methods>
-          <include name="hitTopicIds"/>
+          <include name="CloseProcesses"/>
+          <include name="initialize"/>
+          <include name="executeAndVerifyResult"/>
         </methods>
-      </class> <!-- flip.api.businesslayer.BusinessLayer.TopicIdTest -->
+      </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

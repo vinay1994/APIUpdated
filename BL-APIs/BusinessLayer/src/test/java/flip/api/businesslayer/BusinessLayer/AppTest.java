@@ -27,12 +27,10 @@ public class AppTest extends App{
 
 	@BeforeClass
 	public void initialize() throws ClassNotFoundException, SQLException, IOException{
-		//xls=new Xls_Reader();
-		//load=new LoadProperty();
+		setBaseUrl();
 	}
 	@AfterClass
 	public void CloseProcesses() throws ClassNotFoundException, SQLException{
-
 	}
 
 	@Test
@@ -49,9 +47,9 @@ public class AppTest extends App{
 			getProfileCode();
 			APIName=xls.getCellData(sheetName, "API_NAME", i);
 			printStatement("\n*********************************************");
-			System.out.println("Executing for "+APIName+"");
-			//printStatement("*********************************************");
-			APIUrl = xls.getCellData(sheetName, "API_URL", i);
+			printStatement("Executing for "+APIName+"");
+			printStatement("*********************************************");
+			APIUrl = baseUlr + xls.getCellData(sheetName, "API_URL", i);
 			APIBody = xls.getCellData(sheetName, "API_REQUEST", i).trim();
 			APIResponse=xls.getCellData(sheetName, "API_RESPONSE_Expected", i).trim();
 			APIMethod=xls.getCellData(sheetName, "API_METHOD", i).trim();
@@ -68,14 +66,11 @@ public class AppTest extends App{
 				}else{
 					verifyExecutionResult(xls, sheetName, response.body().asString(), i,AssertionType);
 				}
-
 			}else if(APIMethod.equalsIgnoreCase("POST")){
 				Response response=hitPostRequest(loginId,APIUrl, APIBody);
 				try {
 					statusCode=response.getStatusCode();
-				} catch (Exception e) {
-				}
-
+				} catch (Exception e) {}
 				printStatement("Status Code is "+statusCode);
 				setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
 				if(AssertionType.equalsIgnoreCase("RESP_CODE")){
@@ -164,12 +159,3 @@ public class AppTest extends App{
 		}
 	}
 }
-
-//counter++;
-//xls.setCellData("ResourceData", "topicId", counter, topicId);
-//				xls.setCellData("ResourceData", "resourceSize", counter, String.valueOf(jsonArray.length()));
-//				xls.setCellData("ResourceData", "resourceId", counter, jsonArray.getJSONObject(j).get("resourceId").toString());
-//				xls.setCellData("ResourceData", "resourceName", counter, jsonArray.getJSONObject(j).get("resourceName").toString());
-//				xls.setCellData("ResourceData", "type", counter, jsonArray.getJSONObject(j).get("type").toString());
-//				xls.setCellData("ResourceData", "title", counter, jsonArray.getJSONObject(j).get("title").toString());
-//				xls.setCellData("ResourceData", "wouzaUrl", counter, jsonArray.getJSONObject(j).get("wouzaUrl").toString());

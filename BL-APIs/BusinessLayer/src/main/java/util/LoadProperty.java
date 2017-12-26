@@ -11,7 +11,8 @@ import java.util.Properties;
  * Created by Satya Prakash Solanki
  */
 public class LoadProperty {
-        private final String PROPS_PATH = System.getProperty("user.dir") + "/Config.properties";
+	    private final String PROPS_PATH = System.getProperty("user.dir").split("BusinessLayer")[0].trim()+"/envConfig.properties"; 
+       // private final String PROPS_PATH = System.getProperty("user.dir") + "/Config.properties";
         private static Properties loadProps = null;
         private boolean isLoaded = false;
 
@@ -45,7 +46,6 @@ public class LoadProperty {
                     System.clearProperty(name);
                 }
             }
-
             loadProps = new java.util.Properties();
             try {
                 /*InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(filePath);*/
