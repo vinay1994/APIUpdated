@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7868" started-at="2018-01-05T08:00:09Z" finished-at="2018-01-05T08:00:17Z">
+  <suite name="Default suite" duration-ms="3243" started-at="2018-01-05T11:22:50Z" finished-at="2018-01-05T11:22:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7868" started-at="2018-01-05T08:00:09Z" finished-at="2018-01-05T08:00:17Z">
+    <test name="Default test" duration-ms="3243" started-at="2018-01-05T11:22:50Z" finished-at="2018-01-05T11:22:53Z">
       <class name="flip.api.businesslayer.BusinessLayer.AppTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="initialize" is-config="true" duration-ms="9" started-at="2018-01-05T13:30:09Z" finished-at="2018-01-05T13:30:09Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@27d415d9]" name="initialize" is-config="true" duration-ms="5" started-at="2018-01-05T16:52:50Z" finished-at="2018-01-05T16:52:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="executeAndVerifyResult" duration-ms="7843" started-at="2018-01-05T13:30:09Z" finished-at="2018-01-05T13:30:17Z">
+        <test-method status="PASS" signature="executeAndVerifyResult()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@27d415d9]" name="executeAndVerifyResult" duration-ms="3217" started-at="2018-01-05T16:52:50Z" finished-at="2018-01-05T16:52:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executeAndVerifyResult -->
-        <test-method status="PASS" signature="CloseProcesses()[pri:0, instance:flip.api.businesslayer.BusinessLayer.AppTest@5ec0a365]" name="CloseProcesses" is-config="true" duration-ms="0" started-at="2018-01-05T13:30:17Z" finished-at="2018-01-05T13:30:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseProcesses -->
       </class> <!-- flip.api.businesslayer.BusinessLayer.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
