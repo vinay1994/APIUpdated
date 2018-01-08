@@ -143,7 +143,7 @@ public class App {
 	}
 
 	public String getSessionToken(String loginId){
-		//DBConnection.connectUmsDB();
+		DBConnection.connectUmsDB();
 		try {
 			ResultSet rs = DBConnection.executeQuery("SELECT * FROM ums_api.user_session where uuid in "
 					+ "(select uuid from ums_api.user_master where login_id='"+loginId+"') order by updated_date desc limit 1");
@@ -155,7 +155,7 @@ public class App {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally{
-			//DBConnection.disconnectDB("ums");
+			DBConnection.disconnectDB("ums");
 		}
 		return sessionToken;
 	}
