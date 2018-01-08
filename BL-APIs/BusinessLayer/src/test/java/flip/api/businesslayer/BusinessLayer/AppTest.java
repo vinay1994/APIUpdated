@@ -1,34 +1,46 @@
 package flip.api.businesslayer.BusinessLayer;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.IOException;
 import java.sql.SQLException;
+
+import util.DBConnection;
 import util.LoadProperty;
 import util.Xls_Reader;
 import com.jayway.restassured.response.Response;
 
 public class AppTest extends App{
 	LoadProperty load;
+	
 	@BeforeMethod
 	public void initialize() throws ClassNotFoundException, SQLException, IOException{
+		DBConnection.connectUmsDB();
+		System.out.println("Connection Created");
 		load=new LoadProperty();
 		load.setPropertyPath();
 		setBaseUrl();
 	}
+	//@AfterMethod
+	public void closeCon(){
+		DBConnection.disconnectDB("ums");
+	}
 
 	@Test
 	public void executeAndVerifyResult(){
+		
 		Xls_Reader xls=new Xls_Reader();
 		sheetName="ExecutionSheet";
 		int statusCode=200;
 		int rowCount=xls.getRowCount(sheetName);
-		System.out.println("Row count is   "+rowCount);
+		System.out.println("Row count is "+rowCount);
 		for(int i=2;i<rowCount+1;i++){
 			APIName=xls.getCellData(sheetName, "API_NAME", i);
 			loginId=(String) load.getProperty(xls.getCellData(sheetName, "RoleType", i));
+			System.out.println("Login id is "+loginId);
 			if(!(APIName.equalsIgnoreCase("Login"))){
 				getSessionToken(loginId);
 				getProfileCode();

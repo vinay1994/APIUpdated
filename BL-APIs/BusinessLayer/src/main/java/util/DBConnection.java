@@ -24,6 +24,7 @@ public class DBConnection{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			umsConnection=DriverManager.getConnection(dbUrl+DbName,username,password);
+			System.out.println(dbUrl+DbName+username+password);
 			stmt = umsConnection.createStatement();
 		} catch (Exception e) {}
 	}    
