@@ -1,4 +1,4 @@
-package com.flipLearn.Bl.utilities;
+package com.flipLearn.BL.utilities;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -7,14 +7,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.flipLearn.BL.methods.ApiMethods;
-import com.flipLearn.Bl.utilities.Xls_Reader;
 import com.jayway.restassured.response.Response;
 
 public class ApiTests extends ApiMethods{
-	Xls_Reader xls;
+	com.flipLearn.BL.utilities.Xls_Reader xls;
 	@BeforeClass
 	public void initialize(){
-		xls=new Xls_Reader();
+		xls=new com.flipLearn.BL.utilities.Xls_Reader();
 	}
 	@Test(priority=1)
 	public void loginRequest() throws JSONException,InterruptedException {
@@ -54,13 +53,21 @@ public class ApiTests extends ApiMethods{
 			Response response=hitGetRequest(APIUrl);
 			int statusCode=response.getStatusCode();
 			setResponseCodeWithResponseData(sheetName,i, statusCode, response.body().asString());
-			JSONObject jsonObject = new JSONObject(response.body().asString());
-			printStatement("\nStatus Code is "+statusCode);
-			JSONArray jsonArray = jsonObject.getJSONArray("response");
-			profileCode = jsonArray.getJSONObject(0).getString("profileCode");
-			printStatement("\nProfile code is "+profileCode);
-			Assert.assertEquals(profileCode, xls.getCellData(sheetName, "profileCode", 2));
+			
+//			JSONObject jsonObject = new JSONObject(response.body().asString());
+//			printStatement("\nStatus Code is "+statusCode);
+//			JSONArray jsonArray = jsonObject.getJSONArray("response");
+//			System.out.println(jsonArray.length());
+//			profileCode = jsonArray.getJSONObject(0).getString("profileCode");
+//			Assert.assertEquals(profileCode, xls.getCellData(sheetName, "profileCode", 2));
+//			xls.setCellData(sheetName, "RESULT", i, "Pass");
+				
+			JSONObject jsonObject = new JSONObject((response.body().asString()));
+			errorMessage=jsonObject.getJSONObject("error").getString("errorMessage");
+			printStatement("\nProfile code is "+errorMessage);
+			Assert.assertEquals(errorMessage, xls.getCellData(sheetName, "API_RESPONSE_Expected", 2));
 			xls.setCellData(sheetName, "RESULT", i, "Pass");
 		}
+
 	}
 }

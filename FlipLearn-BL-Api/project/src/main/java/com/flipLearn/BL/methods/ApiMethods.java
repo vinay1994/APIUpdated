@@ -2,7 +2,7 @@ package com.flipLearn.BL.methods;
 
 import static com.jayway.restassured.RestAssured.given;
 
-import com.flipLearn.Bl.utilities.Xls_Reader;
+import com.flipLearn.BL.utilities.Xls_Reader;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;

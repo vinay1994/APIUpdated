@@ -1,4 +1,4 @@
-package com.flipLearn.Bl.utilities;
+package com.flipLearn.BL.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

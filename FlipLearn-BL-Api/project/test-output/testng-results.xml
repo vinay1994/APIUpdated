@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5658" started-at="2017-09-08T12:37:15Z" finished-at="2017-09-08T12:37:21Z">
+  <suite started-at="2021-04-28T07:32:11Z" name="Default suite" finished-at="2021-04-28T07:32:19Z" duration-ms="8360">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5658" started-at="2017-09-08T12:37:15Z" finished-at="2017-09-08T12:37:21Z">
+    <test started-at="2021-04-28T07:32:11Z" name="Default test" finished-at="2021-04-28T07:32:19Z" duration-ms="8360">
       <class name="com.flipLearn.BL.tests.ApiTests">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@7085bdee]" name="initialize" is-config="true" duration-ms="312" started-at="2017-09-08T18:07:15Z" finished-at="2017-09-08T18:07:15Z">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@53251a66]" started-at="2021-04-28T13:02:11Z" name="initialize" finished-at="2021-04-28T13:02:11Z" duration-ms="408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginRequest()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@7085bdee]" name="loginRequest" duration-ms="4806" started-at="2017-09-08T18:07:15Z" finished-at="2017-09-08T18:07:20Z">
+        <test-method signature="loginRequest()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@53251a66]" started-at="2021-04-28T13:02:11Z" name="loginRequest" finished-at="2021-04-28T13:02:19Z" duration-ms="7447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginRequest -->
-        <test-method status="PASS" signature="getUserProfile()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@7085bdee]" name="getUserProfile" duration-ms="517" started-at="2017-09-08T18:07:20Z" finished-at="2017-09-08T18:07:21Z">
+        <test-method signature="getUserProfile()[pri:0, instance:com.flipLearn.BL.tests.ApiTests@53251a66]" started-at="2021-04-28T13:02:19Z" name="getUserProfile" finished-at="2021-04-28T13:02:19Z" duration-ms="467" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserProfile -->
