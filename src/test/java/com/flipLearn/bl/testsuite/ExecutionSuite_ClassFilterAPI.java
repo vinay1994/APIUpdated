@@ -1,5 +1,6 @@
 package com.flipLearn.bl.testsuite;
 
+import com.flipLearn.bl.base.BaseTestClass;
 import com.flipLearn.bl.constants.Constants;
 import com.flipLearn.bl.enums.CSVColumns;
 import com.flipLearn.bl.generic.ApiFunctions;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class ExecutionSuite_ClassFilterAPI {
+public class ExecutionSuite_ClassFilterAPI extends BaseTestClass {
 
     @DataProvider
     public Iterator<Object> DataProvide_CLassFilter_API() {

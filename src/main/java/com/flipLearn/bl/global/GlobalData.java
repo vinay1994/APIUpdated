@@ -3,7 +3,7 @@ package com.flipLearn.bl.global;
 public class GlobalData {
 
     public static final String EXTENT_REPORT_DOCUMENT_TITLE = "API Automation Reports";
-    public static final String EXTENT_REPORT_REPORT_NAME = "Fliplearn";
+    public static final String EXTENT_REPORT_REPORT_NAME = "Fliplearn API Automation Report";
     public static final String OUTPUT_FOLDER_REPORT = "extentreport/";
     public static final String OUTPUT_FOLDER_SCREENSHOTS = "screenshots/";
     public static final String REPORT_ENCODING = "utf-8";
