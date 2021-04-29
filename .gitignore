@@ -1,0 +1,10 @@
+/target/
+.settings
+.idea
+*.iml
+*.project
+*.classpath
+test-output
+.DS_Store
+extentreport
+testng.xml
